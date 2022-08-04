@@ -6,7 +6,7 @@ We use the Client Credentials Grant Flow, which allows an application to request
 
 ### Authorization Flow
 1. Get `client_id` and `client_secret` from DK Hardware team
-2. Call `https://auth.dkhardware.com/realms/DKH/protocol/openid-connect/token` endpoint
+2. Call `https://auth.dkhardware.com/realms/dkh/protocol/openid-connect/token` endpoint
 3. If the call is successful, the endpoint returns an `access_token` and `refresh_token`.
 
 ### Header Parameters
