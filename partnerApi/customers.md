@@ -54,7 +54,7 @@ Example:
 | altPhone | | string | max 50 | Alternative phone number |
 | fax |  | string |  max 50 | Fax|
 | email | * | string | max 100 | Email address|
-| addresses |  |[Address](https://dkhardware.visualstudio.com/DkHardware/_wiki/wikis/DkHardware.wiki/403/Orders?anchor=address)[] |  | Customer's addresses|
+| addresses |  |[Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#address)[] |  | Customer's addresses|
 
 
 ## Address
