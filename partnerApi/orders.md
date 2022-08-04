@@ -15,8 +15,8 @@
 | shippingTax | * | money  |  | Shipping tax |
 | shippingDiscount | | money  | default(0) | Shipping discount |
 | handlingFee | | money  | default(0) | Handling fee|
-| billing* | | fields from [Address](https://dkhardware.visualstudio.com/DkHardware/_wiki/wikis/DkHardware.wiki/403/Orders?anchor=address) |  | Billing address |
-| shipping* | | fields from [Address](https://dkhardware.visualstudio.com/DkHardware/_wiki/wikis/DkHardware.wiki/403/Orders?anchor=address) |  | Shipping address |
+| billing* | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Billing address |
+| shipping* | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Shipping address |
 
 ## Order Item
 | Field | Required | Type | Restrictions | Description |
