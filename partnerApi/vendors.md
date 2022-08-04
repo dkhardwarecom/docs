@@ -9,5 +9,10 @@
 | altPhone | | string | max 50 | Alternative phone number |
 | fax |  | string |  max 50 | Fax|
 | email | * | string | max 100 | Email address|
-| addresses |  |[Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#address)[] |  | Vendor's addresses|
+| zip | * | string | max 50 | Zip/Postal code |
+| country | * | string | max 150 | Country name |
+| state | * | string | max 50 | State or region |
+| city | * | string | max 255 | City |
+| address1 | * | string  | max 255 | Address line 1 |
+| address2 |  | string  | max 255 | Address line 2 |
 | notes |  | string |   | Notes about vendor |
