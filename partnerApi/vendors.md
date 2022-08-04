@@ -4,3 +4,10 @@
 |  vendorId | * | integer |  | Vendor's identifier |
 | name |  | string | max 300 | Vendor's name |
 | code|  | string | max 32 |  Vendor's code (Business key) |
+| company |  | string | max 250 | Full Company name |
+| phone |  | string | max 50 | Phone number |
+| altPhone | | string | max 50 | Alternative phone number |
+| fax |  | string |  max 50 | Fax|
+| email | * | string | max 100 | Email address|
+| addresses |  |[Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#address)[] |  | Vendor's addresses|
+| notes |  | string |   | Notes about vendor |
