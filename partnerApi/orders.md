@@ -1,4 +1,4 @@
-##Order
+## Order
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 |  orderId | * | integer |  | Order identifier |
@@ -18,7 +18,7 @@
 | billing* | | fields from [Address](https://dkhardware.visualstudio.com/DkHardware/_wiki/wikis/DkHardware.wiki/403/Orders?anchor=address) |  | Billing address |
 | shipping* | | fields from [Address](https://dkhardware.visualstudio.com/DkHardware/_wiki/wikis/DkHardware.wiki/403/Orders?anchor=address) |  | Shipping address |
 
-##Order Item
+## Order Item
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 |  itemId | * | integer |  | Order item identifier |
@@ -36,7 +36,7 @@
 | productImage |  | string |  | Product main image link |
 | productUrl |  | string |  | Product url for details |
 
-##Address
+## Address
 
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
