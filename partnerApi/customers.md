@@ -24,6 +24,65 @@ HTTP Status Code: 200
 Example:
 ```
 {
+    "payload": [
+        {
+            "customerId": 874410,
+            "createdAt": "2022-08-05T05:56:44",
+            "updatedAt": "2022-08-05T05:56:44",
+            "firstName": "Jesse",
+            "lastName": "Book",
+            "email": "jesse.superbtrucking@gmail.com",
+            "company": "",
+            "phone": "3068677031",
+            "altPhone": null,
+            "fax": null,
+            "addresses": [
+                {
+                    "customerId": 874410,
+                    "firstName": "Jesse",
+                    "lastName": "Book",
+                    "zip": "S9H 4T7",
+                    "country": "Canada",
+                    "state": "SK",
+                    "city": "Swift Current",
+                    "address1": "405 Northcote DR",
+                    "address2": null,
+                    "company": null,
+                    "phone": "3068677031",
+                    "altPhone": null,
+                    "fax": null,
+                    "isDefaultBilling": false,
+                    "isDefaultShipping": true
+                },
+                ...
+```
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 |  |
+| 500 |  |
+|  |  |
+
+
+# Get Customer by Id
+
+## Path
+/v1/customer/{customerId}
+
+## Method
+
+GET
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
     "payload": {
         "customerId": 21762,
         "createdAt": "2015-01-13T22:16:49",
@@ -83,7 +142,6 @@ Example:
 | 400 |  |
 | 500 |  |
 | 404 |  |
-
 
 
 # Contracts
