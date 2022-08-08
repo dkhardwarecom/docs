@@ -26,7 +26,7 @@ Example:
 {
     "payload": [
         {
-            "customerId": 874410,
+            "customerId": "874410",
             "createdAt": "2022-08-05T05:56:44",
             "updatedAt": "2022-08-05T05:56:44",
             "firstName": "Jesse",
@@ -38,7 +38,7 @@ Example:
             "fax": null,
             "addresses": [
                 {
-                    "customerId": 874410,
+                    "customerId": "874410",
                     "firstName": "Jesse",
                     "lastName": "Book",
                     "zip": "S9H 4T7",
@@ -84,7 +84,7 @@ Example:
 ```
 {
     "payload": {
-        "customerId": 21762,
+        "customerId": "21762",
         "createdAt": "2015-01-13T22:16:49",
         "updatedAt": "2022-08-02T13:46:00",
         "firstName": "MIKE",
@@ -96,7 +96,7 @@ Example:
         "fax": null,
         "addresses": [
             {
-                "customerId": 21762,
+                "customerId": "21762",
                 "firstName": "MIKE",
                 "lastName": "TIMMONS",
                 "zip": "77377",
@@ -113,7 +113,7 @@ Example:
                 "isDefaultShipping": false
             },
             {
-                "customerId": 21762,
+                "customerId": "21762",
                 "firstName": "MIKE",
                 "lastName": "TIMMONS",
                 "zip": "78247",
@@ -149,7 +149,7 @@ Example:
 
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| customerId | * | integer |  | Customer's identifier |
+| customerId | * | string | max 64 | Customer's identifier |
 | createdAt | * | dateTime |  | Creation date and time in UTC format |
 | updatedAt | * | dateTime |  | Updated date and time in UTC format |
 | firstName | * | string | max 150 | First name |
@@ -166,8 +166,8 @@ Example:
 
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| addressId | * | integer |  | Address identifier |
-| customerId | * | integer |  | Customer's identifier |
+| addressId | * | string | max 64 | Address identifier |
+| customerId | * | string | max 64 | Customer's identifier |
 | firstName | * | string | max 150 | First name |
 | lastName | * | string | max 150 | Last name |
 | company |  | string | max 250 | Company name |
