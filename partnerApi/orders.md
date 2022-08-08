@@ -1,13 +1,13 @@
 ## Order
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-|  orderId | * | integer |  | Order identifier |
+|  orderId | * | string | max 64 | Order identifier |
 | createdAt | * | dateTime |  | Creation date and time in UTC format |
 | updatedAt | * | dateTime  |  | Last changes date and time in UTC format |
 | total | * | money |  | Order total |
 | currency |  | string | max 10 | Currency code, default **USD** |
 | status | * | string | max 100 | Order status name from **Dictionary** |
-| customerId | * | integer |  | Customer's identifier |
+| customerId | * | string | max 64  | Customer's identifier |
 | customerNotes | | string | max 8000 | Customer's notes or Cutting instructions |
 | channel | | string | max 100 | Order channel name from **Dictionary**|
 | shippingMethod | * | string | max 200  | Shipping method |
@@ -21,9 +21,9 @@
 ## Order Item
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-|  itemId | * | integer |  | Order item identifier |
-|  orderId | * | integer |  | Order identifier |
-| productId | * | integer  |  |  Product identifier|
+|  itemId | * | string |  max 64 | Order item identifier |
+|  orderId | * | string | max 64 | Order identifier |
+| productId | * | string  | max 64 |  Product identifier|
 | unitPrice | * | money |  | Product unit price |
 | quantity | * | integer |  | Product quantity in order line |
 | linePosition | * | integer |  | Line position |
