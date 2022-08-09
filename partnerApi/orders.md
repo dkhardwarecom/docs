@@ -22,7 +22,6 @@
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 |  itemId | * | string |  max 64 | Order item identifier |
-|  orderId | * | string | max 64 | Order identifier |
 | productId | * | string  | max 64 |  Product identifier|
 | unitPrice | * | money |  | Product unit price |
 | quantity | * | integer |  | Product quantity in order line |
