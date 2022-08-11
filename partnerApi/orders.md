@@ -1,3 +1,96 @@
+# Get Orders
+
+## Path
+/v1/order/
+
+## Method
+
+GET
+
+## Query Parameters
+| Name | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| from|  | DateTime| default(null)<br />UTC | From updated (or created) date and time filter value.<br /> Example: /v1/order?from=2022-03-11T22:15:59Z |
+| to|  | DateTime| default(null)<br />UTC | To updated (or created) date and time filter value.<br /> Example: /v1/order?to=2022-03-13T10:45:11Z |
+| newest|  | Boolean| default(true) | If true, return in descending order newest to oldest. |
+| limit|  | integer | max 1000, default(100) | Return a number of records with the set limit value. |
+| offset |  | integer | default(0) | Return a subset of records starting with the offset value. |
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+
+```
+{
+    "payload": [
+        {
+            "orderId": "805685",
+            "createdAt": "2021-01-05T00:42:54",
+            "total": 172.25,
+            "currency": "USD",
+            "status": "Shipped Orders - PAID",
+            "customerId": "592786",
+            "customerNotes": "",
+            "channel": "Walmart",
+            "shippingMethod": "Standard Ground",
+            "shippingPrice": 6.89,
+            "shippingTax": 0.48,
+            "shippingDiscount": 0.0,
+            "handlingFee": 0.0,
+            "billing": {
+                "firstName": "Gloria",
+                "lastName": "Thompson",
+                "company": "",
+                "phone": "5613765386",
+                "altPhone": "",
+                "fax": "",
+                "zip": "33446",
+                "country": "United States",
+                "state": "FL",
+                "city": "Delray Beach",
+                "address1": "8602 Sawpine Rd",
+                "address2": "",
+                "email": "D37B99CFACAC4DF691193B0441108F86@relay.walmart.com"
+            },
+            "shipping": {
+                "firstName": "Gloria",
+                "lastName": "Thompson",
+                "company": "",
+                "phone": "5613765386",
+                "altPhone": "",
+                "fax": "",
+                "zip": "33446",
+                "country": "United States",
+                "state": "FL",
+                "city": "Delray Beach",
+                "address1": "8602 Sawpine Rd",
+                "address2": "",
+                "email": "D37B99CFACAC4DF691193B0441108F86@relay.walmart.com"
+            },
+            "items": [
+                {
+                    "itemId": "2077235",
+                    "productId": "3158135",
+                    "unitPrice": 154.09,
+                    "quantity": 1,
+                    "linePosition": 1,
+                    "lineComment": "",
+                    "unitWeight": 0,
+                    "tax": 10.79,
+                    "discount": 0.0,
+                    "mpn": "834CX-3004",
+                    "productTitle": "Premier Sanibel Three-Handle Tub & Shower Faucet, Brushed Nickel",
+                    "productImage": "https://dkstatic.blob.core.windows.net/images/561979/original/3552595_usn.jpg",
+                    "productUrl": "https://www.dkhardware.com/sanibel-3-handle-1-spray-tub-and-shower-faucet-in-brushed-nickel-834cx-3004-product-3158135.html"
+                }
+            ]
+        },
+...
+
+```
+
+
 ## Order
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
