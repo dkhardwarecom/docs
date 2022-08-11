@@ -90,6 +90,16 @@ Example:
 
 ```
 
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 |  |
+| 500 |  |
+|  |  |
+
+# Contracts
 
 ## Order
 | Field | Required | Type | Restrictions | Description |
