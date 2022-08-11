@@ -38,6 +38,7 @@ Example:
             "fax": null,
             "addresses": [
                 {
+                    "addressId": "187218",
                     "customerId": "874410",
                     "firstName": "Jesse",
                     "lastName": "Book",
@@ -96,6 +97,7 @@ Example:
         "fax": null,
         "addresses": [
             {
+                "addressId": "187218",
                 "customerId": "21762",
                 "firstName": "MIKE",
                 "lastName": "TIMMONS",
@@ -113,6 +115,7 @@ Example:
                 "isDefaultShipping": false
             },
             {
+                "addressId": "187218",
                 "customerId": "21762",
                 "firstName": "MIKE",
                 "lastName": "TIMMONS",
