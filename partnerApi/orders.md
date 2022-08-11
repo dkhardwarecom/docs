@@ -99,6 +99,26 @@ Example:
 | 500 |  |
 |  |  |
 
+# Get Quotes
+Looks the same as orders but different type. Instead of `orderId` is using `quoteId`
+
+## Path
+/v1/quote/
+
+## Method
+
+GET
+
+# Get Ruturns/ RMA
+Looks the same as orders but different type. Instead of `orderId` is using `returnId`
+
+## Path
+/v1/return/
+
+## Method
+
+GET
+
 # Contracts
 
 ## Order
