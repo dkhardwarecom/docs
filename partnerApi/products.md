@@ -5,6 +5,7 @@
 |  productId | * | string | max 64 | Product identifier |
 |  productCode |  | string | max 50 | Product code for internal usage. General same as MPN |
 | mpn |  | string | max 50 | Manufacturer part number |
+| upc |  | string | max 50 | UPC or GTIN |
 | name |  | string | max 2000 | Product name |
 | fullName |  | string | max 2000 | Brand + MPN + name |
 | description |  | string |  | Product description |
@@ -20,6 +21,10 @@
 | mustCut |  | Boolean |  | Is long item, need cutting instruction |
 | oversize |  | Boolean |  | Product is oversize |
 | oversizeType |  | Integer | 1..5 | Oversize type |
+| size |  | string | max 50 | Product size (is using in varitions) |
+| finish |  | string | max 255 | Product finish or color (is using in varitions) |
+| packSize |  | Integer |  | pack size (is using in varitions) |
+
 
 ## Brand
 | Field | Required | Type | Restrictions | Description |
