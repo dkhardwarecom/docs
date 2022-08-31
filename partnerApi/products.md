@@ -11,6 +11,8 @@ GET
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | search | * | String | min(2) max(50) | Search term |
+| limit|  | integer | max 1000, default(100) | Return a number of records with the set limit value. |
+| offset |  | integer | default(0) | Return a subset of records starting with the offset value. |
 
 ## Success Response
 
