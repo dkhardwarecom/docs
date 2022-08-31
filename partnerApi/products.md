@@ -1,3 +1,72 @@
+# Search products
+
+## Path
+/v1/product/
+
+## Method
+
+GET
+
+## Query Parameters
+| Name | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| search | * | String | min(2) max(50) | Search term |
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "payload": [
+        {
+             ...
+```
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 |  |
+| 500 |  |
+|  |  |
+
+
+# Get Product by Id
+
+## Path
+/v1/product/{productId}
+
+## Method
+
+GET
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "payload": {
+       
+        
+    }
+}
+```
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 |  |
+| 500 |  |
+| 404 |  |
+
+
 # Contracts
 ## Product
 | Field | Required | Type | Restrictions | Description |
