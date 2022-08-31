@@ -9,8 +9,8 @@
 | fullName |  | string | max 2000 | Brand + MPN + name |
 | mainImage |  | string |  | Product main image link |
 | url |  | string |  | Product url for details |
-| brand |  | Brand |  | Product brand |
-| manufacturer |  | Manufacturer |  | Product manufacturer |
+| brand |  | [Brand](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/products.md#brand) |  | Product brand |
+| manufacturer |  | [Manufacturer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/products.md#manufacturer) |  | Product manufacturer |
 
 ## Brand
 | Field | Required | Type | Restrictions | Description |
