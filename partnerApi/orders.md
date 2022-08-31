@@ -80,7 +80,7 @@ Example:
                     "tax": 10.79,
                     "discount": 0.0,
                     "mpn": "834CX-3004",
-                    "productTitle": "Premier Sanibel Three-Handle Tub & Shower Faucet, Brushed Nickel",
+                    "itemName": "Premier Sanibel Three-Handle Tub & Shower Faucet, Brushed Nickel",
                     "productImage": "https://dkstatic.blob.core.windows.net/images/561979/original/3552595_usn.jpg",
                     "productUrl": "https://www.dkhardware.com/sanibel-3-handle-1-spray-tub-and-shower-faucet-in-brushed-nickel-834cx-3004-product-3158135.html"
                 }
@@ -154,7 +154,7 @@ GET
 | tax |  | money   | default(0) | Total line tax |
 | discount |  | money   | default(0) | Total line discount |
 | mpn |  | string | max 50 | Manufacturer part number |
-| productTitle |  | string | max 2000 | Product title |
+| itemName |  | string | max 2000 | Item name |
 | productImage |  | string |  | Product main image link |
 | productUrl |  | string |  | Product url for details |
 
