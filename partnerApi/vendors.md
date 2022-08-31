@@ -1,3 +1,72 @@
+# Get Vendors
+
+## Path
+/v1/vendor/
+
+## Method
+
+GET
+
+## Query Parameters
+| Name | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "payload": [
+        {
+             ...
+```
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 |  |
+| 500 |  |
+|  |  |
+
+
+# Get Vendor by Id
+
+## Path
+/v1/vendor/{vendorId}
+
+## Method
+
+GET
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "payload": {
+       
+        
+    }
+}
+```
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 |  |
+| 500 |  |
+| 404 |  |
+
+
+# Contracts
 ## Vendor
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
