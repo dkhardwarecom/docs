@@ -7,3 +7,6 @@
 [Orders](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md)
 
 [Vendors](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/vendors.md)
+
+[Products](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/products.md)
+
