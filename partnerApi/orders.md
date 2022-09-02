@@ -119,6 +119,36 @@ Looks the same as orders but different type. Instead of `orderId` is using `retu
 
 GET
 
+# Get Vendor Order
+Looks the same as customer orders but different type.
+
+## Path
+/v1/vendor-order/
+
+## Method
+
+GET
+
+# Get Vendor Quotes
+Looks the same as customer quotes but different type.
+
+## Path
+/v1/vendor-quote/
+
+## Method
+
+GET
+
+# Get Vendor Ruturns/ RMA
+Looks the same as customer rma but different type.
+
+## Path
+/v1/vendor-return/
+
+## Method
+
+GET
+
 # Contracts
 
 ## Order
