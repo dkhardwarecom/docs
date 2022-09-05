@@ -160,6 +160,7 @@ GET
 | total | * | money |  | Order total |
 | currency |  | string | max 10 | Currency code, default **USD** |
 | status | * | string | max 100 | Order status name from **Dictionary** |
+| statusId | * | string | max 10 | Order status id from **Dictionary** |
 | customerId | * | string | max 64  | Customer's identifier |
 | customerNotes | | string | max 8000 | Customer's notes or Cutting instructions |
 | channel | | string | max 100 | Order channel name from **Dictionary**|
