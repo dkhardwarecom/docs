@@ -21,9 +21,9 @@ We use the Client Credentials Grant Flow, which allows an application to request
 | client_id | your `client_id`  |
 | client_secret | your `client_secret`  |
 | grant_type | client_credentials  |
-| scope | available `scopes` divided by `,` |
+| scope | available `scopes` divided by ` ` (space) |
 
-Example of available scopes: `customers, orders`
+Example of available scopes: `customers orders returns vendor-orders`
 
 ### Response example
 
