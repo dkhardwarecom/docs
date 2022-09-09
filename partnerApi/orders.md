@@ -209,7 +209,9 @@ GET
 
 ## Vendor Order
 **Inherits fields from [Order](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#order)**
-+ extra fields
+
+extra fields:
+
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | shippingType | * | string | max 50 | **Dropship** or **Coming in House** |
