@@ -120,7 +120,7 @@ Looks the same as orders but different type. Instead of `orderId` is using `retu
 GET
 
 # Get Vendor Order
-Looks the same as customer orders but different type.
+Looks the same as customer orders but different type. See [Contracts](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#vendor-order)
 
 ## Path
 /v1/vendor-order/
