@@ -206,3 +206,10 @@ GET
 | address1 | * | string  | max 255 | Address line 1 |
 | address2 |  | string  | max 255 | Address line 2 |
 | email |  | string  | max 100|Email address|
+
+## Vendor Order
+**Inherits fields from [Order](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#order)**
++ extra fields
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| shippingType | * | string | max 50 | **Dropship** or **Coming in House** |
