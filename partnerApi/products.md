@@ -115,6 +115,6 @@ Example:
 | Date | Version |
 |--|--|
 | 2022 September 12 | 20220912.1 |
-##### Release Notes
+### Release Notes
 * Data read endpoints added.
 -------------------------------
