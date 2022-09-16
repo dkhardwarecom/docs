@@ -108,3 +108,13 @@ Example:
 |--|--|--|--|--|
 |  manufacturerId | * | string | max 64 | Manufacturer identifier |
 |  name | * | string | max 100 | Manufacturer name |
+
+
+# Releases
+-------------------------------
+| Date | Version |
+|--|--|
+| 2022 September 12 | 20220912.1 |
+##### Release Notes
+* Data read endpoints added.
+-------------------------------
