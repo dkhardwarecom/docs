@@ -80,3 +80,13 @@ Example:
 | email | * | string | max 100 | Email address|
 | notes |  | string |   | Notes about vendor |
 | addresses |  |[Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#address)[] |  | Vendor's addresses|
+
+# Releases
+-------------------------------
+| Date | Version |
+|--|--|
+| 2022 September 12 | 20220912.1 |
+### Release Notes
+* Data read endpoints added.
+-------------------------------
+
