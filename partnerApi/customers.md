@@ -187,3 +187,12 @@ Example:
 | isDefaultShipping |  | boolean | default(false) | It is default shipping address  |
 | createdAt | * | dateTime |  | Creation date and time in UTC format |
 | updatedAt | * | dateTime |  | Updated date and time in UTC format |
+
+# Releases
+-------------------------------
+| Date | Version |
+|--|--|
+| 2022 September 12 | 20220912.1 |
+### Release Notes
+* Data read endpoints added.
+-------------------------------
