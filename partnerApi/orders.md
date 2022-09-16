@@ -215,3 +215,12 @@ extra fields:
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | shippingType | * | string | max 50 | **Dropship** or **Coming in House** |
+
+# Releases
+-------------------------------
+| Date | Version |
+|--|--|
+| 2022 September 12 | 20220912.1 |
+### Release Notes
+* Data read endpoints added.
+-------------------------------
