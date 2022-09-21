@@ -425,7 +425,7 @@ Example for 500:
 -------------------------------
 | Date | Version |
 |--|--|
-| 2022 September 21 | 20220921.1 |
+| 2022 September 21 | 20220921.3 |
 ### Release Notes
 * Customer create and update endpoints added.
 * Customer operations status endpoint added.
