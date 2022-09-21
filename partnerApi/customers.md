@@ -29,27 +29,27 @@ Example:
             "customerId": "874410",
             "createdAt": "2022-08-05T05:56:44",
             "updatedAt": "2022-08-05T05:56:44",
-            "firstName": "Jesse",
-            "lastName": "Book",
-            "email": "jesse.superbtrucking@gmail.com",
+            "firstName": "Some",
+            "lastName": "Person",
+            "email": "some.email@some.site",
             "company": "",
-            "phone": "3068677031",
+            "phone": "4678478",
             "altPhone": null,
             "fax": null,
             "addresses": [
                 {
                     "addressId": "187218",
                     "customerId": "874410",
-                    "firstName": "Jesse",
-                    "lastName": "Book",
+                    "firstName": "Some",
+                    "lastName": "Person",
                     "zip": "S9H 4T7",
                     "country": "Canada",
                     "state": "SK",
                     "city": "Swift Current",
-                    "address1": "405 Northcote DR",
+                    "address1": "77 Road",
                     "address2": null,
                     "company": null,
-                    "phone": "3068677031",
+                    "phone": "53678538",
                     "altPhone": null,
                     "fax": null,
                     "isDefaultBilling": false,
@@ -88,9 +88,9 @@ Example:
         "customerId": "21762",
         "createdAt": "2015-01-13T22:16:49",
         "updatedAt": "2022-08-02T13:46:00",
-        "firstName": "MIKE",
-        "lastName": "TIMMONS",
-        "email": "timmons.mike@gmail.com",
+        "firstName": "Some",
+        "lastName": "Person",
+        "email": "some.email@some.site",
         "company": "",
         "phone": "713-254-1161",
         "altPhone": null,
@@ -99,16 +99,16 @@ Example:
             {
                 "addressId": "187218",
                 "customerId": "21762",
-                "firstName": "MIKE",
-                "lastName": "TIMMONS",
+                "firstName": "Some",
+                "lastName": "Person",
                 "zip": "77377",
                 "country": "United States",
                 "state": "TX",
                 "city": "TOMBALL",
-                "address1": "12030 ECHO CANYON DR",
+                "address1": "456 BIG MOUNTAIN",
                 "address2": "",
                 "company": "",
-                "phone": "713-254-1161",
+                "phone": "513-254-1161",
                 "altPhone": "",
                 "fax": "",
                 "isDefaultBilling": true,
@@ -117,16 +117,16 @@ Example:
             {
                 "addressId": "187218",
                 "customerId": "21762",
-                "firstName": "MIKE",
-                "lastName": "TIMMONS",
+                "firstName": "Some",
+                "lastName": "Person",
                 "zip": "78247",
                 "country": "United States",
                 "state": "TX",
                 "city": "SAN ANTONIO",
-                "address1": "12891 WETMORE RD",
+                "address1": "128 WETMORE RD",
                 "address2": "",
                 "company": "",
-                "phone": "713-254-1161",
+                "phone": "964-254-1161",
                 "altPhone": "",
                 "fax": "",
                 "isDefaultBilling": false,
@@ -146,7 +146,7 @@ Example:
 | 500 |  |
 | 404 |  |
 
-# Create Customers
+# Create Customer
 
 ## Path
 /v1/customer/create
@@ -164,7 +164,7 @@ POST
 {
 	"firstName": "Some",
 	"lastName": "Person",
-	"email": "some-email@some.site",
+	"email": "some.email@some.site",
 	"company": "",
 	"phone": "14562356",
 	"altPhone": null,
@@ -236,7 +236,7 @@ Example for 500:
 }
 ```
 
-# Update Customers
+# Update Customer
 
 ## Path
 /v1/customer/update
