@@ -308,6 +308,71 @@ Example for 500:
 }
 ```
 
+# Customer operation status
+
+## Path
+/v1/customer/status
+
+## Method
+
+POST
+
+## Body
+
+SubmissionId serialized as json.
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| SubmissionId | * | string | max 64 | Identifier of operation received at create or update response. |
+
+## Valid Request
+```
+{
+    "submissionId": "77921d3a-7838-40bf-a2d2-e30424d15520"
+}
+```
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "customerId": 463118,
+    "status": "Succeeded",
+    "errors": null
+}
+```
+
+Example with errors messages:
+```
+{
+    "customerId": null,
+    "status": "Failed",
+    "errors": [
+        "Property Email failed validation. Error: 'Email' must not be empty."
+    ]
+}
+```
+
+## Error Response
+
+| HTTP status code | Message |
+|--|--|
+| 500 | System error. |
+|  |  |
+
+Example for 500:
+```
+{
+    "status": 500,
+    "title": "System error.",
+    "traceId": "3a6a590a-1263-4fb0-a330-82e9e62c13c9"
+}
+```
+
+
 
 # Contracts
 ## Customer
@@ -363,4 +428,5 @@ Example for 500:
 | 2022 September 21 | 20220921.1 |
 ### Release Notes
 * Customer create and update endpoints added.
+* Customer operations status endpoint added.
 -------------------------------
