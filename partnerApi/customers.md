@@ -157,7 +157,7 @@ POST
 
 ## Body
 
-[Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#customer) contract serialized as json include addresses.
+[Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#customer) contract serialized as json **include** addresses.
 
 ## Valid Request
 ```
@@ -247,7 +247,7 @@ POST
 
 ## Body
 
-[Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#customer) contract serialized as json except addresses.
+[Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#customer) contract serialized as json **except** addresses.
 
 ## Valid Request
 ```
