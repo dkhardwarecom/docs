@@ -146,6 +146,168 @@ Example:
 | 500 |  |
 | 404 |  |
 
+# Create Customers
+
+## Path
+/v1/customer/create
+
+## Method
+
+POST
+
+## Body
+
+[Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#customer) contract serialized as json include addresses.
+
+## Valid Request
+```
+{
+	"firstName": "Some",
+	"lastName": "Person",
+	"email": "some-email@some.site",
+	"company": "",
+	"phone": "14562356",
+	"altPhone": null,
+	"fax": null,
+	"addresses": [
+		{
+			"firstName": "Some",
+			"lastName": "Person",
+			"zip": "80911",
+			"country": "United States",
+			"state": "CO",
+			"city": "Colorado Springs",
+			"address1": "55 Some St",
+			"address2": null,
+			"company": null,
+			"phone": "56235776",
+			"altPhone": null,
+			"fax": null,
+			"isDefaultBilling": true,
+			"isDefaultShipping": true
+		}
+	]
+}
+```
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "submissionId": "77921d3a-7838-40bf-a2d2-e30424d15520"
+}
+```
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 | One or more validation errors occurred. |
+| 500 | System error. |
+|  |  |
+
+Example for 400:
+```
+{
+    "status": 400,
+    "title": "One or more validation errors occurred.",
+    "traceId": "d5c99cbf-054d-4be1-8f09-c8b198926765",
+    "errors": {
+        "CustomerId": [
+            "'Customer Id' must be empty."
+        ],
+        "Email": [
+            "'Email' must not be empty."
+        ]
+    }
+}
+```
+
+Example for 500:
+```
+{
+    "status": 500,
+    "title": "System error.",
+    "traceId": "d7234748-ba00-4d87-8cf2-246423cc172c"
+}
+```
+
+# Update Customers
+
+## Path
+/v1/customer/update
+
+## Method
+
+POST
+
+## Body
+
+[Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#customer) contract serialized as json except addresses.
+
+## Valid Request
+```
+{
+"customerId":"463118",
+"firstName": "Some",
+"lastName": "Big Person",
+"company": "Horns and hooves",
+"phone": "14562356",
+"altPhone": null,
+"fax": "24562456"
+}
+```
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "submissionId": "ddf7db40-5d43-45f0-a260-8015320ed828"
+}
+```
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 | One or more validation errors occurred. |
+| 500 | System error. |
+|  |  |
+
+Example for 400:
+```
+{
+    "status": 400,
+    "title": "One or more validation errors occurred.",
+    "traceId": "40bd4d7d-195b-4194-898b-727e4f7357bf",
+    "errors": {
+        "CustomerId": [
+            "'Customer Id' must not be empty."
+        ],
+        "Email": [
+            "'Email' must be empty."
+        ]
+    }
+}
+```
+
+Example for 500:
+```
+{
+    "status": 500,
+    "title": "System error.",
+    "traceId": "3a6a590a-1263-4fb0-a330-82e9e62c13c9"
+}
+```
+
 
 # Contracts
 ## Customer
@@ -195,4 +357,10 @@ Example:
 | 2022 September 12 | 20220912.1 |
 ### Release Notes
 * Data read endpoints added.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2022 September 21 | 20220921.1 |
+### Release Notes
+* Customer create and update endpoints added.
 -------------------------------
