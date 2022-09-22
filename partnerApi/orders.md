@@ -39,8 +39,8 @@ Example:
             "shippingDiscount": 0.0,
             "handlingFee": 0.0,
             "billing": {
-                "firstName": "Gloria",
-                "lastName": "Thompson",
+                "firstName": "Some",
+                "lastName": "Person",
                 "company": "",
                 "phone": "5613765386",
                 "altPhone": "",
@@ -49,13 +49,13 @@ Example:
                 "country": "United States",
                 "state": "FL",
                 "city": "Delray Beach",
-                "address1": "8602 Sawpine Rd",
+                "address1": "4417 Some Rd",
                 "address2": "",
-                "email": "D37B99CFACAC4DF691193B0441108F86@relay.walmart.com"
+                "email": "someperson@relay.walmart.com"
             },
             "shipping": {
-                "firstName": "Gloria",
-                "lastName": "Thompson",
+                "firstName": "Some",
+                "lastName": "Person",
                 "company": "",
                 "phone": "5613765386",
                 "altPhone": "",
@@ -64,9 +64,9 @@ Example:
                 "country": "United States",
                 "state": "FL",
                 "city": "Delray Beach",
-                "address1": "8602 Sawpine Rd",
+                "address1": "4417 Some Rd",
                 "address2": "",
-                "email": "D37B99CFACAC4DF691193B0441108F86@relay.walmart.com"
+                "email": "someperson@relay.walmart.com"
             },
             "items": [
                 {
