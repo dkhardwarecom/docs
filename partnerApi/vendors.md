@@ -7,6 +7,9 @@
 
 GET
 
+## Scope
+vendors
+
 ## Query Parameters
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
@@ -41,6 +44,9 @@ Example:
 ## Method
 
 GET
+
+## Scope
+vendors
 
 ## Success Response
 
