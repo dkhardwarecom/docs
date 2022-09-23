@@ -7,6 +7,9 @@
 
 GET
 
+## Scope
+customers
+
 ## Query Parameters
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
@@ -76,6 +79,9 @@ Example:
 ## Method
 
 GET
+
+## Scope
+customers
 
 ## Success Response
 
@@ -154,6 +160,9 @@ Example:
 ## Method
 
 POST
+
+## Scope
+customers:create
 
 ## Body
 
@@ -245,6 +254,9 @@ Example for 500:
 
 POST
 
+## Scope
+customers:update
+
 ## Body
 
 [Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#customer) contract serialized as json **except** addresses.
@@ -316,6 +328,9 @@ Example for 500:
 ## Method
 
 POST
+
+## Scope
+customers:status
 
 ## Body
 
