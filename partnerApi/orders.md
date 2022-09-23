@@ -7,6 +7,9 @@
 
 GET
 
+## Scope
+orders
+
 ## Query Parameters
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
@@ -109,6 +112,9 @@ Looks the same as orders but different type. Instead of `orderId` is using `quot
 
 GET
 
+## Scope
+quotes
+
 # Get Ruturns/ RMA
 Looks the same as orders but different type. Instead of `orderId` is using `returnId`
 
@@ -118,6 +124,9 @@ Looks the same as orders but different type. Instead of `orderId` is using `retu
 ## Method
 
 GET
+
+## Scope
+returns
 
 # Get Vendor Order
 Looks the same as customer orders but different type. See [Contracts](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#vendor-order)
@@ -129,6 +138,9 @@ Looks the same as customer orders but different type. See [Contracts](https://gi
 
 GET
 
+## Scope
+vendor-orders
+
 # Get Vendor Quotes
 Looks the same as customer quotes but different type.
 
@@ -139,6 +151,9 @@ Looks the same as customer quotes but different type.
 
 GET
 
+## Scope
+vendor-quotes
+
 # Get Vendor Ruturns/ RMA
 Looks the same as customer rma but different type.
 
@@ -148,6 +163,9 @@ Looks the same as customer rma but different type.
 ## Method
 
 GET
+
+## Scope
+vendor-returns
 
 # Contracts
 
