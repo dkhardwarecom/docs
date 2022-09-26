@@ -101,8 +101,8 @@ Example:
 | size |  | string | max 50 | Product size (is using in varitions) |
 | finish |  | string | max 255 | Product finish or color (is using in varitions) |
 | packSize |  | Integer |  | pack size (is using in varitions) |
-| cost |  | Money |  | Prodcut cost at USD |
-| price |  | Money |  | Poduct price at USD |
+| cost |  | Money |  | Prodcut cost (USD) |
+| price |  | Money |  | Poduct price (USD) |
 | totalStock |  | Integer |  | Total stock (vendor + local) |
 | localStock |  | Integer |  | Availability at local warehouses |
 | vendorStock |  | Integer |  | Availability at vendor warehouses |
