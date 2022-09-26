@@ -101,6 +101,11 @@ Example:
 | size |  | string | max 50 | Product size (is using in varitions) |
 | finish |  | string | max 255 | Product finish or color (is using in varitions) |
 | packSize |  | Integer |  | pack size (is using in varitions) |
+| cost |  | Money |  | Prodcut cost at USD |
+| price |  | Money |  | Poduct price at USD |
+| totalStock |  | Integer |  | Total stock (vendor + local) |
+| localStock |  | Integer |  | Availability at local warehouses |
+| vendorStock |  | Integer |  | Availability at vendor warehouses |
 
 
 ## Brand
@@ -123,4 +128,10 @@ Example:
 | 2022 September 12 | 20220912.1 |
 ### Release Notes
 * Data read endpoints added.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2022 September 26 | 20220926.1 |
+### Release Notes
+* Product model extended by 'cost, price, localStock, vendorStock, totalStock' fields.
 -------------------------------
