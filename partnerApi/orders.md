@@ -226,7 +226,7 @@ vendor-returns
 | email |  | string  | max 100|Email address|
 
 ## Customer Order
-**Inherits common order fields from [Common Order Fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
+**Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
 
 extra fields:
 
@@ -238,7 +238,7 @@ extra fields:
 | returnIds |  | array of string | max 64 | Returns Ids for the current order |
 
 ## Customer Quote
-**Inherits common order fields from [Common Order Fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
+**Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
 
 extra fields:
 
@@ -247,7 +247,7 @@ extra fields:
 | orderIds |  | array of string | max 64 | Order Ids for the current quote |
 
 ## Customer Return
-**Inherits common order fields from [Common Order Fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
+**Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
 
 extra fields:
 
@@ -256,7 +256,7 @@ extra fields:
 | parentOrderId |  | string | max 64 | Id of parent order |
 
 ## Vendor Order
-**Inherits common order fields from [Common Order Fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
+**Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
 
 extra fields:
 
@@ -269,7 +269,7 @@ extra fields:
 | returnIds |  | array of string | max 64 | Vendor returns Ids for the current vendor order |
 
 ## Vendor Quote
-**Inherits common order fields from [Common Order Fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
+**Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
 
 extra fields:
 
@@ -278,7 +278,7 @@ extra fields:
 | orderIds |  | array of string | max 64 | Vendor order Ids for the current vendor quote |
 
 ## Vendor Return
-**Inherits common order fields from [Common Order Fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
+**Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
 
 extra fields:
 
