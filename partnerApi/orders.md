@@ -172,7 +172,7 @@ vendor-returns
 ## Common Order Fields
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-|  orderId | * | string | max 64 | Order identifier |
+| orderId | * | string | max 64 | Order identifier |
 | createdAt | * | dateTime |  | Creation date and time in UTC format |
 | updatedAt | * | dateTime  |  | Last changes date and time in UTC format |
 | total | * | money |  | Order total |
@@ -225,14 +225,66 @@ vendor-returns
 | address2 |  | string  | max 255 | Address line 2 |
 | email |  | string  | max 100|Email address|
 
+## Customer Order
+**Inherits common order fields from [Common Order Fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
+
+extra fields:
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| parentQuoteId |  | string | max 64 | Id of parent quote |
+| replacementForOrderId |  | string | max 64 | Id of parent order in case of the current order is replacement |
+| replacementOrderIds |  | array of string | max 64 | Replacement Ids for the current order |
+| returnIds |  | array of string | max 64 | Returns Ids for the current order |
+
+## Customer Quote
+**Inherits common order fields from [Common Order Fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
+
+extra fields:
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| orderIds |  | array of string | max 64 | Order Ids for the current quote |
+
+## Customer Return
+**Inherits common order fields from [Common Order Fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
+
+extra fields:
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| parentOrderId |  | string | max 64 | Id of parent order |
+
 ## Vendor Order
-**Inherits fields from [Order](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#order)**
+**Inherits common order fields from [Common Order Fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
 
 extra fields:
 
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | shippingType | * | string | max 50 | **Dropship** or **Coming in House** |
+| parentQuoteId |  | string | max 64 | Id of parent vendor quote |
+| replacementForOrderId |  | string | max 64 | Id of parent vendor order in case of the current vendor order is replacement |
+| replacementOrderIds |  | array of string | max 64 | Vendor replacement order Ids for the current vendor order |
+| returnIds |  | array of string | max 64 | Vendor returns Ids for the current vendor order |
+
+## Vendor Quote
+**Inherits common order fields from [Common Order Fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
+
+extra fields:
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| orderIds |  | array of string | max 64 | Vendor order Ids for the current vendor quote |
+
+## Vendor Return
+**Inherits common order fields from [Common Order Fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
+
+extra fields:
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| parentOrderId |  | string | max 64 | Id of parent vendor order |
 
 # Releases
 -------------------------------
@@ -241,4 +293,10 @@ extra fields:
 | 2022 September 12 | 20220912.1 |
 ### Release Notes
 * Data read endpoints added.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2022 October 04 | 20221004.1 |
+### Release Notes
+* Orders, returns, replacement orders, quotes links added.
 -------------------------------
