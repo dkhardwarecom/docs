@@ -370,6 +370,14 @@ Example with errors messages:
     ]
 }
 ```
+### Statuses
+
+| Status | Description |
+|--|--|
+| Accepted | Submission accepted, but processing has not started yet. |
+| Processing | Processing started. |
+| Succeeded | Processed succeeded. | 
+| Failed | Processed failed. | 
 
 ## Error Response
 
