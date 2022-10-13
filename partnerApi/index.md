@@ -10,3 +10,5 @@
 
 [Products](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/products.md)
 
+[Shipping](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md)
+
