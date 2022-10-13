@@ -17,20 +17,20 @@ shipping
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | OrderItems| * | Array of [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md#order-item) |  | Order items with id and quantity |
-| DeliveryAddress | * |Complex type [Country and State Delivery Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md#country-and-state-delivery-address)  |  | Address to delivery |
-| OrderSubTotal | | Money | greater than 0 | Amount of order subtotal |
+| DeliveryAddress | * |Complex type [Country and State Delivery Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md#country-and-state-delivery-address)  |  | Address to delivery. |
+| OrderSubTotal | | Money | greater than 0 | Amount of order subtotal. |
 
 ### Country and State Delivery Address
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| Country | * | string | max 2 | Country code. For example: "US" for USA, "IN" for India, "RU" for Russian Federation. |
+| Country | * | string | max 2 | Country code. For example: "US" for USA, "IN" for India. |
 | StateCode |  | string |  | Code of region. |
 
 ### Order Item
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| ProductId | * | long integer | greater than 0 | Id of product |
-| Quantity | * | integer  | greater than 0 | Quantity to order |
+| ProductId | * | long integer | greater than 0 | Id of product. |
+| Quantity | * | integer  | greater than 0 | Quantity to order. |
 
 ## Body
 
@@ -168,29 +168,29 @@ Example for 500:
 
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| id | * | string | max 64 | Shipping method identifier |
-| default | * | boolean |  | Flag for default method |
+| id | * | string | max 64 | Shipping method identifier. |
+| default | * | boolean |  | Flag for default method. |
 | title | * | string | max 250 | Shipping method title.  |
-| shipping | * | Complex type [Shipping info](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md#shipping-info) |  | Information about shipping |
-| delivery | * | Complex type [Delivery info](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md#delivery-info) |  | Information about delivery |
+| shipping | * | Complex type [Shipping info](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md#shipping-info) |  | Information about shipping. |
+| delivery | * | Complex type [Delivery info](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md#delivery-info) |  | Information about delivery. |
 
 ## Shipping Info
 
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| total | * | money | | Total in USD |
-| shippingCost | * | money |  | Cost of shipping in USD |
-| handlingFee | * | money |  | Handling fee in USD  |
+| total | * | money | | Total in USD. |
+| shippingCost | * | money |  | Cost of shipping in USD. |
+| handlingFee | * | money |  | Handling fee in USD.  |
 
 ## Delivery Info
 
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| businessDays.from |  | integer | | Minimum days for delivery |
-| businessDays.to |  | integer | | Maximum days for delivery |
-| dateUtc.from | * | date and time | UTC | Minimum date and time for delivery |
-| dateUtc.to | * | date and time | UTC | Maximum date and time for delivery |
-| cutOffUtc | * | date and time | UTC | Shipping rate expiration |
+| businessDays.from |  | integer | | Minimum days for delivery. |
+| businessDays.to |  | integer | | Maximum days for delivery. |
+| dateUtc.from | * | date and time | UTC | Minimum date and time for delivery. |
+| dateUtc.to | * | date and time | UTC | Maximum date and time for delivery. |
+| cutOffUtc | * | date and time | UTC | Shipping rate expiration. |
 
 
 
