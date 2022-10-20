@@ -130,7 +130,7 @@ subscriptions:edit
 
 ## Body
 
-[Subscription](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscriptions.md#subscription) contract serialized as json.
+[Subscription](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#subscription-base) contract serialized as json.
 
 ## Valid Request
 ```
@@ -204,7 +204,7 @@ Subscriptions:edit
 
 ## Body
 
-[Subscription](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscriptions.md#subscription) contract serialized as json.
+[Subscription](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#subscription-base) contract serialized as json.
 
 ## Valid Request
 ```
@@ -324,5 +324,41 @@ Example for 500:
 
 # Contracts
 
+### Subscription Base
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| subscriptionId | * | string | max 64 | Identifier of subscription |
+| enentType | * | string | max 64 | Type of event. For example: 'customer:changed'. |
+| actionType | * | enum | values: webhook,...  | Type of subscription action. For example: webhook url call. |
+| policies |  |Complex type [Subscription Policies](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#subscription-policies)  |  | Some behaviour policies for Subscription. |
+| createdAt |  | dateTime |  | Creation date and time in UTC format |
+| updatedAt |  | dateTime |  | Updated date and time in UTC format |
 
+### Subscription Policies
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| Retry | * |Complex type [RetryPolicy](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#retry-policy)  |  | Retry policy settings. |
+
+### Retry Policy
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| Intervals | * |Array of [RetryPolicyInterval](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#retry-policy-interval)  |  | Retry policy settings. |
+
+### Retry Policy Interval
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| Value | * | time span  |  | Value of interval. For example '02:10:30' for 2 hours 10 minutes and 30 seconds.  |
+
+### Webhook Action Subscription
+Specific for webhook action:
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| Webhook | * |Complex type [Webhook](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#webhook)  |  | Webhook settings. |
+
+### Webhook
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| Url | * | string  | max 1024 https only | Url for HTTP POST call. Normalized url. Https required. |
+| Secret | * | string  | max 64 | Secret string shared for webhook url caller and subscription creator. Sent as part of https POST request. |
 
