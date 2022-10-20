@@ -344,6 +344,6 @@ Specific for webhook action:
 ### Webhook
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| url | * for creation only | string  | max 1024 https only | Url for HTTP POST call. Normalized url. Https required. |
+| url | * for creation only | string  | max 1024 </br> https only | Url for HTTP POST call. Normalized url. Https required. |
 | secret | * for creation only | string  | max 64 | Secret string shared for webhook url caller and subscription creator. Sent as part of https POST request. |
 
