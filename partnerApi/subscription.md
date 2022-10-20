@@ -1,6 +1,9 @@
 
 # Get Subscriptions
 
+Subscriptions are using for get notification about change entity event in near real time. The first step is registration subscription for defined event type.
+The main part of registation is HTTPS URL as webhook. When event will be triggered that webhook will be called as POST request. Request will content SECRET as a part of security for checking that caller is DKH API system.  Also the POST request will has payload based on event type. The most common case will be entity identifyer. Endpoint on webhook part should response with success http code = 200. If not retry policy will be applyed. 
+
 ## Path
 /v1/subscription/
 
