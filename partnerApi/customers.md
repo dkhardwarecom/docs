@@ -438,6 +438,35 @@ Example for 500:
 | createdAt | * | dateTime |  | Creation date and time in UTC format |
 | updatedAt | * | dateTime |  | Updated date and time in UTC format |
 
+# Events
+
+## Customer Changed
+
+### Id
+customer:changed
+
+### Payload
+| Field | Type | Description |
+|--|--|--|
+| customerIds | Array of string | Identifiers of changed customers.  |
+| date |  date and time | UTC date of changes. |
+
+Example:
+```
+{
+	"event": "customer:changed",
+	"secret": "40158583e9bd9d122014907b57a60c12",
+	"payload": {
+		"customerIds": [
+			"6235",
+			"11345",
+			"8737"
+		],
+		"date":"2022-10-20T11:15:45Z"
+	}
+}
+```
+
 # Releases
 -------------------------------
 | Date | Version |
