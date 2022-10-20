@@ -14,14 +14,7 @@ subscriptions
 ## Query Parameters
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| from|  | DateTime| default(null)<br />UTC | From updated (or created) date and time filter value.<br /> Example: /v1/customer?from=2022-03-11T22:15:59Z |
-| to|  | DateTime| default(null)<br />UTC | To updated (or created) date and time filter value.<br /> Example: /v1/customer?to=2022-03-13T10:45:11Z |
 | eventType |  | string| max 64  | Type of event. For example: 'customer:changed'. |
-| actionType |  | enum | values: webhook,...  | Type of subscription action. For example: webhook url call. |
-| newest|  | Boolean| default(true) | If true, return in descending order newest to oldest. |
-| limit|  | integer | max 1000, default(100) | Return a number of records with the set limit value. |
-| offset |  | integer | default(0) | Return a subset of records starting with the offset value. |
-| basedOnCreatedDate|  | Boolean | default(false) | If true, return subset based on created date else updated date |
 
 ## Success Response
 
@@ -32,12 +25,11 @@ Example:
 {
 	"payload": [
 		{
+			"subscriptionId": "bbd76e0b-b14e-4610-b307-041fd4cfdfa4",
 			"webhook": {
-				"secret": "40158583e9bd9d122014907b57a60c12",
 				"url": "https://some.site/webhook"
 			},
-			"enentType": "customer:changed",
-			"actionType": "webhook",
+			"eventType": "customer:changed",
 			"policies": {
 				"retry": {
 					"intervals": [
@@ -48,8 +40,7 @@ Example:
 				}
 			},
 			"createdAt": "2022-10-20T11:15:45.2397901Z",
-			"updatedAt": "2022-10-20T11:15:45.2398178Z",
-			"subscriptionId": "bbd76e0b-b14e-4610-b307-041fd4cfdfa4"
+			"updatedAt": "2022-10-20T11:15:45.2398178Z"
 		}
 	]
 }
@@ -86,11 +77,9 @@ Example:
 {
 	"payload": {
 		"webhook": {
-			"secret": "40158583e9bd9d122014907b57a60c12",
 			"url": "https://some.site/webhook"
 		},
-		"enentType": "customer:changed",
-		"actionType": "webhook",
+		"eventType": "customer:changed",
 		"policies": {
 			"retry": {
 				"intervals": [
@@ -140,7 +129,6 @@ subscriptions:edit
 		"url": "https://some.site/webhook"
 	},
 	"enentType": "customer:changed",
-	"actionType": "webhook",
 	"policies": {
 		"retry": {
 			"intervals": [
@@ -150,7 +138,8 @@ subscriptions:edit
 				{
 					"value": "00:02:00"
 				}
-			]
+			],
+			"requestTimeout": "00:01:40"	
 		}
 	}
 }
@@ -204,25 +193,21 @@ Subscriptions:edit
 
 ## Body
 
-[Subscription](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#subscription-base) contract serialized as json.
+[Subscription](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#subscription-base) contract serialized as json. 
+*Only policies allowed to update.*
 
 ## Valid Request
 ```
 {
 	"subscriptionId": "bbd76e0b-b14e-4610-b307-041fd4cfdfa4",
-	"webhook": {
-		"secret": "40158583e9bd9d122014907b57a60c12",
-		"url": "https://some-other.site/webhook"
-	},
-	"enentType": "customer:changed",
-	"actionType": "webhook",
 	"policies": {
 		"retry": {
 			"intervals": [
 				{
 					"value": "00:00:20"
 				}
-			]
+			],
+			"requestTimeout": "00:01:40"	
 		}
 	}
 }
@@ -328,8 +313,7 @@ Example for 500:
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | subscriptionId | * | string | max 64 | Identifier of subscription |
-| enentType | * | string | max 64 | Type of event. For example: 'customer:changed'. |
-| actionType | * | enum | values: webhook,...  | Type of subscription action. For example: webhook url call. |
+| eventType | * | string | max 64 | Type of event. For example: 'customer:changed'. |
 | policies |  |Complex type [Subscription Policies](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#subscription-policies)  |  | Some behaviour policies for Subscription. |
 | createdAt |  | dateTime |  | Creation date and time in UTC format |
 | updatedAt |  | dateTime |  | Updated date and time in UTC format |
@@ -337,28 +321,29 @@ Example for 500:
 ### Subscription Policies
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| Retry |  |Complex type [RetryPolicy](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#retry-policy)  |  | Retry policy settings. |
+| retry |  |Complex type [RetryPolicy](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#retry-policy)  |  | Retry policy settings. |
 
 ### Retry Policy
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| Intervals | * |Array of [RetryPolicyInterval](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#retry-policy-interval)  |  | Retry policy settings. |
+| intervals | * |Array of [RetryPolicyInterval](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#retry-policy-interval)  |  | Retry policy settings. |
+| requestTimeout |  | time span  |  | Timeout for each request. For example '00:01:40' for 100 seconds. |
 
 ### Retry Policy Interval
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| Value | * | time span  |  | Value of interval. For example '02:10:30' for 2 hours 10 minutes and 30 seconds.  |
+| value | * | time span  |  | Value of interval. For example '02:10:30' for 2 hours 10 minutes and 30 seconds.  |
 
 ### Webhook Action Subscription
 Specific for webhook action:
 
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| Webhook | * |Complex type [Webhook](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#webhook)  |  | Webhook settings. |
+| webhook | * | Complex type [Webhook](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#webhook)  |  | Webhook settings. |
 
 ### Webhook
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| Url | * | string  | max 1024 https only | Url for HTTP POST call. Normalized url. Https required. |
-| Secret | * | string  | max 64 | Secret string shared for webhook url caller and subscription creator. Sent as part of https POST request. |
+| url | * for creation only | string  | max 1024 https only | Url for HTTP POST call. Normalized url. Https required. |
+| secret | * for creation only | string  | max 64 | Secret string shared for webhook url caller and subscription creator. Sent as part of https POST request. |
 
