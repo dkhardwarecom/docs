@@ -337,7 +337,7 @@ Example for 500:
 ### Subscription Policies
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| Retry | * |Complex type [RetryPolicy](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#retry-policy)  |  | Retry policy settings. |
+| Retry |  |Complex type [RetryPolicy](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md#retry-policy)  |  | Retry policy settings. |
 
 ### Retry Policy
 | Field | Required | Type | Restrictions | Description |
