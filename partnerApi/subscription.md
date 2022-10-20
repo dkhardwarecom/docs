@@ -36,7 +36,8 @@ Example:
 						{
 							"value": "00:01:07"
 						}
-					]
+					],
+					"requestTimeout": "00:01:40"	
 				}
 			},
 			"createdAt": "2022-10-20T11:15:45.2397901Z",
@@ -86,7 +87,8 @@ Example:
 					{
 						"value": "00:01:07"
 					}
-				]
+				],
+				"requestTimeout": "00:01:40"	
 			}
 		},
 		"createdAt": "0001-01-01T00:00:00",
