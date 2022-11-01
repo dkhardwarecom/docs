@@ -133,7 +133,7 @@ subscriptions:edit
 		"secret": "40158583e9bd9d122014907b57a60c12",
 		"url": "https://some.site/webhook"
 	},
-	"enentType": "customer:changed",
+	"eventType": "customer:changed",
 	"policies": {
 		"retry": {
 			"intervals": [
