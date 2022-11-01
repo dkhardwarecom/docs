@@ -12,3 +12,5 @@
 
 [Shipping](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md)
 
+[Subscription](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md)
+
