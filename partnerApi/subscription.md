@@ -352,3 +352,11 @@ Specific for webhook action:
 | url | * for creation only | string  | max 1024 </br> https only | Url for HTTP POST call. Normalized url. Https required. |
 | secret | * for creation only | string  | max 64 | Secret string shared for webhook url caller and subscription creator. Sent as part of https POST request. |
 
+# Releases
+-------------------------------
+| Date | Version |
+|--|--|
+| 2022 November 17 | 20221117.2 |
+### Release Notes
+* Subscriptions endpoints added.
+-------------------------------
