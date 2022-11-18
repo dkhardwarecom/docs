@@ -106,6 +106,7 @@ Example:
 | totalStock |  | Integer |  | Total stock (vendor + local) |
 | localStock |  | Integer |  | Availability at local warehouses |
 | vendorStock |  | Integer |  | Availability at vendor warehouses |
+| vendors |  | Array of [ProductVendor](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/products.md#product-vendor) |  | Product vendors |
 
 
 ## Brand
@@ -120,6 +121,12 @@ Example:
 |  manufacturerId | * | string | max 64 | Manufacturer identifier |
 |  name | * | string | max 100 | Manufacturer name |
 
+## Product vendor
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+|  id | * | string | max 64 | Vendor identifier |
+|  name | * | string | max 300 | Vendor name |
+|  code | * | string | max 32 | Vendor code |
 
 # Releases
 -------------------------------
@@ -134,4 +141,10 @@ Example:
 | 2022 September 26 | 20220926.1 |
 ### Release Notes
 * Product model extended by 'cost, price, localStock, vendorStock, totalStock' fields.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2022 November 18 | 20221118.2 |
+### Release Notes
+* Add product vendors collection to product model.
 -------------------------------
