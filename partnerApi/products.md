@@ -125,8 +125,8 @@ Example:
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 |  id | * | string | max 64 | Vendor identifier |
-|  name | * | string | max 300 | Vendor name |
-|  code | * | string | max 32 | Vendor code |
+|  name |  | string | max 300 | Vendor name |
+|  code |  | string | max 32 | Vendor code |
 
 # Releases
 -------------------------------
