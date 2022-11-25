@@ -1,1 +1,162 @@
 
+# Get Shipping Rates
+
+## Path
+
+/v1/tax/for-order
+
+## Method
+
+POST
+
+## Scope
+taxes
+
+## Query Parameters
+
+### Shipping Rates Request
+| Name | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| ShippingAddress | * |Complex type [Shipping Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#shipping-address)  |  | Address to delivery. |
+| CallContext| * | Complex type [Call Context](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#call-context) |  | Required data for identify initiator and place of call |
+| OrderItems| | Array of [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#order-item) |  | Order items |
+| ShippingCost | | Money | greater than 0 | Cost of order shipping. |
+| ShippingDiscount | | Money | greater than 0 | Discount for order shipping. |
+| HandlingFee | | Money | greater than 0 | Fee for order handling. |
+
+
+### Shipping Address
+| Name | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| Country | * | string | max 2 | Country code. For example: "US" for USA, "IN" for India. |
+| StateCode |  | string | Required for country 'US' | Code of region. |
+| City |  | string | | City. |
+| Street |  | string |  | Street. |
+| Zip |  | string |  | Postal code. |
+| Email |  | string |  | Email. |
+
+
+### Order Item
+| Name | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| LineId | * | long | greater than 0, unique for all items | Position (number) of order line. It could be many lines with the same 'ProductId'. |
+| ProductId | * | string | max 64 | Id of product. |
+| Quantity | * | integer  | greater than 0 | Quantity to order. |
+| UnitPrice | * | Money  | greater than 0 | Price of one product item for order line. |
+| Discount |  | Money  | greater than 0 | Discount for one product item for order line. |
+
+For examle:
+| LineId | ProductId | Quantity | UnitPrice | Discount |
+|--|--|--|--|--|
+| 1 | "57632" | 3 | 17.95| |
+| 2 | "23311" | 1 | 1216.11| 60.80 |
+| 3 | "13476" | 2 | 18.77| |
+| 4 | "7632" | 5 | 134.05| |
+
+
+### Call Context
+
+Used for diagnosic reasons.
+
+| Name | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| InitiatorAccountId | * | string | max 128 | Identity of call initiator account. |
+| InitiatorAccountName |  | string | max 300 | Name of call initiator account. |
+| InitiatedFromPlace | | string | max 300 | Description of call initiation place. Code or description of Application Form, or an API subsystem alias. For example: 'Order Approving Form', 'Merchant API' |
+
+## Body
+
+[Shipping Rates Request](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#shipping-rates-request) object seralized as JSON.
+
+## Valid Request
+```
+{ "shippingAddress":
+    {
+        "country":"us",
+        "zip":"11122",
+        "stateCode":"NY",
+        "city":"NewYork",
+        "street": "1st av"
+    },
+    "callContext":{"initiatorAccountId":"54", "initiatorAccountName":"John Doe", "initiatedFromPlace":"Approve Order Form"},
+    "orderItems":[
+        {"lineId":"1", "productId":"57632", "quantity":3,  "unitPrice":17.95},
+        {"lineId":"2", "productId":"23311", "quantity":1, "unitPrice":1216.11, "discount":60.80 },
+        {"lineId":"3", "productId":"13476", "quantity":2,  "unitPrice":18.77},
+        {"lineId":"4", "productId":"7632", "quantity":5,  "unitPrice":134.05}
+        ],
+    "shippingCost":95.39,
+    "handlingFee":55.65
+}
+```
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "payload": {
+        "tax": 82.71,
+        "shippingTax": 6.04,
+        "lineItems": [
+            {
+                "lineId": 1,
+                "productId": "57632",
+                "tax": 2.15
+            },
+            {
+                "lineId": 2,
+                "productId": "23311",
+                "tax": 46.21
+            },
+            {
+                "lineId": 3,
+                "productId": "13476",
+                "tax": 1.50
+            },
+            {
+                "lineId": 4,
+                "productId": "7632",
+                "tax": 26.81
+            }
+        ],
+        "status": "Success"
+    }
+}
+```
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 | One or more validation errors occurred. |
+| 500 | System error. |
+|  |  |
+
+Example for 400:
+```
+{
+    "status": 400,
+    "title": "One or more validation errors occurred.",
+    "traceId": "6d607a7c-1a0f-4d37-83d8-ddd870707e2b",
+    "errors": {
+        "OrderItems[2].UnitPrice": [
+            "'Unit Price' must not be empty."
+        ]
+    }
+}
+```
+
+Example for 500:
+```
+{
+    "status": 500,
+    "title": "System error.",
+    "traceId": "d7234748-ba00-4d87-8cf2-246423cc172c"
+}
+```
+
+# Contracts
