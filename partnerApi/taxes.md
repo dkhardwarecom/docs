@@ -1,5 +1,5 @@
 
-# Get Shipping Rates
+# Get Tax for Order
 
 ## Path
 
