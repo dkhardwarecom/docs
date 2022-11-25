@@ -34,7 +34,7 @@ shipping
 
 ## Body
 
-[Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#customer) contract serialized as json **include** addresses.
+[Shipping Rates Request](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md#shipping-rates-request) contract serialized as JSON.
 
 ## Valid Request
 ```
