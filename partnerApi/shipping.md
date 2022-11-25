@@ -29,7 +29,7 @@ shipping
 ### Order Item
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| ProductId | * | long integer | greater than 0 | Id of product. |
+| ProductId | * | string | max 64 | Id of product. |
 | Quantity | * | integer  | greater than 0 | Quantity to order. |
 
 ## Body
@@ -40,8 +40,8 @@ shipping
 ```
 {
     "OrderItems":[
-         {"productId":40384, "Quantity":1}
-        ,{"productId":31399, "Quantity":1}
+         {"productId":"40384", "Quantity":1}
+        ,{"productId":"31399", "Quantity":1}
         ],
     "OrderSubTotal":95.39,
     "DeliveryAddress": {
