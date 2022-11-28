@@ -14,7 +14,7 @@ taxes
 
 ## Query Parameters
 
-### Shipping Rates Request
+### Tax for Order Request
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | ShippingAddress | * |Complex type [Shipping Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#shipping-address)  |  | Address to delivery. |
@@ -160,3 +160,31 @@ Example for 500:
 ```
 
 # Contracts
+
+## Tax for Order
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+|  tax | * | Money | | Tax sum for order. |
+|  shippingTax |  | Money | max 100 | Shipping tax sum for order |
+|  lineItems |  | Array of [Tax Line Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#tax-line-item) | | Detailed tax info by order line items |
+|  resultStatus |  | Enum value of [Result Status](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#result-status) | | Status of result. |
+|  fallbackReasons |  | Array of string | | Details about fallback reasons in case of Result Status is Fallback. |
+
+
+## Tax Line Item
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| LineId | * | long | greater than 0, unique for all items | Position (number) of order line of requested [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#order-item). |
+| ProductId | * | string | max 64 | Id of product. |
+| Tax | * | Money  | greater than 0 | Sum of tax for current item. |
+
+## Result Status
+| Value | Description |
+|--|--|
+|  Normal | Tax result without any anomalies.  |
+|  Exampt | Tax exemption was applied.  |
+|  Fallback | Result is fallback. See details at [Tax for Order](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#tax-for-order) -> fallbackReasons    |
+| Error | Some non critical system error occoured. |
+
+
+
