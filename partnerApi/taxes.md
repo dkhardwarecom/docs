@@ -176,7 +176,7 @@ Example for 500:
 |--|--|--|--|--|
 | LineId | * | long | greater than 0, unique for all items | Position (number) of order line of requested [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#order-item). |
 | ProductId | * | string | max 64 | Id of product. |
-| Tax | * | Money  | greater than 0 | Sum of tax for current item. |
+| Tax | * | Money  | greater than 0 | Sum of tax for current line item. |
 
 ## Result Status
 | Value | Description |
