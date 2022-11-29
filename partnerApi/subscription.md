@@ -270,7 +270,7 @@ SubscriptionId serialized as json.
 
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| SubscriptionId | * | string | max 64 | Identifier of subscription for delete. |
+| subscriptionId | * | string | max 64 | Identifier of subscription for delete. |
 
 ## Valid Request
 ```
