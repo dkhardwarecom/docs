@@ -16,21 +16,21 @@ shipping
 ### Shipping Rates Request
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| OrderItems| * | Array of [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md#order-item) |  | Order items with id and quantity |
-| DeliveryAddress | * |Complex type [Country and State Delivery Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md#country-and-state-delivery-address)  |  | Address to delivery. |
-| OrderSubTotal | | Money | greater than 0 | Amount of order subtotal. |
+| orderItems| * | Array of [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md#order-item) |  | Order items with id and quantity |
+| deliveryAddress | * |Complex type [Country and State Delivery Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md#country-and-state-delivery-address)  |  | Address to delivery. |
+| orderSubTotal | | Money | greater than 0 | Amount of order subtotal. |
 
 ### Country and State Delivery Address
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| Country | * | string | max 2 | Country code. For example: "US" for USA, "IN" for India. |
-| StateCode |  | string |  | Code of region. |
+| country | * | string | max 2 | Country code. For example: "US" for USA, "IN" for India. |
+| state |  | string |  | Code of region. |
 
 ### Order Item
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| ProductId | * | string | max 64 | Id of product. |
-| Quantity | * | integer  | greater than 0 | Quantity to order. |
+| productId | * | string | max 64 | Id of product. |
+| quantity | * | integer  | greater than 0 | Quantity to order. |
 
 ## Body
 
