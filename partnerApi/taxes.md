@@ -60,8 +60,8 @@ Used for diagnosic reasons.
 
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| InitiatorAccountId | * | string | max 128 | Identity of call initiator account. |
-| InitiatorAccountName |  | string | max 300 | Name of call initiator account. |
+| InitiatorAccountId | * | string | max 128 | Identity of call initiator account. For example UserID |
+| InitiatorAccountName |  | string | max 300 | Name of call initiator account. For example UserName  |
 | InitiatedFromPlace | | string | max 300 | Description of call initiation place. Code or description of Application Form, or an API subsystem alias. For example: 'Order Approving Form', 'Merchant API' |
 
 ## Body
