@@ -17,33 +17,34 @@ taxes
 ### Tax for Order Request
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| ShippingAddress | * |Complex type [Shipping Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#shipping-address)  |  | Address to delivery. |
-| CallContext| * | Complex type [Call Context](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#call-context) |  | Required data for identify initiator and place of call |
-| OrderItems| | Array of [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#order-item) |  | Order items |
-| ShippingCost | | Money | greater than 0 | Cost of order shipping. |
-| ShippingDiscount | | Money | greater than 0 | Discount for order shipping. |
-| HandlingFee | | Money | greater than 0 | Fee for order handling. |
+| shippingAddress | * |Complex type [Shipping Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#shipping-address)  |  | Address to delivery. |
+| email |  | string | valid email address | Customer email to bind exemption rules. |
+| callContext| * | Complex type [Call Context](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#call-context) |  | Required data for identify initiator and place of call |
+| orderItems| | Array of [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#order-item) |  | Order items |
+| shippingPrice | | Money | greater than 0 | Price of order shipping. |
+| shippingDiscount | | Money | greater than 0 | Discount for order shipping. |
+| handlingFee | | Money | greater than 0 | Fee for order handling. |
 
 
 ### Shipping Address
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| Country | * | string | max 2 | Country code. For example: "US" for USA, "IN" for India. |
-| StateCode |  | string | Required for country 'US' | Code of region. |
-| City |  | string | | City. |
-| Street |  | string |  | Street. |
-| Zip |  | string |  | Postal code. |
-| Email |  | string |  | Email. |
+| country | * | string | max 2 | Country code. For example: "US" for USA, "IN" for India. |
+| stateCode |  | string | Required for country 'US' | Code of region. |
+| city |  | string | | City. |
+| street |  | string |  | Street. |
+| zip |  | string |  | Postal code. |
+
 
 
 ### Order Item
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| LineId | * | long | greater than 0, unique for all items | Position (number) of order line. It could be many lines with the same 'ProductId'. |
-| ProductId | * | string | max 64 | Id of product. |
-| Quantity | * | integer  | greater than 0 | Quantity to order. |
-| UnitPrice | * | Money  | greater than 0 | Price of one product item for order line. |
-| Discount |  | Money  | greater than 0 | Discount for one product item for order line. |
+| lineId | * | long | greater than 0, unique for all items | Position (number) of order line. It could be many lines with the same 'ProductId'. |
+| productId | * | string | max 64 | Id of product. |
+| quantity | * | integer  | greater than 0 | Quantity to order. |
+| unitPrice | * | Money  | greater than 0 | Price of one product item for order line. |
+| discount |  | Money  | greater than 0 | Discount for one product item for order line. |
 
 For examle:
 | LineId | ProductId | Quantity | UnitPrice | Discount |
@@ -60,9 +61,9 @@ Used for diagnosic reasons.
 
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| InitiatorAccountId | * | string | max 128 | Identity of call initiator account. For example UserID |
-| InitiatorAccountName |  | string | max 300 | Name of call initiator account. For example UserName  |
-| InitiatedFromPlace | | string | max 300 | Description of call initiation place. Code or description of Application Form, or an API subsystem alias. For example: 'Order Approving Form', 'Merchant API' |
+| initiatorAccountId | * | string | max 128 | Identity of call initiator account. For example UserID |
+| initiatorAccountName |  | string | max 300 | Name of call initiator account. For example UserName  |
+| initiatedFrom | | string | max 300 | Description of call initiation place. Code or description of Application Form, or an API subsystem alias. For example: 'Order Approving Form', 'Merchant API' |
 
 ## Body
 
@@ -174,9 +175,9 @@ Example for 500:
 ## Tax Line Item
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| LineId | * | long | greater than 0, unique for all items | Position (number) of order line of requested [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#order-item). |
-| ProductId | * | string | max 64 | Id of product. |
-| Tax | * | Money  | greater than 0 | Sum of tax for current line item. |
+| lineId | * | long | greater than 0, unique for all items | Position (number) of order line of requested [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#order-item). |
+| productId | * | string | max 64 | Id of product. |
+| tax | * | Money  | greater than 0 | Sum of tax for current line item. |
 
 ## Result Status
 | Value | Description |
