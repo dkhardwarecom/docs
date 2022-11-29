@@ -187,5 +187,12 @@ Example for 500:
 |  Fallback | Result is fallback. See details at [Tax for Order](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#tax-for-order) -> fallbackReasons    |
 | Error | Some non critical system error occoured. |
 
-
+# Releases
+-------------------------------
+| Date | Version |
+|--|--|
+| 2022 November 29 | 20221129.4 |
+### Release Notes
+* Tax for order endpoint added.
+-------------------------------
 
