@@ -79,7 +79,7 @@ Used for diagnosic reasons.
         "city":"NewYork",
         "street": "1st av"
     },
-    "callContext":{"initiatorAccountId":"54", "initiatorAccountName":"John Doe", "initiatedFromPlace":"Approve Order Form"},
+    "callContext":{"userId":"54", "userName":"John Doe", "initiatedFrom":"Approve Order Form"},
     "orderItems":[
         {"lineId":"1", "productId":"57632", "quantity":3,  "unitPrice":17.95},
         {"lineId":"2", "productId":"23311", "quantity":1, "unitPrice":1216.11, "discount":60.80 },
@@ -138,7 +138,7 @@ Example:
         "city":"NewYork",
         "street": "1st av"
     },
-    "callContext":{"initiatorAccountId":"54", "initiatorAccountName":"John Doe", "initiatedFromPlace":"Approve Order Form"},
+    "callContext":{"userId":"54", "userName":"John Doe", "initiatedFrom":"Approve Order Form"},
     "orderItems":[
         {"lineId":"1", "productId":"57632", "quantity":3,  "unitPrice":17.95},
         {"lineId":"2", "productId":"23311", "quantity":1, "unitPrice":1216.11, "discount":60.80 },
