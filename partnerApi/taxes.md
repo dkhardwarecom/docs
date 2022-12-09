@@ -61,15 +61,15 @@ Used for diagnosic reasons.
 
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| initiatorAccountId | * | string | max 128 | Identity of call initiator account. For example UserID |
-| initiatorAccountName |  | string | max 300 | Name of call initiator account. For example UserName  |
+| UserId | * | string | max 128 | Identity of call initiator user account. |
+| UserName |  | string | max 300 | Name of call initiator user account. |
 | initiatedFrom | | string | max 300 | Description of call initiation place. Code or description of Application Form, or an API subsystem alias. For example: 'Order Approving Form', 'Merchant API' |
 
 ## Body
 
 [Shipping Rates Request](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#shipping-rates-request) object seralized as JSON.
 
-## Valid Request
+## Valid Request for Normal status
 ```
 { "shippingAddress":
     {
@@ -127,6 +127,69 @@ Example:
     }
 }
 ```
+
+## Valid Request for Fallback status
+```
+{ "shippingAddress":
+    {
+        "country":"us",
+        "zip":"46324",
+        "state":"NY",
+        "city":"NewYork",
+        "street": "1st av"
+    },
+    "callContext":{"initiatorAccountId":"54", "initiatorAccountName":"John Doe", "initiatedFromPlace":"Approve Order Form"},
+    "orderItems":[
+        {"lineId":"1", "productId":"57632", "quantity":3,  "unitPrice":17.95},
+        {"lineId":"2", "productId":"23311", "quantity":1, "unitPrice":1216.11, "discount":60.80 },
+        {"lineId":"3", "productId":"13476", "quantity":2,  "unitPrice":18.77},
+        {"lineId":"4", "productId":"7632", "quantity":5,  "unitPrice":134.05}
+        ],
+    "shippingCost":95.39,
+    "handlingFee":55.65
+}
+```
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "payload": {
+        "tax": 161.54,
+        "shippingTax": 4.55,
+        "lineItems": [
+            {
+                "lineId": 1,
+                "productId": "57632",
+                "tax": 4.41
+            },
+            {
+                "lineId": 2,
+                "productId": "23311",
+                "tax": 94.61
+            },
+            {
+                "lineId": 3,
+                "productId": "13476",
+                "tax": 3.07
+            },
+            {
+                "lineId": 4,
+                "productId": "7632",
+                "tax": 54.89
+            }
+        ],
+        "resultStatus": "Fallback",
+        "fallbackReasons": [
+            "Bad Request - to_zip 46324 is not used within to_state NY"
+        ]
+    }
+}
+```
+
 
 ## Error Response
 
