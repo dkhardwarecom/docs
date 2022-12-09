@@ -30,7 +30,7 @@ taxes
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | country | * | string | max 2 | Country code. For example: "US" for USA, "IN" for India. |
-| stateCode |  | string | Required for country 'US' | Code of region. |
+| state |  | string | Required for country 'US' | Code of region. |
 | city |  | string | | City. |
 | street |  | string |  | Street. |
 | zip |  | string |  | Postal code. |
@@ -75,7 +75,7 @@ Used for diagnosic reasons.
     {
         "country":"us",
         "zip":"11122",
-        "stateCode":"NY",
+        "state":"NY",
         "city":"NewYork",
         "street": "1st av"
     },
@@ -99,8 +99,8 @@ Example:
 ```
 {
     "payload": {
-        "tax": 82.71,
-        "shippingTax": 6.04,
+        "tax": 78.90,
+        "shippingTax": 2.23,
         "lineItems": [
             {
                 "lineId": 1,
@@ -123,7 +123,7 @@ Example:
                 "tax": 26.81
             }
         ],
-        "status": "Success"
+        "resultStatus": "Normal"
     }
 }
 ```
