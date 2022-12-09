@@ -14,3 +14,6 @@
 
 [Subscription](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/subscription.md)
 
+[Taxes](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md)
+
+
