@@ -91,7 +91,7 @@ Used for diagnosic reasons.
 }
 ```
 
-## Success Response
+### Success Response
 
 HTTP Status Code: 200
 
@@ -150,7 +150,7 @@ Example:
 }
 ```
 
-## Success Response
+### Success Response
 
 HTTP Status Code: 200
 
@@ -205,7 +205,7 @@ Example:
 }
 ```
 
-## Success Response
+### Success Response
 
 HTTP Status Code: 200
 
