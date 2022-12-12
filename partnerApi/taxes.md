@@ -200,7 +200,7 @@ Example:
         "city":"NewYork",
         "street": "1st av"
     },
-    "email":"service@oholeitorah.com",
+    "email":"carrt@canton.edu",
     "callContext":{"userId":"54", "userName":"John Doe", "initiatedFrom":"Approve Order Form"}
 }
 ```
