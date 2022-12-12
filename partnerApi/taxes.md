@@ -256,6 +256,16 @@ Example for 500:
 |--|--|
 | 2022 November 29 | 20221129.4 |
 ### Release Notes
+
 * Tax for order endpoint added.
+
+-------------------------------
+| Date | Version |
+|--|--|
+| 2022 December 12 | 20221212.1 |
+### Release Notes
+
+* Rename 'initiatorAccountId' to 'userId', 'initiatorAccountName' to 'userName'.
+
 -------------------------------
 
