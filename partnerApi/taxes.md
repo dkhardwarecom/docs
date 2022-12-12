@@ -61,8 +61,8 @@ Used for diagnosic reasons.
 
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| UserId | * | string | max 128 | Identity of call initiator user account. |
-| UserName |  | string | max 300 | Name of call initiator user account. |
+| userId | * | string | max 128 | Identity of call initiator user account. |
+| userName |  | string | max 300 | Name of call initiator user account. |
 | initiatedFrom | | string | max 300 | Description of call initiation place. Code or description of Application Form, or an API subsystem alias. For example: 'Order Approving Form', 'Merchant API' |
 
 ## Body
