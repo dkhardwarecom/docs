@@ -74,7 +74,7 @@ Used for diagnosic reasons.
 { "shippingAddress":
     {
         "country":"us",
-        "zip":"11122",
+        "zip":"11222",
         "state":"NY",
         "city":"NewYork",
         "street": "1st av"
