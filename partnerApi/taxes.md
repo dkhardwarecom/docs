@@ -246,7 +246,7 @@ Example for 500:
 | Value | Description |
 |--|--|
 |  Normal | Tax result without any anomalies.  |
-|  Exampt | Tax exemption was applied.  |
+|  Exempt | Tax exemption was applied.  |
 |  Fallback | Result is fallback. See details at [Tax for Order](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md#tax-for-order) -> fallbackReasons    |
 | Error | Some non critical system error occoured. |
 
