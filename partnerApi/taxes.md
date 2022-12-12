@@ -190,6 +190,35 @@ Example:
 }
 ```
 
+## Valid Request for Exempt status
+```
+{ "shippingAddress":
+    {
+        "country":"us",
+        "zip":"11222",
+        "state":"NY",
+        "city":"NewYork",
+        "street": "1st av"
+    },
+    "email":"service@oholeitorah.com",
+    "callContext":{"userId":"54", "userName":"John Doe", "initiatedFrom":"Approve Order Form"}
+}
+```
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "payload": {
+        "tax": 0,
+        "lineItems": [],
+        "resultStatus": "Exempt"
+    }
+}
+```
 
 ## Error Response
 
