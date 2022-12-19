@@ -16,4 +16,6 @@
 
 [Taxes](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/taxes.md)
 
+[Users](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/users.md)
+
 
