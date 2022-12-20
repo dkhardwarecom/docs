@@ -50,7 +50,7 @@ Example:
 |--|--|--|--|--|
 | id | * | string | max 64 | Users's identifier. |
 | name |  | string | max 300 | Users's name. |
-| enabled |  | bool | | User activity flag. In case of false - user login is disabled. |
+| enabled | * | bool | | User activity flag. In case of false - user login is disabled. |
 
 # Releases
 -------------------------------
