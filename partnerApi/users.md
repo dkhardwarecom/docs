@@ -64,6 +64,6 @@ Example:
 |--|--|
 | 2022 December 20 | 20221220.1 |
 ### Release Notes
-* Added "Enabled" flag for user model.
+* Added "enabled" flag for user model.
 -------------------------------
 
