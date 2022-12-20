@@ -48,8 +48,9 @@ Example:
 ## User
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| id | * | string | max 64 | Users's identifier |
-| name |  | string | max 300 | Users's name |
+| id | * | string | max 64 | Users's identifier. |
+| name |  | string | max 300 | Users's name. |
+| enabled |  | bool | | User activity flag. In case of false - user login is disabled. |
 
 # Releases
 -------------------------------
@@ -58,5 +59,11 @@ Example:
 | 2022 December 19 | 20221219.1 |
 ### Release Notes
 * User list endpoint added.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2022 December 20 | 20221220.1 |
+### Release Notes
+* Added "Enabled" flag for user model.
 -------------------------------
 
