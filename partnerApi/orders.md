@@ -134,6 +134,98 @@ Create Customer Quote Request
 | customerQuote | * | [Customer Quote](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#customer-quote) object |  | Customer quote object serialized as JSON. |
 | referenceId |  | string | max 64 | Id of quote in external system. |
 
+## Valid Request
+```
+{
+	"referenceId": "87",
+	"customerQuote": {
+		"responseTime": "ThreeDays",
+		"customerId": "424726",
+		"shippingPrice": 10,
+		"shippingTax": 1,
+		"shippingDiscount": 2,
+		"handlingFee": 3,
+		
+		"billing": {
+			"firstName": "John",
+			"lastName": "Doe",
+			"zip": "11122",
+			"country": "US",
+			"state": "NY",
+			"city": "New York",
+			"address1": "some st, 15"
+		},
+		"shipping": {
+			"firstName": "John",
+			"lastName": "Doe",
+			"zip": "11122",
+			"country": "US",
+			"state": "NY",
+			"city": "New York",
+			"address1": "some st, 15"
+		},
+		"items": [
+			{
+				"productId": "17",
+				"mpn": "SCW103N",
+				"itemName": "Satin Anodized Cashier Window Unit",
+				"quantity": 3,
+				"unitOfMeasure":{"id":"17"},
+				"unitPrice": 10,
+                "unitCost": 4,
+				"unitWeight": 113,
+				"tax": 2,
+				"discount": 1,
+				"lineposition": 1
+			}
+		],
+        "total": 43
+	}
+}
+```
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "submissionId": "351acbf8-2030-41b3-a0ea-0792236b5174"
+}
+```
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 | One or more validation errors occurred. |
+| 500 | System error. |
+|  |  |
+
+Example for 400:
+```
+{
+    "status": 400,
+    "title": "One or more validation errors occurred.",
+    "traceId": "0dc30f18-e6c9-45f9-b797-4d0c91401acc",
+    "errors": {
+        "items[0].unitCost": [
+            "'unit Cost' must not be empty."
+        ]
+    }
+}
+```
+
+Example for 500:
+```
+{
+    "status": 500,
+    "title": "System error.",
+    "traceId": "d7234748-ba00-4d87-8cf2-246423cc172c"
+}
+```
 
 # Get Ruturns/ RMA
 Looks the same as orders but different type. Instead of `orderId` is using `returnId`
