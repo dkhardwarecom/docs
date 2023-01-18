@@ -145,7 +145,6 @@ Create Customer Quote Request
 		"shippingTax": 1,
 		"shippingDiscount": 2,
 		"handlingFee": 3,
-		
 		"billing": {
 			"firstName": "John",
 			"lastName": "Doe",
@@ -170,16 +169,18 @@ Create Customer Quote Request
 				"mpn": "SCW103N",
 				"itemName": "Satin Anodized Cashier Window Unit",
 				"quantity": 3,
-				"unitOfMeasure":{"id":"17"},
+				"unitOfMeasure": {
+					"id": "17"
+				},
 				"unitPrice": 10,
-                "unitCost": 4,
+				"unitCost": 4,
 				"unitWeight": 113,
 				"tax": 2,
 				"discount": 1,
 				"lineposition": 1
 			}
 		],
-        "total": 43
+		"total": 43
 	}
 }
 ```
@@ -226,6 +227,82 @@ Example for 500:
     "traceId": "d7234748-ba00-4d87-8cf2-246423cc172c"
 }
 ```
+
+# Quote operation status
+
+## Path
+/v1/quote/status
+
+## Method
+
+POST
+
+## Scope
+quotes:status
+
+## Body
+
+SubmissionId serialized as json.
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| SubmissionId | * | string | max 64 | Identifier of operation received at create or update response. |
+
+## Valid Request
+```
+{
+    "submissionId": "32e6a31b-f48a-4b9f-ab36-fdcda6dda461"
+}
+```
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "quoteId": "638361",
+    "status": "Succeeded",
+    "errors": null
+}
+```
+
+Example with errors messages:
+```
+{
+    "quoteId": null,
+    "status": "Failed",
+    "errors": [
+        "Same reference ID already was used for another quote or in another request"
+    ]
+}
+```
+### Statuses
+
+| Status | Description |
+|--|--|
+| Accepted | Submission accepted, but processing has not started yet. |
+| Processing | Processing started. |
+| Succeeded | Processed succeeded. | 
+| Failed | Processed failed. | 
+
+## Error Response
+
+| HTTP status code | Message |
+|--|--|
+| 500 | System error. |
+|  |  |
+
+Example for 500:
+```
+{
+    "status": 500,
+    "title": "System error.",
+    "traceId": "e65230db-a1ae-44d4-a303-23c4cf8c13bf"
+}
+```
+
 
 # Get Ruturns/ RMA
 Looks the same as orders but different type. Instead of `orderId` is using `returnId`
