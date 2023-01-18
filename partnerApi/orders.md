@@ -483,8 +483,8 @@ extra fields:
 |--|--|
 | Unknown | Response time is unknown. Use any response time. |
 | OneDay | Response time is 1 day. |
-| ThreeDays | Response time are 3 days. |
-| FiveDays | Response time are 5 days. |
+| ThreeDays | Response time is 3 days. |
+| FiveDays | Response time is 5 days. |
 
 # Releases
 -------------------------------
