@@ -115,6 +115,26 @@ GET
 ## Scope
 quotes
 
+# Create Quote
+
+## Path
+/v1/quote/create
+
+## Method
+
+POST
+
+## Scope
+quotes:create
+
+## Body
+Create Customer Quote Request
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| customerQuote | * | [Customer Quote](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#customer-quote) object |  | Customer quote object serialized as JSON. |
+| referenceId |  | string | max 64 | Id of quote in external system. |
+
+
 # Get Ruturns/ RMA
 Looks the same as orders but different type. Instead of `orderId` is using `returnId`
 
@@ -245,6 +265,8 @@ extra fields:
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | orderIds |  | array of string | max 64 | Order Ids for the current quote |
+| сomment |  | string | max 1000 | Quote operator comment. |
+| responseTime |  | [Response Time](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#response-time) enum | | Expected response time for quote. |
 
 ## Customer Return
 **Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
@@ -285,6 +307,15 @@ extra fields:
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | parentOrderId |  | string | max 64 | Id of parent vendor order |
+
+## Response Time
+
+| Enum Value | Description |
+|--|--|
+| Unknown | Response time is unknown. Use any response time. |
+| OneDay | Response time is 1 day. |
+| ThreeDays | Response time are 3 days. |
+| FiveDays | Response time are 5 days. |
 
 # Releases
 -------------------------------
