@@ -486,6 +486,34 @@ extra fields:
 | ThreeDays | Response time is 3 days. |
 | FiveDays | Response time is 5 days. |
 
+# Events
+
+## Quote Changed
+
+### Id
+customer-quote:changed
+
+### Payload
+| Field | Type | Description |
+|--|--|--|
+| quoteIds | Array of string | Identifiers of changed quotes.  |
+| date |  date and time | UTC date of changes. |
+
+Example:
+```
+{
+	"event": "customer-quote:changed",
+	"secret": "78f1a65ff4cc4d8ab6b855cd3c15ff79",
+	"payload": {
+		"quoteIds": [
+			"6781345",
+			"6781346"
+		],
+		"date":"2023-01-20T10:45:15Z"
+	}
+}
+```
+
 # Releases
 -------------------------------
 | Date | Version |
