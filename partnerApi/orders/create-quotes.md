@@ -65,7 +65,6 @@ Create Customer Quote Request
 				"unitWeight": 113,
 				"tax": 2,
 				"discount": 1,
-				"lineposition": 1
 			}
 		],
 		"total": 43
