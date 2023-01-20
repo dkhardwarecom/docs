@@ -49,8 +49,8 @@ Once you have an Access Token, you can use it to call authorized APIs. You can d
 
 
 ## Request Context
-For some data modify endpoints request context should be provided. That request context provided by set of specific HTTP headers.
-In case that endpoint require context it marked as 'require request context'.
+For some data modication endpoints, request context should be provided. Request context provided by set of specific HTTP headers.
+In case the endpoint require context it is marked as 'require request context'.
 
 
 ### HTTP headers
