@@ -225,7 +225,7 @@ vendor-returns
 | address2 |  | string  | max 255 | Address line 2 |
 | email |  | string  | max 100|Email address|
 
-## Customer Order
+## Order
 **Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
 
 extra fields:
