@@ -125,6 +125,11 @@ Example for 500:
 
 POST
 
+## Headers
+
+[require request context](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/authentication.md#request-context)
+
+
 ## Scope
 quotes:status
 
