@@ -48,5 +48,15 @@ Once you have an Access Token, you can use it to call authorized APIs. You can d
 ## Using a Refresh Token
 
 
+## Request Context
+For some data modify endpoints request context should be provided. That request context provided by set of specific HTTP headers.
+In case that endpoint require context it marked as 'require request context'.
 
+
+# HTTP headers
+| HTTP Header Name | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| User-Id | * | string | max 64 | Identity of call initiator user account. Use 'id' value from [Users](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/users.md#list-users) list. |
+| User-Name | * | string | max 300 | Name of call initiator user account. |
+| Initiated-From | * | string | max 300 | Description of call initiation place. Code or description of Application Form, or an API subsystem alias. For example: 'Order Approving Form', 'Merchant API' |
  
