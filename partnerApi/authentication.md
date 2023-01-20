@@ -53,7 +53,7 @@ For some data modify endpoints request context should be provided. That request 
 In case that endpoint require context it marked as 'require request context'.
 
 
-# HTTP headers
+### HTTP headers
 | HTTP Header Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | User-Id | * | string | max 64 | Identity of call initiator user account. Use 'id' value from [Users](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/users.md#list-users) list. |
