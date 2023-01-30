@@ -412,6 +412,7 @@ Example for 500:
 | altPhone | | string | max 50 | Alternative phone number |
 | fax |  | string |  max 50 | Fax|
 | email | * | string | max 100 | Email address|
+| customerType |  | string value if dictionary [Type of Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#type-of-customer) | max 20 | Type of customer |
 | addresses |  |[Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#address)[] |  | Customer's addresses|
 
 
@@ -437,6 +438,14 @@ Example for 500:
 | isDefaultShipping |  | boolean | default(false) | It is default shipping address  |
 | createdAt | * | dateTime |  | Creation date and time in UTC format |
 | updatedAt | * | dateTime |  | Updated date and time in UTC format |
+
+## Type of Customer
+
+| Value | Description |
+|--|--|
+| business | Business |
+| government | Government |
+| military | Military |
 
 # Events
 
