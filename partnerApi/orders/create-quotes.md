@@ -265,3 +265,14 @@ Example:
 	}
 }
 ```
+
+# Releases
+-------------------------------
+| Date | Version |
+|--|--|
+| 2023 January 20 | 20230120.2 |
+### Release Notes
+* Create customer quote endpoint added.
+-------------------------------
+
+-------------------------------
