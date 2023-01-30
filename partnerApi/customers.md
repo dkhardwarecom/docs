@@ -491,3 +491,9 @@ Example:
 * Customer create and update endpoints added.
 * Customer operations status endpoint added.
 -------------------------------
+| Date | Version |
+|--|--|
+| 2023 January 30 | 20230130.2 |
+### Release Notes
+* Add Type of Customer field  to customer enpoints.
+-------------------------------
