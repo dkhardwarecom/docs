@@ -495,5 +495,5 @@ Example:
 |--|--|
 | 2023 January 30 | 20230130.2 |
 ### Release Notes
-* Add Type of Customer field  to customer enpoints.
+* Add Type of Customer to customer endpoints.
 -------------------------------
