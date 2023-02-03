@@ -209,7 +209,7 @@ Example for 500:
 | total | * | money |  | Order total |
 | billing | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Billing address |
 | shipping | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Shipping address |
-| items | | array of [Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotes.md#quote-item) |  | Items for quote |
+| items | * | array of [Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotes.md#quote-item) |  | Items for quote |
 | сomment |  | string | max 1000 | Quote operator comment. |
 | responseTime |  | [Response Time](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotes.md#response-time) enum | | Expected response time for quote. |
 
@@ -274,5 +274,9 @@ Example:
 ### Release Notes
 * Create customer quote endpoint added.
 -------------------------------
-
+| Date | Version |
+|--|--|
+| 2023 February 03 | 20230203.1 |
+### Release Notes
+* Create quote endpoint. Add validation for items collection. Items must not be empty.
 -------------------------------
