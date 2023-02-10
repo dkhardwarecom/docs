@@ -222,7 +222,7 @@ Example for 500:
 | unitWeight | * | float |  | Product weight |
 | unitOfMeasure | * | [UnitOfMeasure]() |  | Unit of measure. |
 | quantity | * | integer |  | Product quantity in order line |
-| lineComment |  | integer |  | Additional line comment |
+| lineComment |  | string |  | Additional line comment |
 | tax |  | money   | default(0) | Total line tax |
 | discount |  | money   | default(0) | Total line discount |
 | mpn |  | string | max 50 | Manufacturer part number |
