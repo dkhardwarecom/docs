@@ -206,7 +206,7 @@ vendor-returns
 | itemName |  | string | max 2000 | Item name |
 | productImage |  | string |  | Product main image link |
 | productUrl |  | string |  | Product url for details |
-| unitOfMeasure |  | [Unit Of Measure](https://github.com/dkhardwarecom/docs/edit/main/partnerApi/orders.md#unit-of-measure)|  | Product unit of measure |
+| unitOfMeasure |  | [Unit Of Measure](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#unit-of-measure)|  | Product unit of measure |
 
 ## Unit Of Measure
 | Field | Required | Type | Restrictions | Description |
