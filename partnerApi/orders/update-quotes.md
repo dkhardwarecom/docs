@@ -134,7 +134,7 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-property)
 
 | Field | Required | Type | Restrictions | Description |
-|--|--|--|--|--|--|
+|--|--|--|--|--|
 | email |  | string  | max 100|Email address|
 | firstName |  | string | max 150 | First name |
 | lastName |  | string | max 150 | Last name |
