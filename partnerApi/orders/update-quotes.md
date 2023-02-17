@@ -152,20 +152,20 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 ## Updatable Quote Items
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| idsOfItemsToDelete | * | array of string  |  |  Identifiers of items to delete |
-| itemsToUpdate | * | array of [Updatable Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-item) |  | Items to update |
-| itemsToAdd | * | array of [Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#quote-item) |  | Items to add |
+| idsOfItemsToDelete |  | array of string  |  |  Identifiers of items to delete |
+| itemsToUpdate |  | array of [Updatable Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-item) |  | Items to update |
+| itemsToAdd |  | array of [Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#quote-item) |  | Items to add |
 
 ## Updatable Quote Item
 | Field | Required | Type | [Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-property) | Restrictions | Description |
-|--|--|--|--|--|
-| itemId | * | string  |  | max 64 |  Item identifier|
-| productId | * | string  | * | max 64 |  Product identifier|
-| unitPrice | * | money | * |  | Product unit price |
-| unitCost | * | money | * |  | Product unit price |
-| unitWeight | * | float | * |  | Product weight |
-| unitOfMeasure | * | [UnitOfMeasure]() | * |  | Unit of measure. |
-| quantity | * | integer | * |  | Product quantity in order line |
+|--|--|--|--|--|--|
+| itemId |  | string  |  | max 64 |  Item identifier|
+| productId |  | string  | * | max 64 |  Product identifier|
+| unitPrice |  | money | * |  | Product unit price |
+| unitCost |  | money | * |  | Product unit price |
+| unitWeight |  | float | * |  | Product weight |
+| unitOfMeasure |  | [UnitOfMeasure]() | * |  | Unit of measure. |
+| quantity |  | integer | * |  | Product quantity in order line |
 | lineComment |  | string | * |  | Additional line comment |
 | tax |  | money   | * | default(0) | Total line tax |
 | discount |  | money   | * | default(0) | Total line discount |
@@ -174,7 +174,7 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 
 ## Quote Item
 | Field | Required | Type | Restrictions | Description |
-|--|--|--|--|--|--|
+|--|--|--|--|--|
 | productId | * | string  | max 64 |  Product identifier|
 | unitPrice | * | money |  | Product unit price |
 | unitCost | * | money |  | Product unit price |
