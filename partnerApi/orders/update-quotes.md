@@ -33,7 +33,7 @@ Create Customer Quote Request
 				"oldValue": 11.7
 			}
 		},
-		"billingAddress": {
+		"billing": {
 			"email": {
 				"newValue": "johndoe@my--best-company.com",
 				"oldValue": "johndoe@my-company.com"
@@ -43,7 +43,7 @@ Create Customer Quote Request
 				"oldValue": "My Company"
 			}
 		},
-		"shippingAddress": {
+		"shipping": {
 			"email": {
 				"newValue": "johndoe@my-best-company.com",
 				"oldValue": "johndoe@my-company.com"
@@ -152,14 +152,29 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 ## Updatable Quote Items
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| productId | * | string  | max 64 |  Product identifier|
-| unitPrice | * | money |  | Product unit price |
-| unitCost | * | money |  | Product unit price |
+| idsOfItemsToDelete | * | array of string  |  |  Identifiers of items to delete |
+| itemsToUpdate | * | array of [Updatable Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-item) |  | Items to update |
+| itemsToAdd | * | array of [Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#quote-item) |  | Items to add |
 
+## Updatable Quote Item
+| Field | Required | Type | [Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-property) | Restrictions | Description |
+|--|--|--|--|--|
+| itemId | * | string  |  | max 64 |  Item identifier|
+| productId | * | string  | * | max 64 |  Product identifier|
+| unitPrice | * | money | * |  | Product unit price |
+| unitCost | * | money | * |  | Product unit price |
+| unitWeight | * | float | * |  | Product weight |
+| unitOfMeasure | * | [UnitOfMeasure]() | * |  | Unit of measure. |
+| quantity | * | integer | * |  | Product quantity in order line |
+| lineComment |  | string | * |  | Additional line comment |
+| tax |  | money   | * | default(0) | Total line tax |
+| discount |  | money   | * | default(0) | Total line discount |
+| mpn |  | string | * | max 50 | Manufacturer part number |
+| itemName |  | string | * | max 2000 | Item name |
 
 ## Quote Item
 | Field | Required | Type | Restrictions | Description |
-|--|--|--|--|--|
+|--|--|--|--|--|--|
 | productId | * | string  | max 64 |  Product identifier|
 | unitPrice | * | money |  | Product unit price |
 | unitCost | * | money |  | Product unit price |
@@ -171,15 +186,6 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 | discount |  | money   | default(0) | Total line discount |
 | mpn |  | string | max 50 | Manufacturer part number |
 | itemName |  | string | max 2000 | Item name |
-
-## Response Time
-
-| Enum Value | Description |
-|--|--|
-| Unknown | Response time is unknown. Use any response time. |
-| OneDay | Response time is 1 day. |
-| ThreeDays | Response time is 3 days. |
-| FiveDays | Response time is 5 days. |
 
 ## Updatable Property
 | Property | Description |
