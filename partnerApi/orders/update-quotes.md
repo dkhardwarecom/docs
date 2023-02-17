@@ -123,25 +123,29 @@ Status operation is the same as [Quote operation status](https://github.com/dkha
 | Field | Required | Type | [Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-property) | Restrictions | Description |
 |--|--|--|--|--|--|
 | shippingPrice |  | money  | * | greater or equal than zero | Shipping price |
+| shippingTax |  | money  | * | greater or equal than zero | Shipping tax |
+| shippingDiscount |  | money  | * | greater or equal than zero | Shipping discount |
+| handlingFee |  | money  | * | greater or equal than zero | Handling fee |
 
 
 ## Updatable Quote Address
 
-| Field | Required | Type | Restrictions | Description |
-|--|--|--|--|--|
-| firstName | * | string | max 150 | First name |
-| lastName | * | string | max 150 | Last name |
-| company |  | string | max 250 | Company name |
-| phone |  | string | max 50 | Phone number |
-| altPhone | | string | max 50 | Alternative phone number |
-| fax |  | string |  max 50 | Fax|
-| zip | * | string | max 50 | Zip/Postal code |
-| country | * | string | max 150 | Country name |
-| state | * | string | max 50 | State or region |
-| city | * | string | max 255 | City |
-| address1 | * | string  | max 255 | Address line 1 |
-| address2 |  | string  | max 255 | Address line 2 |
-| email |  | string  | max 100|Email address|
+| Field | Required | Type |[Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-property) | Restrictions | Description |
+|--|--|--|--|--|--|
+| email |  | * | string  | max 100|Email address|
+| firstName |  | * | string | max 150 | First name |
+| lastName |  | * | string | max 150 | Last name |
+| company |  | * | string | max 250 | Company name |
+| phone |  | * | string | max 50 | Phone number |
+| altPhone | | * | string | max 50 | Alternative phone number |
+| fax |  | * | string |  max 50 | Fax|
+| zip |  | * | string | max 50 | Zip/Postal code |
+| country |  | * | string | max 150 | Country name |
+| state |  | * | string | max 50 | State or region |
+| city |  | * | string | max 255 | City |
+| address1 |  | * | string  | max 255 | Address line 1 |
+| address2 |  | * | string  | max 255 | Address line 2 |
+
 
 ## Quote Item
 | Field | Required | Type | Restrictions | Description |
