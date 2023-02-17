@@ -102,7 +102,7 @@ Example:
 | 500 |  |
 |  |  |
 
-# Get Quotes
+# Get Quotas
 Looks the same as orders but different type. Instead of `orderId` is using `quoteId`
 
 ## Path
@@ -113,7 +113,7 @@ Looks the same as orders but different type. Instead of `orderId` is using `quot
 GET
 
 ## Scope
-quotes
+quotas
 
 # Get Ruturns/ RMA
 Looks the same as orders but different type. Instead of `orderId` is using `returnId`
@@ -141,8 +141,8 @@ GET
 ## Scope
 vendor-orders
 
-# Get Vendor Quotes
-Looks the same as customer quotes but different type.
+# Get Vendor Quotas
+Looks the same as customer quotas but different type.
 
 ## Path
 /v1/vendor-quote/
@@ -152,7 +152,7 @@ Looks the same as customer quotes but different type.
 GET
 
 ## Scope
-vendor-quotes
+vendor-quotas
 
 # Get Vendor Ruturns/ RMA
 Looks the same as customer rma but different type.
@@ -306,5 +306,5 @@ extra fields:
 |--|--|
 | 2022 October 04 | 20221004.1 |
 ### Release Notes
-* Orders, returns, replacement orders, quotes links added.
+* Orders, returns, replacement orders, quotas links added.
 -------------------------------
