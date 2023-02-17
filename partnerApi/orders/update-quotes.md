@@ -188,10 +188,12 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 | itemName |  | string | max 2000 | Item name |
 
 ## Updatable Property
-| Property | Description |
-|--|--|
-| newValue | New value to update. |
-| oldValue | Old value to handle concurrent updates. |
+See [example]()
+
+| Property | Required | Description |
+|--|--|--|
+| newValue | * | New value to update. |
+| oldValue |  | Old value to handle concurrent updates. |
 
 
 # Events
