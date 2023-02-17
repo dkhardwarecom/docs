@@ -188,7 +188,7 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 | itemName |  | string | max 2000 | Item name |
 
 ## Updatable Property
-See [example]()
+See [example](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#valid-request)
 
 | Property | Required | Description |
 |--|--|--|
