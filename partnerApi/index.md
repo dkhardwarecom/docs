@@ -6,7 +6,7 @@
 
 [Orders](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md)
 
-* [Create quotes](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotes.md)
+* [Create quotas](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md)
 
 [Vendors](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/vendors.md)
 
