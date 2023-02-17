@@ -220,7 +220,7 @@ Example for 500:
 | unitPrice | * | money |  | Product unit price |
 | unitCost | * | money |  | Product unit price |
 | unitWeight | * | float |  | Product weight |
-| unitOfMeasure | * | [UnitOfMeasure]() |  | Unit of measure. |
+| unitOfMeasure | * | [UnitOfMeasure](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#unit-of-measure) |  | Unit of measure. |
 | quantity | * | integer |  | Product quantity in order line |
 | lineComment |  | string |  | Additional line comment |
 | tax |  | money   | default(0) | Total line tax |
