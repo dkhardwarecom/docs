@@ -115,36 +115,46 @@ Status operation is the same as [Quote operation status](https://github.com/dkha
 |--|--|--|--|--|
 | quoteId | * | string  | max 64 |  Quote identifier|
 | quoteTotals | | fields from [Updatable Quote Totals](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-totals) |  | Quote totals data for update |
-| billing | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Billing address |
-| shipping | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Shipping address |
-| items |  | array of [Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#quote-item) |  | Items for quote |
+| billing | | fields from [Updatable Quote Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-address) |  | Billing address |
+| shipping | | fields from [Updatable Quote Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-address) |  | Shipping address |
+| items |  | fields from [Updatable Quote Items](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-items) |  | Items for update |
 
 ## Updatable Quote Totals
-| Field | Required | Type | [Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-property) | Restrictions | Description |
-|--|--|--|--|--|--|
-| shippingPrice |  | money  | * | greater or equal than zero | Shipping price |
-| shippingTax |  | money  | * | greater or equal than zero | Shipping tax |
-| shippingDiscount |  | money  | * | greater or equal than zero | Shipping discount |
-| handlingFee |  | money  | * | greater or equal than zero | Handling fee |
+All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-property)
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| shippingPrice |  | money  | greater or equal than zero | Shipping price |
+| shippingTax |  | money  | greater or equal than zero | Shipping tax |
+| shippingDiscount |  | money  | greater or equal than zero | Shipping discount |
+| handlingFee |  | money  | greater or equal than zero | Handling fee |
 
 
 ## Updatable Quote Address
+All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-property)
 
-| Field | Required | Type |[Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-property) | Restrictions | Description |
+| Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|--|
-| email |  | * | string  | max 100|Email address|
-| firstName |  | * | string | max 150 | First name |
-| lastName |  | * | string | max 150 | Last name |
-| company |  | * | string | max 250 | Company name |
-| phone |  | * | string | max 50 | Phone number |
-| altPhone | | * | string | max 50 | Alternative phone number |
-| fax |  | * | string |  max 50 | Fax|
-| zip |  | * | string | max 50 | Zip/Postal code |
-| country |  | * | string | max 150 | Country name |
-| state |  | * | string | max 50 | State or region |
-| city |  | * | string | max 255 | City |
-| address1 |  | * | string  | max 255 | Address line 1 |
-| address2 |  | * | string  | max 255 | Address line 2 |
+| email |  | string  | max 100|Email address|
+| firstName |  | string | max 150 | First name |
+| lastName |  | string | max 150 | Last name |
+| company |  | string | max 250 | Company name |
+| phone |  | string | max 50 | Phone number |
+| altPhone | | string | max 50 | Alternative phone number |
+| fax |  | string |  max 50 | Fax|
+| zip |  | string | max 50 | Zip/Postal code |
+| country |  | string | max 150 | Country name |
+| state |  | string | max 50 | State or region |
+| city |  | string | max 255 | City |
+| address1 |  | string | max 255 | Address line 1 |
+| address2 |  | string  | max 255 | Address line 2 |
+
+## Updatable Quote Items
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| productId | * | string  | max 64 |  Product identifier|
+| unitPrice | * | money |  | Product unit price |
+| unitCost | * | money |  | Product unit price |
 
 
 ## Quote Item
