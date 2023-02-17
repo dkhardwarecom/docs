@@ -20,7 +20,7 @@ Create Customer Quote Request
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | customerQuote | * | [Updatable Quote](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote) object |  | Customer quote data for update serialized as JSON. |
-| referenceId |  | string | max 64 | Id of quote in external system. |
+
 
 ## Valid Request
 ```
