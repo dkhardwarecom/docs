@@ -120,9 +120,9 @@ Status operation is the same as [Quote operation status](https://github.com/dkha
 | items |  | array of [Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#quote-item) |  | Items for quote |
 
 ## Updatable Quote Totals
-| Field | Required | Type | Restrictions | Description |
-|--|--|--|--|--|
-| shippingPrice |  | money [u](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-property)  | greater or equal than zero | Shipping price |
+| Field | Required | Type | [Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-property) | Restrictions | Description |
+|--|--|--|--|--|--|
+| shippingPrice |  | money  | * | greater or equal than zero | Shipping price |
 
 
 ## Updatable Quote Address
