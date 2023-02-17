@@ -114,9 +114,9 @@ Status operation is the same as [Quote operation status](https://github.com/dkha
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | quoteId | * | string  | max 64 |  Quote identifier|
-| quoteTotals | | fields from [Updatable Quote Totals](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-totals) |  | Quote totals data for update |
-| billing | | fields from [Updatable Quote Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-address) |  | Billing address |
-| shipping | | fields from [Updatable Quote Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-address) |  | Shipping address |
+| quoteTotals |  | fields from [Updatable Quote Totals](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-totals) |  | Quote totals data for update |
+| billing |  | fields from [Updatable Quote Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-address) |  | Billing address |
+| shipping |  | fields from [Updatable Quote Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-address) |  | Shipping address |
 | items |  | fields from [Updatable Quote Items](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotes.md#updatable-quote-items) |  | Items for update |
 
 ## Updatable Quote Totals
