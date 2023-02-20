@@ -105,7 +105,7 @@ Example for 500:
 
 # Quote operation status
 
-Status operation is the same as [Quote operation status](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotes.md#quote-operation-status) for create quote operation.
+Status operation is the same as [Quote operation status](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#quote-operation-status) for create quote operation.
 
 # Contracts
 
