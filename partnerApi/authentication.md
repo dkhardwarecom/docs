@@ -23,7 +23,7 @@ We use the Client Credentials Grant Flow, which allows an application to request
 | grant_type | client_credentials  |
 | scope | available `scopes` divided by ` ` (space) |
 
-Example of available scopes: `customers orders returns quotes products vendors vendor-orders vendor-returns vendor-quotes`
+Example of available scopes: `customers orders returns quotes products vendors vendor-orders vendor-returns vendor-quotas`
 
 ### Response example
 
