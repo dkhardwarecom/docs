@@ -78,7 +78,6 @@ Example:
                     "unitPrice": 154.09,
                     "quantity": 1,
                     "linePosition": 1,
-                    "lineComment": "",
                     "unitWeight": 0,
                     "tax": 10.79,
                     "discount": 0.0,
@@ -198,7 +197,6 @@ vendor-returns
 | unitPrice | * | money |  | Product unit price |
 | quantity | * | integer |  | Product quantity in order line |
 | linePosition | * | integer |  | Line position |
-| lineComment |  | integer |  | Additional line comment |
 | unitWeight |  | float |  | Product weight |
 | tax |  | money   | default(0) | Total line tax |
 | discount |  | money   | default(0) | Total line discount |
