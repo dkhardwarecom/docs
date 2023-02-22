@@ -166,7 +166,6 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 | unitWeight |  | float | * |  | Product weight |
 | unitOfMeasure |  | [UnitOfMeasure](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#unit-of-measure) | * |  | Unit of measure. |
 | quantity |  | integer | * |  | Product quantity in order line |
-| lineComment |  | string | * |  | Additional line comment |
 | tax |  | money   | * | default(0) | Total line tax |
 | discount |  | money   | * | default(0) | Total line discount |
 | mpn |  | string | * | max 50 | Manufacturer part number |
@@ -181,7 +180,6 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 | unitWeight | * | float |  | Product weight |
 | unitOfMeasure | * | [UnitOfMeasure](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#unit-of-measure) |  | Unit of measure. |
 | quantity | * | integer |  | Product quantity in order line |
-| lineComment |  | string |  | Additional line comment |
 | tax |  | money   | default(0) | Total line tax |
 | discount |  | money   | default(0) | Total line discount |
 | mpn |  | string | max 50 | Manufacturer part number |
