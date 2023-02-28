@@ -222,3 +222,12 @@ Example:
 }
 ```
 
+# Releases
+-------------------------------
+| Date | Version |
+|--|--|
+| 2023 February 28 | 20230228.1 |
+### Release Notes
+* Update customer quote endpoint added.
+-------------------------------
+
