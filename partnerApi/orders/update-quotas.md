@@ -118,6 +118,7 @@ Status operation is the same as [Quote operation status](https://github.com/dkha
 | billing |  | fields from [Updatable Quote Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-quote-address) |  | Billing address |
 | shipping |  | fields from [Updatable Quote Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-quote-address) |  | Shipping address |
 | items |  | fields from [Updatable Quote Items](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-quote-items) |  | Items for update |
+| notes |  | fields from [Updatable Notes](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-notes) |  | Notes for update |
 
 ## Updatable Quote Totals
 All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-property)
@@ -184,6 +185,41 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 | discount |  | money   | default(0) | Total line discount |
 | mpn |  | string | max 50 | Manufacturer part number |
 | itemName |  | string | max 2000 | Item name |
+
+## Updatable Notes
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| idsOfNotesToDelete |  | array of string  |  |  Identifiers of notes to delete |
+| notesToUpdate |  | array of [Updatable Note](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-note) |  | Notes to update |
+| notesToAdd |  | array of [Note](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#note) |  | Notes to add |
+
+
+## Updatable Note
+| Field | Required | Type | [Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-property) | Restrictions | Description |
+|--|--|--|--|--|--|
+| noteId |  | string  |  | max 64 |  Note identifier |
+| message |  | string  | * | max 2000 | Note message |
+| actionTypeCode |  | [ActionTypeCode](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#action-type-code) | * |  | Code of action type. |
+
+## Note
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| message | * | string  | max 2000 |  Note message |
+| actionTypeCode |  | [ActionTypeCode](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#action-type-code) |  | Code of action type. |
+
+
+## Action Type Code
+
+| Code | Description |
+|--|--|
+| WalkIn | ??? |
+| PhoneCall | Phone call. |
+| Email | Email message. |
+| Fax | Fax message. |
+| General | ???. |
+| Order | ???. |
+| QuestionToSupport | Question to support. |
+| Cancel | ???. |
 
 ## Updatable Property
 See [example](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#valid-request)
