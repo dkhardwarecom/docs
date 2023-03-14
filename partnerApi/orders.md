@@ -230,6 +230,36 @@ vendor-returns
 | address2 |  | string  | max 255 | Address line 2 |
 | email |  | string  | max 100|Email address|
 
+
+## Note
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| noteId | * | string  | max 64 |  Note identifier |
+| message | * | string  |  max 2000 | Note message |
+| actionTypeCode |  | [ActionTypeCode](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#action-type-code) |  | Code of action type |
+| createdAt | * | datetime | UTC | Coordinated Universal Time of note creation |
+| author |  | [User](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#user) | | The user who modified or created the note |
+
+## User
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| id | * | string | max 64 | Users's identifier |
+| name |  | string | max 300 | Users's name |
+
+## Action Type Code
+
+| Code | Description |
+|--|--|
+| WalkIn | ??? |
+| PhoneCall | Phone call. |
+| Email | Email message. |
+| Fax | Fax message. |
+| General | ???. |
+| Order | ???. |
+| QuestionToSupport | Question to support. |
+| Cancel | ???. |
+
+
 ## Order
 **Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
 
