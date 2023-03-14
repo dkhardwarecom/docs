@@ -197,7 +197,7 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 ## Updatable Note
 | Field | Required | Type | [Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-property) | Restrictions | Description |
 |--|--|--|--|--|--|
-| noteId |  | string  |  | max 64 |  Note identifier |
+| noteId | * | string  |  | max 64 |  Note identifier |
 | message |  | string  | * | max 2000 | Note message |
 | actionTypeCode |  | [ActionTypeCode](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#action-type-code) | * |  | Code of action type. |
 
