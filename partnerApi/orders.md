@@ -188,6 +188,8 @@ vendor-returns
 | handlingFee | | money  | default(0) | Handling fee|
 | billing* | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Billing address |
 | shipping* | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Shipping address |
+| items | | fields from [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#order-item) |  | Items |
+| notes | | fields from [Note](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#note) |  | Notes |
 
 ## Order Item
 | Field | Required | Type | Restrictions | Description |
