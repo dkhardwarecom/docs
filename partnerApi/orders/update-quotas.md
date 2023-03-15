@@ -205,7 +205,7 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | message | * | string  | max 2000 |  Note message |
-| actionTypeCode |  | [ActionTypeCode](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#action-type-code) |  | Code of action type. |
+| actionTypeCode | * | [ActionTypeCode](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#action-type-code) |  | Code of action type. |
 
 
 ## Action Type Code
