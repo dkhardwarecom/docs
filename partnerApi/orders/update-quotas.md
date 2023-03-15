@@ -199,27 +199,14 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 |--|--|--|--|--|--|
 | noteId | * | string  |  | max 64 |  Note identifier |
 | message |  | string  | * | max 2000 | Note message |
-| actionTypeCode |  | [ActionTypeCode](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#action-type-code) | * |  | Code of action type. |
+| actionTypeCode |  | [ActionTypeCode](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#action-type-code) | * |  | Code of action type. |
 
 ## Note
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | message | * | string  | max 2000 |  Note message |
-| actionTypeCode | * | [ActionTypeCode](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#action-type-code) |  | Code of action type. |
+| actionTypeCode | * | [ActionTypeCode](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#action-type-code) |  | Code of action type. |
 
-
-## Action Type Code
-
-| Code | Description |
-|--|--|
-| WalkIn | Walk-in. |
-| PhoneCall | Phone call. |
-| Email | Email message. |
-| Fax | Fax message. |
-| General | Notes General. Most usefull type. |
-| Order | Notes specific for orders. |
-| QuestionToSupport | Questions/Support. |
-| Cancel | Cancel Order. |
 
 ## Updatable Property
 See [example](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#valid-request)
