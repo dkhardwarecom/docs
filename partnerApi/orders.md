@@ -252,14 +252,14 @@ vendor-returns
 
 | Code | Description |
 |--|--|
-| WalkIn | ??? |
+| WalkIn | Walk-in. |
 | PhoneCall | Phone call. |
 | Email | Email message. |
 | Fax | Fax message. |
-| General | ???. |
-| Order | ???. |
-| QuestionToSupport | Question to support. |
-| Cancel | ???. |
+| General | Notes General. Most usefull type. |
+| Order | Notes specific for orders. |
+| QuestionToSupport | Questions/Support. |
+| Cancel | Cancel Order. |
 
 
 ## Order
