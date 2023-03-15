@@ -212,14 +212,14 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 
 | Code | Description |
 |--|--|
-| WalkIn | ??? |
+| WalkIn | Walk-in. |
 | PhoneCall | Phone call. |
 | Email | Email message. |
 | Fax | Fax message. |
-| General | ???. |
-| Order | ???. |
-| QuestionToSupport | Question to support. |
-| Cancel | ???. |
+| General | Notes General. Most usefull type. |
+| Order | Notes specific for orders. |
+| QuestionToSupport | Questions/Support. |
+| Cancel | Cancel Order. |
 
 ## Updatable Property
 See [example](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#valid-request)
