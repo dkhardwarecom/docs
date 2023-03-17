@@ -253,4 +253,10 @@ Example:
 ### Release Notes
 * Update customer quote endpoint added.
 -------------------------------
+| Date | Version |
+|--|--|
+| 2023 March 17 | 20230313.1 |
+### Release Notes
+* Add notes updatable part.
+-------------------------------
 
