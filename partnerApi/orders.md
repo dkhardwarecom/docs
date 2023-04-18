@@ -242,6 +242,23 @@ vendor-returns
 | createdAt | * | datetime | UTC | Coordinated Universal Time of note creation |
 | author |  | [User](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#user) | | The user who modified or created the note |
 
+## Payment
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| paymentId | * | string  | max 64 |  Payment identifier |
+| originalPaymentId |  | string  | max 64 |  Identifier of original payment, for example: original (charge) payment id for refund |
+| amount | * | money  |  | Payment amount |
+| user |  | [User](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#user) | | The user who ... |
+| paymentDate | * | datetime | UTC | Coordinated Universal Time of payment |
+| paymentMethod |  | [PaymentMethod](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#payment-method) |  | Payment method |
+| paymentType |  | string  | 'Charge' or 'Refund' |  Type of payment |
+
+## Payment Method
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| id | * | string | max 64 | Method identifier |
+| name |  | string | max 300 | Method name |
+
 ## User
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
