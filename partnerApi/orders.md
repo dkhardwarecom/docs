@@ -356,3 +356,9 @@ extra fields:
 ### Release Notes
 * Orders, returns, replacement orders, quotas links added.
 -------------------------------
+| Date | Version |
+|--|--|
+| 2023 April 18 | 20230418.1 |
+### Release Notes
+* Orders and RMAs payments added.
+-------------------------------
