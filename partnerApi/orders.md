@@ -190,6 +190,7 @@ vendor-returns
 | shipping* | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Shipping address |
 | items | | fields from [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#order-item) |  | Items |
 | notes | | fields from [Note](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#note) |  | Notes |
+| payments | | fields from [Payment](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#payment) | Applicable for orders and RMAs only | Payments |
 
 ## Order Item
 | Field | Required | Type | Restrictions | Description |
@@ -257,7 +258,7 @@ vendor-returns
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | id | * | string | max 64 | Method identifier |
-| name |  | string | max 300 | Method name |
+| name |  | string | max 100 | Method name |
 
 ## User
 | Field | Required | Type | Restrictions | Description |
