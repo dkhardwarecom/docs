@@ -290,7 +290,7 @@ vendor-returns
 |--|--|--|--|--|
 | packageId | * | string  | max 64 |  Package identifier |
 | trackingNumber |  | string  | max 50 |  Tracking identifier  |
-| shipDate | * | datetime | UTC | Coordinated Universal Time of shipment |
+| shipDate | * | datetime | UTC | Date of shipment |
 | carrierName |  | string  | max 50 |  Name of shipping company  |
 | service |  | string  | max 250 |  Title of shipping service  |
 | shippingPrice |  | money  |  | Price of shipping |
