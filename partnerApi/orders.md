@@ -293,7 +293,7 @@ vendor-returns
 | shipDate | * | datetime | UTC | Coordinated Universal Time of shipment |
 | carrierName |  | string  | max 50 |  Name of shipping company  |
 | service |  | string  | max 250 |  Title of shipping service  |
-| shippingPrice | * | money  |  | Price of shipping |
+| shippingPrice |  | money  |  | Price of shipping |
 
 ## Order
 **Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
@@ -376,4 +376,10 @@ extra fields:
 | 2023 April 18 | 20230418.1 |
 ### Release Notes
 * Orders and RMAs payments added.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2023 April 21 | 20230421.1 |
+### Release Notes
+* Orders and RMAs shipments added.
 -------------------------------
