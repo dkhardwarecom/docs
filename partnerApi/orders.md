@@ -191,6 +191,7 @@ vendor-returns
 | items | | fields from [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#order-item) |  | Items |
 | notes | | fields from [Note](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#note) |  | Notes |
 | payments | | fields from [Payment](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#payment) | Applicable for orders and RMAs only | Payments |
+| shipments | | fields from [Shipment](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#shipment) | Applicable for orders and RMAs only | Shipments |
 
 ## Order Item
 | Field | Required | Type | Restrictions | Description |
@@ -279,6 +280,20 @@ vendor-returns
 | QuestionToSupport | Questions/Support. |
 | Cancel | Cancel Order. |
 
+## Shipment
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| packages | | fields from [ShipmentPackage](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#shipment-package) | | Shipments packages |
+
+## Shipment Package
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| packageId | * | string  | max 64 |  Package identifier |
+| trackingNumber |  | string  | max 50 |  Tracking identifier  |
+| shipDate | * | datetime | UTC | Coordinated Universal Time of shipment |
+| carrierName |  | string  | max 50 |  Name of shipping company  |
+| service |  | string  | max 250 |  Title of shipping service  |
+| shippingPrice | * | money  |  | Price of shipping |
 
 ## Order
 **Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
