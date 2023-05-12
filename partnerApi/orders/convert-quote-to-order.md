@@ -20,6 +20,11 @@ Update Customer Quote Request
 |--|--|--|--|--|
 | customerQuote | * | [Quote to Convert](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/convert-quote-to-order.md#quote-to-convert) object |  | Customer quote data for convert serialized as JSON. |
 
+### Quote to Convert
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| quoteId | * | string  | max 64 |  Quote identifier|
 
 ## Valid Request
 ```
@@ -96,11 +101,3 @@ Example:
     "errors": null
 }
 ```
-
-# Contracts
-
-## Quote to Convert
-
-| Field | Required | Type | Restrictions | Description |
-|--|--|--|--|--|
-| quoteId | * | string  | max 64 |  Quote identifier|
