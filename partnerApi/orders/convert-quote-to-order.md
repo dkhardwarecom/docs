@@ -81,7 +81,7 @@ Status operation is the same as [Quote operation status](https://github.com/dkha
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | orderId |  | string  | max 64 |  Identifier of order converted from quote. |
-| status  | * | [Enum of Statuses](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#statuses) | | Operation status. |
+| status  | * | [Enum of Status](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#statuses) | enum | Operation status. |
 | errors  |   | array of string  | |  Array of error messages. |
 
 ## Success Response
