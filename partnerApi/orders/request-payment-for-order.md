@@ -75,7 +75,83 @@ Example for 500:
 
 # Order operation status
 
-Status operation is the same as [Quote operation status](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#quote-operation-status) for create quote operation.
+## Path
+/v1/order/status
+
+## Method
+
+POST
+
+## Headers
+
+[require request context](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/authentication.md#request-context)
+
+
+## Scope
+orders:status
+
+## Body
+
+SubmissionId serialized as json.
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| SubmissionId | * | string | max 64 | Identifier of operation received at specfic response. |
+
+## Valid Request
+```
+{
+    "submissionId": "17e6a31b-f48a-4b9f-ab36-fdcda6dda737"
+}
+```
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "orderId": "538368",
+    "status": "Succeeded",
+    "errors": null
+}
+```
+
+Example with errors messages:
+```
+{
+    "orderId": 538368,
+    "status": "Failed",
+    "errors": [
+        "Order payment could not be requested for order at status 'Cancelled'"
+    ]
+}
+```
+### Statuses
+
+| Status | Description |
+|--|--|
+| Accepted | Submission accepted, but processing has not started yet. |
+| Processing | Processing started. |
+| Succeeded | Processed succeeded. | 
+| Failed | Processed failed. | 
+
+## Error Response
+
+| HTTP status code | Message |
+|--|--|
+| 500 | System error. |
+|  |  |
+
+Example for 500:
+```
+{
+    "status": 500,
+    "title": "System error.",
+    "traceId": "e65230db-a1ae-44d4-a303-23c4cf8c13bf"
+}
+```
 
 # Contracts
 
