@@ -20,6 +20,11 @@ Update Customer Quote Request
 |--|--|--|--|--|
 | customerOrder | * | [Order for Request Payment](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/request-payment-for-order.md#order-for-request-payment) object |  | Customer order data for request payment serialized as JSON. |
 
+### Order for Request Payment
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| orderId | * | string  | max 64 |  Order identifier|
 
 ## Valid Request
 ```
@@ -152,11 +157,3 @@ Example for 500:
     "traceId": "e65230db-a1ae-44d4-a303-23c4cf8c13bf"
 }
 ```
-
-# Contracts
-
-## Order for Request Payment
-
-| Field | Required | Type | Restrictions | Description |
-|--|--|--|--|--|
-| orderId | * | string  | max 64 |  Order identifier|
