@@ -77,6 +77,26 @@ Example for 500:
 
 Status operation is the same as [Quote operation status](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#quote-operation-status) for create quote operation.
 
+### Response for operation 'convert-to-order'
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| orderId |  | string  | max 64 |  Identifier of order converted from quote. |
+| status  | * | [Enum of Statuses](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#statuses) | | Operation status. |
+| errors  |   | array of string  | |  Array of error messages. |
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "orderId": "778369",
+    "status": "Succeeded",
+    "errors": null
+}
+```
+
 # Contracts
 
 ## Quote to Convert
