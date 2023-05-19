@@ -101,3 +101,12 @@ Example:
     "errors": null
 }
 ```
+
+# Releases
+-------------------------------
+| Date | Version |
+|--|--|
+| 2023 May 19 | 20230512.1 |
+### Release Notes
+* Convert 'quote to order' and 'request payment for order' endpoints added.
+-------------------------------
