@@ -157,3 +157,12 @@ Example for 500:
     "traceId": "e65230db-a1ae-44d4-a303-23c4cf8c13bf"
 }
 ```
+
+# Releases
+-------------------------------
+| Date | Version |
+|--|--|
+| 2023 May 19 | 20230512.1 |
+### Release Notes
+* Convert 'quote to order' and 'request payment for order' endpoints added.
+-------------------------------
