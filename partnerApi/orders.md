@@ -166,6 +166,113 @@ GET
 ## Scope
 vendor-returns
 
+# Get Order by Id
+
+## Path
+/v1/order/{orderId}
+
+## Method
+GET
+
+## Scope
+orders
+
+## Success Response
+HTTP Status Code: 200
+Example:
+
+```
+
+        {
+            "orderId": "805685",
+            "createdAt": "2021-01-05T00:42:54",
+            "total": 172.25,
+            "currency": "USD",
+            "status": "Shipped Orders - PAID",
+            "customerId": "592786",
+            "customerNotes": "",
+            "channel": "Walmart",
+            "shippingMethod": "Standard Ground",
+            "shippingPrice": 6.89,
+            "shippingTax": 0.48,
+            "shippingDiscount": 0.0,
+            "handlingFee": 0.0,
+            "billing": {
+                "firstName": "Some",
+                "lastName": "Person",
+                "company": "",
+                "phone": "5613765386",
+                "altPhone": "",
+                "fax": "",
+                "zip": "33446",
+                "country": "United States",
+                "state": "FL",
+                "city": "Delray Beach",
+                "address1": "4417 Some Rd",
+                "address2": "",
+                "email": "someperson@relay.walmart.com"
+            },
+            "shipping": {
+                "firstName": "Some",
+                "lastName": "Person",
+                "company": "",
+                "phone": "5613765386",
+                "altPhone": "",
+                "fax": "",
+                "zip": "33446",
+                "country": "United States",
+                "state": "FL",
+                "city": "Delray Beach",
+                "address1": "4417 Some Rd",
+                "address2": "",
+                "email": "someperson@relay.walmart.com"
+            },
+            "items": [
+                {
+                    "itemId": "2077235",
+                    "productId": "3158135",
+                    "unitPrice": 154.09,
+                    "quantity": 1,
+                    "linePosition": 1,
+                    "unitWeight": 0,
+                    "tax": 10.79,
+                    "discount": 0.0,
+                    "mpn": "834CX-3004",
+                    "itemName": "Premier Sanibel Three-Handle Tub & Shower Faucet, Brushed Nickel",
+                    "productImage": "https://dkstatic.blob.core.windows.net/images/561979/original/3552595_usn.jpg",
+                    "productUrl": "https://www.dkhardware.com/sanibel-3-handle-1-spray-tub-and-shower-faucet-in-brushed-nickel-834cx-3004-product-3158135.html"
+                }
+```
+
+## Error Response
+
+| HTTP status code | Message |
+|--|--|
+| 400 |  |
+| 500 |  |
+|  |  |
+
+# Get 'order-based' entities by ids
+Any order-based object can be queried in the same way as an [order by ID](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#get-order-by-id)
+
+| Entity | Path | Scope |
+|--|--|--|
+| Customer Quote | /v1/quote/{quoteId} | quotas |
+| Customer Order | /v1/order/{orderId} | orders |
+| Customer Return /RMA | /v1/return/{returnId} | returns |
+| Vendor Quote | /v1/vendor-quote/{quoteId} | vendor-quotas |
+| Vendor Order | /v1/vendor-order/{orderId} | vendor-orders |
+| Vendor Return /RMA | /v1/vendor-return/{returnId} | vendor-returns |
+
+## Path
+/v1/order/{orderId}
+
+## Method
+GET
+
+## Scope
+orders
+
 # Contracts
 
 ## Common Order Fields
