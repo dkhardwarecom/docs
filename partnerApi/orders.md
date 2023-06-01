@@ -253,7 +253,7 @@ Example:
 |  |  |
 
 # Get 'order-based' entities by ids
-Any order-based object can be queried in the same way as an [order by ID](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#get-order-by-id)
+Any order-based entity can be requested in the same way as an [order by ID](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#get-order-by-id)
 
 | Entity | Path | Scope |
 |--|--|--|
