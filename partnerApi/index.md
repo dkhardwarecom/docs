@@ -9,7 +9,8 @@
 * [Create quotas](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md)
 * [Update quotas](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md)
 * [Convert Quote to Order](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/convert-quote-to-order.md)
-* [Request Payment for Order](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/request-payment-for-order.md) 
+* [Request Payment for Order](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/request-payment-for-order.md)
+* [Request Payment for Quote](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/request-payment-for-quote.md)
 * [Events](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/events.md) 
 
 [Vendors](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/vendors.md)
