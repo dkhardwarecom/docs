@@ -4,6 +4,8 @@
 
 [Customers](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md)
 
+* [Customers Addresses](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers-addresses.md)
+
 [Orders](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md)
 
 * [Create quotas](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md)
