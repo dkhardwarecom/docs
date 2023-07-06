@@ -304,6 +304,20 @@ Example for 500:
 ```
 
 
+# Customer address operation status
+
+## Path
+/v1/customer/address/status
+
+## Method
+
+POST
+
+## Scope
+customers:status
+
+Same as [customer status](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#customer-operation-status) but endpount url is '/v1/customer/address/status'
+
 
 # Releases
 -------------------------------
