@@ -501,3 +501,9 @@ extra fields:
 ### Release Notes
 * Orders and RMAs shipments added.
 -------------------------------
+| Date | Version |
+|--|--|
+| 2023 July 13 | 20230713.2 |
+### Release Notes
+* 'createdBy', 'salesRep' and 'vendor' fields added.
+-------------------------------
