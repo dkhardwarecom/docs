@@ -413,7 +413,8 @@ Example for 500:
 | fax |  | string |  max 50 | Fax|
 | email | * | string | max 100 | Email address|
 | channel | | string | max 100 | Customer channel name from **Dictionary**|
-| customerType |  | string value if dictionary [Type of Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#type-of-customer) | max 20 | Type of customer |
+| createdBy | | [User](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#user) |  | The user who created the customer. |
+| customerType |  | string value from dictionary [Type of Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#type-of-customer) | max 20 | Type of customer |
 | addresses |  |[Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#address)[] |  | Customer's addresses|
 
 
@@ -447,6 +448,9 @@ Example for 500:
 | business | Business |
 | government | Government |
 | military | Military |
+
+## UserReference
+
 
 # Events
 
@@ -503,4 +507,10 @@ Example:
 | 2023 July 05 | 20230705.1 |
 ### Release Notes
 * Add 'channel' property to customer.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2023 July 13 | 20230713.2 |
+### Release Notes
+* Add 'createdBy' property to customer.
 -------------------------------
