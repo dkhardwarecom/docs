@@ -293,6 +293,9 @@ orders
 | shippingTax | * | money  |  | Shipping tax |
 | shippingDiscount | | money  | default(0) | Shipping discount |
 | handlingFee | | money  | default(0) | Handling fee|
+| createdBy | | [User](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#user) |  | The user who created the order. |
+| salesRep | | [User](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#user) |  | The user who sales representative for order. |
+| vendor | | [Vendor](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#vendor) |  | The user who sales representative for order. |
 | billing* | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Billing address |
 | shipping* | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Shipping address |
 | items | | fields from [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#order-item) |  | Items |
@@ -373,6 +376,12 @@ orders
 |--|--|--|--|--|
 | id | * | string | max 64 | Users's identifier |
 | name |  | string | max 300 | Users's name |
+
+## Vendor
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| id | * | string | max 64 | Vendor's identifier |
+| name |  | string | max 300 | Vendors's name |
 
 ## Action Type Code
 
