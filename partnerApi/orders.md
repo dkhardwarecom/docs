@@ -295,7 +295,6 @@ orders
 | handlingFee | | money  | default(0) | Handling fee|
 | createdBy | | [User](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#user) |  | The user who created the order. |
 | salesRep | | [User](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#user) |  | The user who sales representative for order. |
-| vendor | | [Vendor](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#vendor) |  | The user who sales representative for order. |
 | billing* | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Billing address |
 | shipping* | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Shipping address |
 | items | | fields from [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#order-item) |  | Items |
@@ -453,6 +452,7 @@ extra fields:
 | replacementForOrderId |  | string | max 64 | Id of parent vendor order in case of the current vendor order is replacement |
 | replacementOrderIds |  | array of string | max 64 | Vendor replacement order Ids for the current vendor order |
 | returnIds |  | array of string | max 64 | Vendor returns Ids for the current vendor order |
+| vendor | | [Vendor](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#vendor) |  | The Vendor for the order. |
 
 ## Vendor Quote
 **Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
@@ -462,6 +462,7 @@ extra fields:
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | orderIds |  | array of string | max 64 | Vendor order Ids for the current vendor quote |
+| vendor | | [Vendor](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#vendor) |  | The Vendor for the order. |
 
 ## Vendor Return (RMA)
 **Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
@@ -471,6 +472,7 @@ extra fields:
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | parentOrderId |  | string | max 64 | Id of parent vendor order |
+| vendor | | [Vendor](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#vendor) |  | The Vendor for the order. |
 
 
 # Releases
