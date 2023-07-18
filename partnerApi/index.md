@@ -2,6 +2,8 @@
 
 [Authentication](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/authentication.md)
 
+[Rate limiting](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/ratelimiting.md)
+
 [Customers](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md)
 
 * [Customers Addresses](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers-addresses.md)
