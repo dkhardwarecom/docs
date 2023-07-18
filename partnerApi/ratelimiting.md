@@ -1,5 +1,5 @@
 # Rate Limiting 
-We use a fixed window algorithm to limit the consumption of API resources.
+We use a **fixed window** algorithm to limit the consumption of API resources.
 
 ## Limiting per client
  - **Read** (generally GET requests) 200 requests per 1 minute
