@@ -147,6 +147,15 @@ SubmissionId serialized as json.
 }
 ```
 
+## Response
+
+| Field | Description |
+|--|--|
+| quoteId | Identifier of quote. |
+| status | [Status of operation](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#statuses). |
+| errors | Array of errors strings. |
+| payload | Quote data. The same as [get quote response](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#get-quotas). |
+
 ## Success Response
 
 HTTP Status Code: 200
@@ -154,9 +163,102 @@ HTTP Status Code: 200
 Example:
 ```
 {
-    "quoteId": "638361",
+    "quoteId": "643543",
     "status": "Succeeded",
-    "errors": null
+    "errors": null,
+    "payload": {
+        "quoteId": "643543",
+        "orderIds": [],
+        "createdAt": "2023-08-09T11:53:30",
+        "total": 43.0,
+        "currency": "USD",
+        "status": "New Web Quotes Inquiry",
+        "statusId": "22",
+        "type": "Quotes",
+        "typeId": "2",
+        "customerId": "424726",
+        "customerNotes": "Requested Response Time: Three Days\nId: 17, Product: Satin Anodized Cashier Window Unit\nQty: 3\nPrice: 10\nWeight: 113\nLine Comment: \n\n\n",
+        "channel": null,
+        "shippingMethod": null,
+        "shippingPrice": 10.0,
+        "shippingTax": 1.0,
+        "shippingDiscount": -2.0,
+        "handlingFee": 3.0,
+        "createdBy": {
+            "id": "93",
+            "name": "Andrew Muhin"
+        },
+        "salesRep": {
+            "id": "93",
+            "name": "Andrew Muhin"
+        },
+        "billing": {
+            "firstName": "John",
+            "lastName": "Doe",
+            "company": "",
+            "phone": "4047027116",
+            "altPhone": "",
+            "fax": "",
+            "zip": "11122",
+            "country": "US",
+            "state": "NY",
+            "city": "New York",
+            "address1": "some st, 15",
+            "address2": "",
+            "email": "johndoe@somesite.com"
+        },
+        "shipping": {
+            "firstName": "John",
+            "lastName": "Doe",
+            "company": "",
+            "phone": "4047027116",
+            "altPhone": "",
+            "fax": "",
+            "zip": "11122",
+            "country": "US",
+            "state": "NY",
+            "city": "New York",
+            "address1": "some st, 15",
+            "address2": "",
+            "email": "johndoe@somesite.com"
+        },
+        "items": [
+            {
+                "itemId": "1784378",
+                "productId": "17",
+                "unitPrice": 10.0,
+                "unitCost": 5.0,
+                "quantity": 3,
+                "linePosition": 1,
+                "lineComment": null,
+                "unitWeight": 113,
+                "tax": 2.0,
+                "discount": -1.0,
+                "mpn": "SCW103N",
+                "itemName": "Satin Anodized Cashier Window Unit",
+                "productImage": "https://dkhtest.blob.core.windows.net/images/78559/original/SCW103N_2.gif",
+                "productUrl": "https://www.dkhardware.com/satin-anodized-cashier-window-unit-scw103n-product-17.html",
+                "unitOfMeasure": {
+                    "id": "17",
+                    "name": "Each"
+                }
+            }
+        ],
+        "notes": [
+            {
+                "noteId": "1622092",
+                "author": {
+                    "id": "93",
+                    "name": "Andrew Muhin"
+                },
+                "message": "Additional comments: Requested Response Time: Three Days",
+                "createdAt": "2023-08-09T11:53:31",
+                "actionTypeCode": "QuestionToSupport"
+            }
+        ],
+        "payments": null,
+        "shipments": null
+    }
 }
 ```
 
