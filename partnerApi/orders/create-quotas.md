@@ -216,16 +216,19 @@ Example for 500:
 ## Quote Item
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| productId | * | string  | max 64 |  Product identifier|
+| itemId | * | string  | max 64 |  Item identifier |
+| productId | * | string  | max 64 |  Product identifier |
 | unitPrice | * | money |  | Product unit price |
 | unitCost | * | money |  | Product unit price |
 | unitWeight | * | float |  | Product weight |
 | unitOfMeasure | * | [UnitOfMeasure](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#unit-of-measure) |  | Unit of measure. |
 | quantity | * | integer |  | Product quantity in order line |
-| tax |  | money   | default(0) | Total line tax |
-| discount |  | money   | default(0) | Total line discount |
-| mpn |  | string | max 50 | Manufacturer part number |
-| itemName |  | string | max 2000 | Item name |
+| linePosition | * | integer | sequence from 1..1000 unique for each item | Position of item line |
+| tax | * | money   | default(0) | Total line tax |
+| discount | * | money   | default(0) | Total line discount |
+| mpn | * | string | max 50 | Manufacturer part number |
+| itemName | * | string | max 2000 | Item name |
+
 
 ## Response Time
 
@@ -278,4 +281,10 @@ Example:
 | 2023 February 03 | 20230203.1 |
 ### Release Notes
 * Create quote endpoint. Add validation for items collection. Items must not be empty.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2023 Aug 09 | 20230809.1 |
+### Release Notes
+* Add line position field for quote items.
 -------------------------------
