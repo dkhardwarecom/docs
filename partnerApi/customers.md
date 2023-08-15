@@ -346,6 +346,15 @@ SubmissionId serialized as json.
     "submissionId": "77921d3a-7838-40bf-a2d2-e30424d15520"
 }
 ```
+## Response
+
+| Field | Description |
+|--|--|
+| customerId | Identifier of customer. |
+| status | [Status of operation](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#statuses). |
+| errors | Array of errors strings. |
+| payload | Customer data. The same as [get customer by id response](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#get-customer-by-id). |
+
 
 ## Success Response
 
@@ -354,9 +363,49 @@ HTTP Status Code: 200
 Example:
 ```
 {
-    "customerId": 463118,
+    "customerId": "463509",
     "status": "Succeeded",
-    "errors": null
+    "errors": null,
+    "payload": {
+        "customerId": "463509",
+        "firstName": "Some1",
+        "lastName": "Person",
+        "email": "some5-email@some.site",
+        "company": "",
+        "phone": "14562356",
+        "altPhone": null,
+        "fax": null,
+        "customerType": "government",
+        "addresses": [
+            {
+                "addressId": "996739",
+                "customerId": "463509",
+                "firstName": "Some",
+                "lastName": "Person",
+                "zip": "80911",
+                "country": "United States",
+                "state": "CO",
+                "city": "Colorado Springs",
+                "address1": "777 king rd",
+                "address2": null,
+                "company": null,
+                "phone": "56235776",
+                "altPhone": null,
+                "fax": null,
+                "isDefaultBilling": true,
+                "isDefaultShipping": true,
+                "createdAt": "2023-08-15T04:22:51",
+                "updatedAt": "2023-08-15T04:22:51"
+            }
+        ],
+        "createdAt": "2023-08-15T08:22:51",
+        "updatedAt": "2023-08-15T08:22:51",
+        "channel": "partner-api",
+        "createdBy": {
+            "id": "37",
+            "name": "Products Editor"
+        }
+    }
 }
 ```
 
