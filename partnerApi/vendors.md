@@ -248,7 +248,7 @@ Example:
 | isMain | * | bool | | Main warehouse flag |
 | inbound | * | bool | | Inbound warehouse flag |
 | priority | * | integer | positive integer | Warehouse priority |
-| locationAddress |  | [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/vendors.md#warehouse-location-address)[]  | | Warehouse location address |
+| locationAddress |  | [Warehouse Location Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/vendors.md#warehouse-location-address)[]  | | Warehouse location address |
 
 ## Warehouse Location Address
 | Field | Required | Type | Restrictions | Description |
