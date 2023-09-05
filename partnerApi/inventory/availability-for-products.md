@@ -217,7 +217,7 @@ Example for 500:
 ## Warehouse Stock
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| warehouseId | * | string | max 8 | Id of warehouse. |
+| warehouseId | * | string | max 8 | Id of warehouse. [Vendor warehouse](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/vendors.md#warehouse) or [Local Warehouse](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/inventory/availability-for-products.md#local-warehouses) |
 | own |  | int |  | Own stock count. Stock count **exclude** compounds and equivalences products stock count.  |
 | total | * | int |  | Total stock count. Stock count **include** compounds and equivalences products stock count. |
 
@@ -233,6 +233,17 @@ Example for 500:
 |--|--|--|--|--|
 | own |  | int |  | Own stock count. Stock count **exclude** compounds and equivalences products stock count.  |
 | total | * | int |  | Total stock count. Stock count **include** compounds and equivalences products stock count. |
+
+## Local Warehouses
+We have static list of local warehouses.
+| Id | Name |
+|--|--|
+| "1" | Warehouse 1 |
+| "2" | Warehouse 2 |
+| "3" | Warehouse 3 |
+| "4" | Warehouse 4 |
+| "5" | Warehouse 5 |
+| "6" | Warehouse 6 |
 
 # Releases
 -------------------------------
