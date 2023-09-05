@@ -1,5 +1,5 @@
 
-# Availability for Products
+# Inventory Availability for Products
 
 ## Path
 
