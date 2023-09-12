@@ -289,6 +289,7 @@ orders
 | customerNotes | | string | max 8000 | Customer's notes or Cutting instructions |
 | channel | | string | max 100 | Order channel name from **Dictionary**|
 | shippingMethod | * | string | max 200  | Shipping method |
+| paymentMethod | | [PaymentMethod](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#payment-method) |  | Payment method |
 | shippingPrice | * | money  |  | Shipping price |
 | shippingTax | * | money  |  | Shipping tax |
 | shippingDiscount | | money  | default(0) | Shipping discount |
