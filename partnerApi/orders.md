@@ -368,6 +368,7 @@ orders
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | id | * | string | max 64 | Method identifier |
+| code | * | string | max 64 | Method code |
 | name |  | string | max 100 | Method name |
 
 ## User
