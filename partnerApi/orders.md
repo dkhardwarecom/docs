@@ -318,12 +318,21 @@ orders
 | productImage |  | string |  | Product main image link |
 | productUrl |  | string |  | Product url for details |
 | unitOfMeasure |  | [Unit Of Measure](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#unit-of-measure)|  | Product unit of measure |
+| addons |  | array of [Order Item Addon](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#order-item-addon) |  | Item addons |
 
 ## Unit Of Measure
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 |  id | * | string | max 10 | Unit of measure identifier |
 |  name |  | string | max 50 | Unit of measure name |
+
+## Order Item Addon
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+|  code | * | string | max 50 | Code |
+|  title |  | string | max 2000 | Ttile |
+|  price | * | money |  | Price |
+|  cost |  | money | | Cost |
 
 ## Address
 
