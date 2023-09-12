@@ -130,7 +130,7 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 | shippingTax |  | money  | greater or equal than zero | Shipping tax |
 | shippingDiscount |  | money  | greater or equal than zero | Shipping discount |
 | handlingFee |  | money  | greater or equal than zero | Handling fee |
-| paymentMethodCode |  | string  | code from dictionary | Payment method code |
+| paymentMethodCode |  | string  | code from [dictionary] | Code of payment method |
 
 
 
