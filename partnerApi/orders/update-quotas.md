@@ -118,6 +118,7 @@ Status operation is the same as [Quote operation status](https://github.com/dkha
 | billing |  | fields from [Updatable Quote Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-quote-address) |  | Billing address |
 | shipping |  | fields from [Updatable Quote Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-quote-address) |  | Shipping address |
 | items |  | fields from [Updatable Quote Items](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-quote-items) |  | Items for update |
+| addons |  | fields from [Updatable Quote Items Addons](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-quote-items-addons) |  | Items addons for update |
 | notes |  | fields from [Updatable Notes](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-notes) |  | Notes for update |
 
 ## Updatable Quote Totals
@@ -129,6 +130,8 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 | shippingTax |  | money  | greater or equal than zero | Shipping tax |
 | shippingDiscount |  | money  | greater or equal than zero | Shipping discount |
 | handlingFee |  | money  | greater or equal than zero | Handling fee |
+| paymentMethodCode |  | string  | code from dictionary | Payment method code |
+
 
 
 ## Updatable Quote Address
@@ -210,6 +213,32 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 | message | * | string  | max 2000 |  Note message |
 | actionTypeCode | * | [ActionTypeCode](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#action-type-code) |  | Code of action type. |
 
+## Updatable Quote Items Addons
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| addonsToDelete |  | array of [Addon to Delete](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#addon-to-delete)   |  | Addons to delete |
+| addonsToUpdate |  | array of [Addon to Update](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#addon-to-update) |  | Addons to update |
+| addonsToAdd |  | array of [Addon to Add](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#addon-to-add) |  | Addons to add |
+
+## Addon to Delete
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| itemId | * | string  | max 64 |  Item identifier |
+| code | * | string  | max 64 |  Code of addon|
+
+## Addon to Update
+| Field | Required | Type | [Updatable](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-property) | Restrictions | Description |
+|--|--|--|--|--|--|
+| itemId | * | string | | max 64 |  Item identifier | 
+| code | * | string | | max 64 |  Code of addon | 
+| price |  | money | * | |  Price of addon | 
+
+## Addon to Add
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| itemId | * | string  | max 64 |  Item identifier |
+| code | * | string  | max 64 |  Code of addon |
+| price |  | money  |  |  Price of addon |
 
 ## Updatable Property
 See [example](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#valid-request)
