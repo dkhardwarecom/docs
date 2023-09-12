@@ -331,6 +331,7 @@ Example for 500:
 | discount | * | money   | default(0) | Total line discount |
 | mpn | * | string | max 50 | Manufacturer part number |
 | itemName | * | string | max 2000 | Item name |
+| addons |  | array of [Order Item Addon](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#order-item-addon) |  | Item addons. |
 
 
 ## Response Time
