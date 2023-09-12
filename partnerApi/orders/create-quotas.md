@@ -314,6 +314,7 @@ Example for 500:
 | items | * | array of [Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#quote-item) |  | Items for quote |
 | сomment |  | string | max 1000 | Quote operator comment. |
 | responseTime |  | [Response Time](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#response-time) enum | | Expected response time for quote. |
+| paymentMethod | | [Payment method](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#payment-method)  | Code field is sufficient | Payment method |
 
 ## Quote Item
 | Field | Required | Type | Restrictions | Description |
