@@ -314,10 +314,10 @@ Example for 500:
 | items | * | array of [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-orders.md#order-item) |  | Items for order |
 | сomment |  | string | max 1000 | Order operator comment. |
 | responseTime |  | [Response Time](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-orders.md#response-time) enum | | Expected response time for order. |
-| paymentMethodCode | * | string  | code from [dictionary] | Code of Payment method |
+| paymentMethodCode | * | string  | code from [dictionary](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/dictionaries.md#payment-method) | Code of Payment method |
 | poNumber | * | string  |  | Purchase Order Number |
 | orderDateUtc | * | datetime  | UTC | Date of order at UTC format |
-| shippingMethod | * | string  | name from [dictionary] | Name of Shipping method |
+| shippingMethod | * | string  | name from [dictionary](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/dictionaries.md#shipping-method) | Name of Shipping method |
 
 ## Order Item
 | Field | Required | Type | Restrictions | Description |
@@ -379,7 +379,7 @@ Example:
 -------------------------------
 | Date | Version |
 |--|--|
-| 2023 September ?? |  |
+| 2023 September 22 | 20230922.1 |
 ### Release Notes
 * Create customer order endpoint added.
 -------------------------------
