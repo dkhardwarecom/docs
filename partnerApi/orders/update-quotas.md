@@ -130,7 +130,7 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 | shippingTax |  | money  | greater or equal than zero | Shipping tax |
 | shippingDiscount |  | money  | greater or equal than zero | Shipping discount |
 | handlingFee |  | money  | greater or equal than zero | Handling fee |
-| paymentMethodCode |  | string  | code from [dictionary] | Code of payment method |
+| paymentMethodCode |  | string  | code from [dictionary](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/dictionaries.md#payment-method) | Code of payment method |
 
 
 
@@ -296,4 +296,10 @@ Example:
 | 2023 Aug 09 | 20230809.1 |
 ### Release Notes
 * Add line position field for quote items.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2023 September 22 | 20230922.1 |
+### Release Notes
+* Payment method code field added.
 -------------------------------
