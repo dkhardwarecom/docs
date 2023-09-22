@@ -314,7 +314,7 @@ Example for 500:
 | items | * | array of [Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#quote-item) |  | Items for quote |
 | сomment |  | string | max 1000 | Quote operator comment. |
 | responseTime |  | [Response Time](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#response-time) enum | | Expected response time for quote. |
-| paymentMethodCode | * | string  | code from [dictionary] | Code of Payment method |
+| paymentMethodCode | * | string  | code from [Dictionary](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/dictionaries.md#payment-method) | Code of Payment method |
 
 ## Quote Item
 | Field | Required | Type | Restrictions | Description |
@@ -390,4 +390,10 @@ Example:
 | 2023 Aug 09 | 20230809.1 |
 ### Release Notes
 * Add line position field for quote items.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2023 September 22 | 20230922.1 |
+### Release Notes
+* Add payment method code.
 -------------------------------
