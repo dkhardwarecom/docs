@@ -27,7 +27,6 @@ Create Customer Order Request
 {
 	"referenceId": "87",
 	"customerOrder": {
-		"responseTime": "ThreeDays",
 		"customerId": "424726",
 		"shippingPrice": 10,
 		"shippingTax": 1,
