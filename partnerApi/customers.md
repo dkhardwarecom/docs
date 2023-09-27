@@ -465,6 +465,8 @@ Example for 500:
 | createdBy | | [User](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#user) |  | The user who created the customer. |
 | customerType |  | string value from dictionary [Type of Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#type-of-customer) | max 20 | Type of customer |
 | addresses |  |[Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#address)[] |  | Customer's addresses|
+| creditApproved | * | bool |  | Credit is approved flag. In case of credit is approved it is 'true', otherwise 'false'. |
+| creditLimit |  | money  |  | Limit of the ctedit. |
 
 
 ## Address
