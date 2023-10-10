@@ -154,6 +154,7 @@ SubmissionId serialized as json.
 | status | [Status of operation](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-orders.md#statuses). |
 | errors | Array of errors strings. |
 | payload | Order data. The same as [get order response](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#get-orders). |
+| referenceId |  Id of order in external system. |
 
 ## Success Response
 
@@ -165,6 +166,7 @@ Example:
     "orderId": "643543",
     "status": "Succeeded",
     "errors": null,
+    "referenceId": "329523",
     "payload": {
         "orderId": "643543",
         "orderIds": [],
