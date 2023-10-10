@@ -90,6 +90,7 @@ HTTP Status Code: 200
 Example:
 ```
 {
+    "referenceId":"1010571",
     "payload": {
         "customerId": "21762",
         "createdAt": "2015-01-13T22:16:49",
@@ -166,36 +167,46 @@ customers:create
 
 ## Body
 
-[Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#customer) contract serialized as json **include** addresses.
+Create Customer Request
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| customer | * | [Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#customer)  |  | Customer serialized as json **include** addresses.. |
+| referenceId |  | string | max 64 | Id of customer in external system. |
+
 
 ## Valid Request
 ```
 {
-	"firstName": "Some",
-	"lastName": "Person",
-	"email": "some.email@some.site",
-	"company": "",
-	"phone": "14562356",
-	"altPhone": null,
-	"fax": null,
-	"addresses": [
-		{
-			"firstName": "Some",
-			"lastName": "Person",
-			"zip": "80911",
-			"country": "United States",
-			"state": "CO",
-			"city": "Colorado Springs",
-			"address1": "55 Some St",
-			"address2": null,
-			"company": null,
-			"phone": "56235776",
-			"altPhone": null,
-			"fax": null,
-			"isDefaultBilling": true,
-			"isDefaultShipping": true
-		}
-	]
+	"referenceId":"626279",
+	"customer":
+	{
+		"firstName": "Some",
+		"lastName": "Person",
+		"email": "some.email@some.site",
+		"company": "",
+		"phone": "14562356",
+		"altPhone": null,
+		"fax": null,
+		"addresses": [
+			{
+				"firstName": "Some",
+				"lastName": "Person",
+				"zip": "80911",
+				"country": "United States",
+				"state": "CO",
+				"city": "Colorado Springs",
+				"address1": "55 Some St",
+				"address2": null,
+				"company": null,
+				"phone": "56235776",
+				"altPhone": null,
+				"fax": null,
+				"isDefaultBilling": true,
+				"isDefaultShipping": true
+			}
+		]
+	}
 }
 ```
 
@@ -259,18 +270,25 @@ customers:update
 
 ## Body
 
-[Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#customer) contract serialized as json **except** addresses.
+Create Customer Request
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| customer | * | [Customer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#customer)  |  | Customer serialized as json **except** addresses. |
 
 ## Valid Request
 ```
 {
-"customerId":"463118",
-"firstName": "Some",
-"lastName": "Big Person",
-"company": "Horns and hooves",
-"phone": "14562356",
-"altPhone": null,
-"fax": "24562456"
+  "customer":
+	{
+	"customerId":"463118",
+	"firstName": "Some",
+	"lastName": "Big Person",
+	"company": "Horns and hooves",
+	"phone": "14562356",
+	"altPhone": null,
+	"fax": "24562456"
+	}
 }
 ```
 
@@ -354,7 +372,7 @@ SubmissionId serialized as json.
 | status | [Status of operation](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#statuses). |
 | errors | Array of errors strings. |
 | payload | Customer data. The same as [get customer by id response](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#get-customer-by-id). |
-
+| referenceId | Id of customer in external system. |
 
 ## Success Response
 
@@ -363,49 +381,55 @@ HTTP Status Code: 200
 Example:
 ```
 {
-    "customerId": "463509",
-    "status": "Succeeded",
-    "errors": null,
-    "payload": {
-        "customerId": "463509",
-        "firstName": "Some1",
-        "lastName": "Person",
-        "email": "some5-email@some.site",
-        "company": "",
-        "phone": "14562356",
-        "altPhone": null,
-        "fax": null,
-        "customerType": "government",
-        "addresses": [
-            {
-                "addressId": "996739",
-                "customerId": "463509",
-                "firstName": "Some",
-                "lastName": "Person",
-                "zip": "80911",
-                "country": "United States",
-                "state": "CO",
-                "city": "Colorado Springs",
-                "address1": "777 king rd",
-                "address2": null,
-                "company": null,
-                "phone": "56235776",
-                "altPhone": null,
-                "fax": null,
-                "isDefaultBilling": true,
-                "isDefaultShipping": true,
-                "createdAt": "2023-08-15T04:22:51",
-                "updatedAt": "2023-08-15T04:22:51"
-            }
-        ],
-        "createdAt": "2023-08-15T08:22:51",
-        "updatedAt": "2023-08-15T08:22:51",
-        "channel": "partner-api",
-        "createdBy": {
-            "id": "37",
-            "name": "Products Editor"
-        }
-    }
+"customerId":"463509",
+"referenceId":"10104563",
+"status":"Success",
+"payload":
+	{
+	    "customerId": "463509",
+	    "status": "Succeeded",
+	    "errors": null,
+	    "payload": {
+	        "customerId": "463509",
+	        "firstName": "Some1",
+	        "lastName": "Person",
+	        "email": "some5-email@some.site",
+	        "company": "",
+	        "phone": "14562356",
+	        "altPhone": null,
+	        "fax": null,
+	        "customerType": "government",
+	        "addresses": [
+	            {
+	                "addressId": "996739",
+	                "customerId": "463509",
+	                "firstName": "Some",
+	                "lastName": "Person",
+	                "zip": "80911",
+	                "country": "United States",
+	                "state": "CO",
+	                "city": "Colorado Springs",
+	                "address1": "777 king rd",
+	                "address2": null,
+	                "company": null,
+	                "phone": "56235776",
+	                "altPhone": null,
+	                "fax": null,
+	                "isDefaultBilling": true,
+	                "isDefaultShipping": true,
+	                "createdAt": "2023-08-15T04:22:51",
+	                "updatedAt": "2023-08-15T04:22:51"
+	            }
+	        ],
+	        "createdAt": "2023-08-15T08:22:51",
+	        "updatedAt": "2023-08-15T08:22:51",
+	        "channel": "partner-api",
+	        "createdBy": {
+	            "id": "37",
+	            "name": "Products Editor"
+	        }
+	    }
+	}
 }
 ```
 
