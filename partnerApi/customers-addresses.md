@@ -82,7 +82,10 @@ customers:update
 
 ## Body
 
-[Customer Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#address) contract serialized as json.
+Create Customer Address Request
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| address | * | [Customer Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#address) object |  | Customer address object serialized as JSON. |
 
 ## Valid Request
 ```
@@ -168,7 +171,10 @@ customers:update
 
 ## Body
 
-[Customer Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#address) contract serialized as json include address id.
+Update Customer Address Request
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| address | * | [Customer Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#address) object |  | Customer address object serialized as JSON include address id. |
 
 ## Valid Request
 ```
