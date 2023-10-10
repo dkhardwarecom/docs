@@ -90,7 +90,6 @@ HTTP Status Code: 200
 Example:
 ```
 {
-    "referenceId":"1010571",
     "payload": {
         "customerId": "21762",
         "createdAt": "2015-01-13T22:16:49",
