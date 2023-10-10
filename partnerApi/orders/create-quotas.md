@@ -155,6 +155,7 @@ SubmissionId serialized as json.
 | status | [Status of operation](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#statuses). |
 | errors | Array of errors strings. |
 | payload | Quote data. The same as [get quote response](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#get-quotas). |
+| referenceId |  Id of quote in external system. |
 
 ## Success Response
 
@@ -166,6 +167,7 @@ Example:
     "quoteId": "643543",
     "status": "Succeeded",
     "errors": null,
+    "referenceId":"562875",
     "payload": {
         "quoteId": "643543",
         "orderIds": [],
