@@ -384,3 +384,9 @@ Example:
 ### Release Notes
 * Create customer order endpoint added.
 -------------------------------
+| Date | Version |
+|--|--|
+| 2023 October 12 | 20231012.2 |
+### Release Notes
+* ReferenceId field added to status response near payload.
+-------------------------------
