@@ -588,3 +588,10 @@ Example:
 ### Release Notes
 * Add 'createdBy' property to customer.
 -------------------------------
+| Date | Version |
+|--|--|
+| 2023 October 12 | 20231012.2 |
+### Release Notes
+* Customer referenceId field added. ReferenceId field added to status response near payload.
+* **Breaking changes**: Create and Update customer requests should be wrapped. See the docs.
+-------------------------------
