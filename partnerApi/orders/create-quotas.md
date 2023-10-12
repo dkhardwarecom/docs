@@ -399,3 +399,9 @@ Example:
 ### Release Notes
 * Add payment method code.
 -------------------------------
+| Date | Version |
+|--|--|
+| 2023 October 12 | 20231012.2 |
+### Release Notes
+* ReferenceId field added to status response near payload.
+-------------------------------
