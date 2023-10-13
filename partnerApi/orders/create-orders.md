@@ -316,7 +316,7 @@ Example for 500:
 | сomment |  | string | max 1000 | Order operator comment. |
 | responseTime |  | [Response Time](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-orders.md#response-time) enum | | Expected response time for order. |
 | paymentMethodCode | * | string  | code from [Dictionary](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/dictionaries.md#payment-method) | Code of Payment method |
-| poNumber | * | string  |  | Purchase Order Number |
+| poNumber |  | string  |  | Purchase Order Number |
 | orderDateUtc | * | datetime  | UTC | Date of order at UTC format |
 | shippingMethod | * | string  | name from [Dictionary](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/dictionaries.md#shipping-method) | Name of Shipping method |
 
