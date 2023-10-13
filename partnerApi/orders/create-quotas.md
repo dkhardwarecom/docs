@@ -313,7 +313,7 @@ Example for 500:
 | total | * | money |  | Order total |
 | billing | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Billing address |
 | shipping | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Shipping address |
-| items | * | array of [Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#quote-item) |  | Items for quote |
+| items |  | array of [Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#quote-item) |  | Items for quote |
 | сomment |  | string | max 1000 | Quote operator comment. |
 | responseTime |  | [Response Time](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#response-time) enum | | Expected response time for quote. |
 | paymentMethodCode | * | string  | code from [Dictionary](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/dictionaries.md#payment-method) | Code of Payment method |
@@ -404,4 +404,10 @@ Example:
 | 2023 October 12 | 20231012.2 |
 ### Release Notes
 * ReferenceId field added to status response near payload.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2023 October 13 | 20231013.1 |
+### Release Notes
+* Items is not required for create quote.
 -------------------------------
