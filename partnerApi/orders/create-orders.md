@@ -390,3 +390,9 @@ Example:
 ### Release Notes
 * ReferenceId field added to status response near payload.
 -------------------------------
+| Date | Version |
+|--|--|
+| 2023 October 13 | 20231013.1 |
+### Release Notes
+* poNumber is not required for create order.
+-------------------------------
