@@ -310,8 +310,8 @@ Example for 500:
 | shippingDiscount | | money  | default(0) | Shipping discount |
 | handlingFee | | money  | default(0) | Handling fee|
 | total | * | money |  | Order total |
-| billing | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Billing address |
-| shipping | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Shipping address |
+| billing | * | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Billing address |
+| shipping | * | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Shipping address |
 | items | * | array of [Order Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-orders.md#order-item) |  | Items for order |
 | сomment |  | string | max 1000 | Order operator comment. |
 | responseTime |  | [Response Time](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-orders.md#response-time) enum | | Expected response time for order. |
