@@ -311,8 +311,8 @@ Example for 500:
 | shippingDiscount | | money  | default(0) | Shipping discount |
 | handlingFee | | money  | default(0) | Handling fee|
 | total | * | money |  | Order total |
-| billing | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Billing address |
-| shipping | | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Shipping address |
+| billing | * | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Billing address |
+| shipping | * | fields from [Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#address) |  | Shipping address |
 | items |  | array of [Quote Item](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#quote-item) |  | Items for quote |
 | сomment |  | string | max 1000 | Quote operator comment. |
 | responseTime |  | [Response Time](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#response-time) enum | | Expected response time for quote. |
