@@ -175,6 +175,7 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 | mpn |  | string | * | max 50 | Manufacturer part number |
 | itemName |  | string | * | max 2000 | Item name |
 | linePosition |  | integer | * |sequence from 1..1000 unique for each item | Position of item line |
+| lineComment |  | string | * | max 2000 | Comment for item line |
 
 ## Quote Item
 | Field | Required | Type | Restrictions | Description |
@@ -191,6 +192,7 @@ All properties are [Updatable](https://github.com/dkhardwarecom/docs/blob/main/p
 | mpn | * | string | max 50 | Manufacturer part number |
 | itemName | * | string | max 2000 | Item name |
 | linePosition | * | integer | sequence from 1..1000 unique for each item | Position of item line |
+| lineComment |  | string | max 2000 | Comment for item line |
 
 ## Updatable Notes
 | Field | Required | Type | Restrictions | Description |
