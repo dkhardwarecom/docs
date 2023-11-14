@@ -331,6 +331,7 @@ Example for 500:
 | unitOfMeasure | * | [UnitOfMeasure](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#unit-of-measure) |  | Unit of measure. |
 | quantity | * | integer |  | Product quantity in order line |
 | linePosition | * | integer | sequence from 1..1000 unique for each item | Position of item line |
+| lineComment |  | string | max 2000 | Comment for item line |
 | tax | * | money   | default(0) | Total line tax |
 | discount | * | money   | default(0) | Total line discount |
 | mpn | * | string | max 50 | Manufacturer part number |
