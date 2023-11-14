@@ -311,6 +311,7 @@ orders
 | unitPrice | * | money |  | Product unit price |
 | quantity | * | integer |  | Product quantity in order line |
 | linePosition | * | integer |  | Line position |
+| lineComment |  | string | max 2000 | Comment for item line |
 | unitWeight |  | float |  | Product weight |
 | tax |  | money   | default(0) | Total line tax |
 | discount |  | money   | default(0) | Total line discount |
