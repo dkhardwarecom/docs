@@ -32,7 +32,7 @@ Example:
 ```
 {
     "payload": {
-        "orderId": 659197,
+        "quoteId": 659197,
         "documentId": 98455,
         "documentName": "test PDF doc",
         "fileName": "test.pdf",
@@ -100,7 +100,7 @@ Example:
 {
     "payload": [
         {
-            "orderId": 623059,
+            "quoteId": 623059,
             "documentId": 94012,
             "documentName": "Signed DKH-622643.pdf",
             "fileName": "Signed DKH-622643.pdf",
@@ -109,7 +109,7 @@ Example:
             "createdAt": "2020-02-06T12:01:12.72"
         },
         {
-            "orderId": 623059,
+            "quoteId": 623059,
             "documentId": 94013,
             "documentName": "cc form DKH-622643.pdf",
             "fileName": "cc form DKH-622643.pdf",
