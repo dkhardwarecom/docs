@@ -80,7 +80,7 @@ Example for 500:
 }
 ```
 
-# General Email operation status
+# Send General Email operation status
 
 ## Path
 
