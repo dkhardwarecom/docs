@@ -16,7 +16,7 @@ emails:send
 ### Send General Email Request
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| emailMessage | * |Complex type [Country and State Delivery Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/shipping.md#country-and-state-delivery-address)  |  | Address to delivery. |
+| emailMessage | * |Complex type [Email Message](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/emails.md#email-message)  |  | Email Message. |
 
 ## Body
 
