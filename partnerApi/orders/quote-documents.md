@@ -69,3 +69,58 @@ Example for 500:
     "traceId": "d7234748-ba00-4d87-8cf2-246423cc172c"
 }
 ```
+
+# Download Document
+
+## Path
+
+/v1/quote/{quoteId}/document/download/{documentId}
+
+## Method
+
+GET
+
+## Headers
+
+[require request context](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/authentication.md#request-context)
+
+| Name | Required |  Restrictions | Description |
+|--|--|--|--|
+| Accept | * | | Should be ```*/*```.   |
+
+
+## Scope
+quotas:documents
+
+## Success Response
+
+HTTP Status Code: 200
+
+Binary file contetnt.
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 | One or more validation errors occurred. |
+| 500 | System error. |
+|  |  |
+
+Example for 400:
+```
+{
+    "status": 400,
+    "title": "Customer quote with id '933864' not found.",
+    "traceId": "8f7d0b19-2158-4d50-8431-2bef147d6306"
+}
+```
+
+Example for 500:
+```
+{
+    "status": 500,
+    "title": "System error.",
+    "traceId": "d7234748-ba00-4d87-8cf2-246423cc172c"
+}
+```
