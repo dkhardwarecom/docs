@@ -80,6 +80,21 @@ Example for 500:
 }
 ```
 
+# General Email operation status
+
+## Path
+
+/v1/email/status
+
+## Method
+
+POST
+
+## Scope
+emails:status
+
+Status operation is the same as other operations staus. For example [Quote operation status](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#quote-operation-status).
+
 # Contracts
 
 ## Email Message
