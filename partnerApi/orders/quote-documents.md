@@ -193,6 +193,67 @@ Example for 500:
 }
 ```
 
+# Delete Document
+
+## Path
+/v1/quote/{quoteId}/document/delete
+
+## Method
+
+POST
+
+## Headers
+
+[require request context](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/authentication.md#request-context)
+
+## Scope
+quotas:documents
+
+## Body
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| DocumentId | * | string | max 64 | Identifier of document. |
+
+
+## Valid Request
+```
+{
+  "documentId":"94013"
+}
+```
+
+## Success Response
+
+HTTP Status Code: 200
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 | One or more validation errors occurred. |
+| 500 | System error. |
+|  |  |
+
+Example for 400:
+```
+{
+    "status": 400,
+    "title": "DocumentId is empty.",
+    "traceId": "59cb18b3-fced-4385-b19c-9b4e3c071eeb"
+}
+```
+
+Example for 500:
+```
+{
+    "status": 500,
+    "title": "System error.",
+    "traceId": "3a6a590a-1263-4fb0-a330-82e9e62c13c9"
+}
+```
+
 # Contracts
 
 ## Document Metadata
