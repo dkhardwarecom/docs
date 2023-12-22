@@ -70,6 +70,74 @@ Example for 500:
 }
 ```
 
+
+
+
+# Documents List
+
+## Path
+/v1/quote/{quoteId}/document/
+
+## Method
+
+GET
+
+## Headers
+
+[require request context](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/authentication.md#request-context)
+
+## Scope
+quotas:documents
+
+## Success Response
+
+HTTP Status Code: 200
+
+List of [Document Metadata](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/quote-documents.md#Document-Metadata)
+
+Example:
+```
+{
+    "payload": [
+        {
+            "orderId": 623059,
+            "documentId": 94012,
+            "documentName": "Signed DKH-622643.pdf",
+            "fileName": "Signed DKH-622643.pdf",
+            "mimeType": "application/pdf",
+            "fileSize": 71611,
+            "createdAt": "2020-02-06T12:01:12.72"
+        },
+        {
+            "orderId": 623059,
+            "documentId": 94013,
+            "documentName": "cc form DKH-622643.pdf",
+            "fileName": "cc form DKH-622643.pdf",
+            "mimeType": "application/pdf",
+            "fileSize": 37530,
+            "createdAt": "2020-02-06T12:03:11.1"
+        }
+    ]
+}
+```
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 500 | System error. |
+|  |  |
+
+Example for 500:
+```
+{
+    "status": 500,
+    "title": "System error.",
+    "traceId": "d7234748-ba00-4d87-8cf2-246423cc172c"
+}
+```
+
 # Download Document
 
 ## Path
@@ -124,3 +192,17 @@ Example for 500:
     "traceId": "d7234748-ba00-4d87-8cf2-246423cc172c"
 }
 ```
+
+# Contracts
+
+## Document Metadata
+
+| Field | Type | Description |
+|--|--|--|
+| quoteId | string | Id of quote. |
+| documentId | string | Id of document. |
+| documentName | string | Document name setted on upload. |
+| fileName | string | File name. |
+| mimeType | string | Mime type. |
+| fileSize | long | File size in bytes. |
+| createdAt | datetime | Creation UTC. |
