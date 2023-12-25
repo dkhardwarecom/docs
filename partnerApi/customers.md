@@ -490,6 +490,7 @@ Example for 500:
 | addresses |  |[Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers.md#address)[] |  | Customer's addresses|
 | creditApproved | * | bool |  | Credit is approved flag. In case of credit is approved it is 'true', otherwise 'false'. |
 | creditLimit |  | money  |  | Limit of the ctedit. |
+| notes |  | string  | max 4000 | Customer notes. |
 
 
 ## Address
