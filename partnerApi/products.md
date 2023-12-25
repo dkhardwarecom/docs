@@ -127,6 +127,8 @@ Example:
 |  id | * | string | max 64 | Vendor identifier |
 |  name |  | string | max 300 | Vendor name |
 |  code |  | string | max 32 | Vendor code |
+|  discontinued | * | bool |  | Product is discontinued by the Vendor |
+|  removed | * | bool |  | Product is removed from the Vendor public information system |
 
 # Releases
 -------------------------------
