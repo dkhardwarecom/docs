@@ -184,7 +184,7 @@ quotas:email-templated
 Update Customer Quote Request
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| sendEmailCommand | * |Complex type [Email Message](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/quote-emails.md#Send-Email-Command)  |  | Send email command. |
+| sendEmailCommand | * |Complex type [Send Email Command](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/quote-emails.md#Send-Email-Command)  |  | Send email command. |
 
 ### Send Email Command
 | Field | Required | Type | Restrictions | Description |
