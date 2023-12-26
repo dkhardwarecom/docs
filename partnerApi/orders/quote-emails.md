@@ -101,7 +101,7 @@ quotas:email-templated
 |--|--|--|--|--|
 | code | * | string  | | Template code. |
 | name | * | string  | | Template name. |
-| availableOptions |  | List of [Email Template Available Option](https://github.com/dkhardwarecom/docs/edit/main/partnerApi/orders/quote-emails.md#Email-Template-Available-Option)  | | Available options. |
+| availableOptions |  | List of [Email Template Available Option](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/quote-emails.md#Email-Template-Available-Option)  | | Available options. |
 
 ### Email Template Available Option
 | Field | Required | Type | Restrictions | Description |
@@ -184,13 +184,13 @@ quotas:email-templated
 Update Customer Quote Request
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| sendEmailCommand | * |Complex type [Email Message](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/emails.md#email-message)  |  | Send email command. |
+| sendEmailCommand | * |Complex type [Email Message](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/quote-emails.md#Send-Email-Command)  |  | Send email command. |
 
 ### Send Email Command
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| emailTemplateCode | * | string  | Code of [Email Template](https://github.com/dkhardwarecom/docs/edit/main/partnerApi/orders/quote-emails.md#Email-Template) | Template code. |
-| options |  |Array of [Send Email Template Option](https://github.com/dkhardwarecom/docs/edit/main/partnerApi/orders/quote-emails.md#Send-Email-Template-Option)  |  One of AvailableOptions from [Template](https://github.com/dkhardwarecom/docs/edit/main/partnerApi/orders/quote-emails.md#Email-Template)  | Options Array. |
+| emailTemplateCode | * | string  | Code of [Email Template](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/quote-emails.md#Email-Template) | Template code. |
+| options |  |Array of [Send Email Template Option](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/quote-emails.md#Send-Email-Template-Option)  |  One of AvailableOptions from [Template](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/quote-emails.md#email-template)  | Options Array. |
 
 ### Send Email Template Option
 | Field | Required | Type | Restrictions | Description |
