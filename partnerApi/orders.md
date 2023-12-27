@@ -285,6 +285,7 @@ orders
 | currency |  | string | max 10 | Currency code, default **USD** |
 | status | * | string | max 100 | Order status name from **Dictionary** |
 | statusId | * | string | max 10 | Order status id from **Dictionary** |
+| currentStatus | * | [Order Status](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#order-status) |  | Order current status. |
 | customerId | * | string | max 64  | Customer's identifier |
 | customerNotes | | string | max 8000 | Customer's notes or Cutting instructions |
 | channel | | string | max 100 | Order channel name from **Dictionary**|
@@ -421,6 +422,12 @@ orders
 | carrierName |  | string  | max 50 |  Name of shipping company  |
 | service |  | string  | max 250 |  Title of shipping service  |
 | shippingPrice |  | money  |  | Price of shipping |
+
+## Order Status
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| id | * | string | max 64 | Order status id. |
+| name |  | string | max 300 | Order status name. |
 
 ## Order
 **Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
