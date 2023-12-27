@@ -115,7 +115,8 @@ HTTP Status Code: 200
 
 Example:
 ```
-[
+{
+ "payload": [
     {
         "code": "email_a_friend",
         "name": "!!!! Email a friend",
@@ -144,7 +145,8 @@ Example:
             }
         ]
     }
-]
+  ]
+}
 ```
 
 ## Error Response
