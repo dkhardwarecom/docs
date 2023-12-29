@@ -1,4 +1,4 @@
-# Convert Quote to Order
+# Change Quote Status
 
 ## Path
 /v1/quote/change-status
@@ -20,11 +20,14 @@ Change Customer Quote Status Request
 |--|--|--|--|--|
 | customerQuote | * | [Quote to Convert](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/quote-change-status.md#Quote-for-Change-Status) object |  | Customer quote data for change status serialized as JSON. |
 
+
+
 ### Quote for Change Status
 
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | quoteId | * | string  | max 64 |  Quote identifier|
+| statusId | * | [Updatable Property](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/update-quotas.md#updatable-property) |  | Status id value. |
 
 ## Valid Request
 ```
