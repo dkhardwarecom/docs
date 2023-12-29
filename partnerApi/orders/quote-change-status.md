@@ -18,7 +18,7 @@ quotas:change-status
 Change Customer Quote Status Request
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| customerQuote | * | [Quote to Convert](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/quote-change-status.md#Quote-for-Change-Status) object |  | Customer quote data for change status serialized as JSON. |
+| customerQuote | * | [Quote for Change Status](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/quote-change-status.md#Quote-for-Change-Status) object |  | Customer quote data for change status serialized as JSON. |
 
 
 
