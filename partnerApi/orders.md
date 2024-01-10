@@ -527,3 +527,9 @@ extra fields:
 ### Release Notes
 * 'createdBy', 'salesRep' and 'vendor' fields added.
 -------------------------------
+| Date | Version |
+|--|--|
+| 2024 January 10 | 20240110.1 |
+### Release Notes
+* 'trackingUrl' field added to Shipment Package.
+-------------------------------
