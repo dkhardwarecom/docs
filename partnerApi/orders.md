@@ -418,6 +418,7 @@ orders
 |--|--|--|--|--|
 | packageId | * | string  | max 64 |  Package identifier |
 | trackingNumber |  | string  | max 50 |  Tracking identifier  |
+| trackingUrl |  | string  | max 2048 |  Url for tracking page  |
 | shipDate | * | datetime |  | Date of shipment |
 | carrierName |  | string  | max 50 |  Name of shipping company  |
 | service |  | string  | max 250 |  Title of shipping service  |
