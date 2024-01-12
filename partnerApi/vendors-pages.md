@@ -101,7 +101,7 @@ Array of [Product Availability](https://github.com/dkhardwarecom/docs/blob/main/
 |--|--|--|--|--|
 | productId | * | string | max 64 | Id of product. |
 | vendorId | * | string | max 64 | Id of vendor. |
-| productPageUrl | * | string | max 2048 | Product page on vendor site URL. |
+| productPageUrl |  | string | max 2048 | Product page on vendor site URL. |
 | errors |  | array of string | | Errors for get current product page operation. |
 | warnings |  | array of string | | Warnings for get current product page operation. |
 
