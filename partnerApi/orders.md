@@ -279,6 +279,7 @@ orders
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | orderId | * | string | max 64 | Order identifier |
+| shoppingCartId | * | string | max 64 | Shopping cart identifier |
 | createdAt | * | dateTime |  | Creation date and time in UTC format |
 | updatedAt | * | dateTime  |  | Last changes date and time in UTC format |
 | total | * | money |  | Order total |
