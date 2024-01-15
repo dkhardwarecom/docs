@@ -442,6 +442,7 @@ extra fields:
 | replacementForOrderId |  | string | max 64 | Id of parent order in case of the current order is replacement |
 | replacementOrderIds |  | array of string | max 64 | Replacement Ids for the current order |
 | returnIds |  | array of string | max 64 | Returns Ids for the current order |
+| vendorOrderIds |  | array of string | max 64 | Ids of vendor orders |
 
 ## Quote
 **Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
@@ -474,6 +475,7 @@ extra fields:
 | replacementOrderIds |  | array of string | max 64 | Vendor replacement order Ids for the current vendor order |
 | returnIds |  | array of string | max 64 | Vendor returns Ids for the current vendor order |
 | vendor | | [Vendor](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#vendor) |  | The Vendor for the order. |
+| customerOrderIds |  | array of string | max 64 | Ids of customer orders |
 
 ## Vendor Quote
 **Inherits [common order fields](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#common-order-fields)**
@@ -533,4 +535,10 @@ extra fields:
 | 2024 January 10 | 20240110.1 |
 ### Release Notes
 * 'trackingUrl' field added to Shipment Package.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2024 January 12 | 20240112.1 |
+### Release Notes
+* 'vendorOrderIds' (for customer order) and 'customerOrderIds' (for vendor order) fields added.
 -------------------------------
