@@ -1,1 +1,111 @@
 
+# Get Quote Email By Note Id
+
+## Path
+/v1/quote/{quoteId}/email/by-note/{noteId}
+
+## Method
+
+GET
+
+## Headers
+
+[require request context](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/authentication.md#request-context)
+
+## Scope
+quotas:quotas:email-by-note-id
+
+## Response Contracts
+Common [Email Message](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/emails.md#email-message) fields and extra fields
+
+
+### Note Email Message Extra Fields
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| from |  | [Email Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/emails.md#email-address)  | | From address. |
+| statusesLog |  | List of [Note Email Message Status Log Entry](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/quote-email-by-note.md#Note-Email-Message-Status-Log-Entry)  | | Statuses log. |
+
+### Note Email Message Status Log Entry
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| status | * | string  | | Status code. |
+| date | * | date-and-time  | | Status date. |
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "payload": {
+        "from": {
+            "email": "pearld@dkhardware.com",
+            "name": null
+        },
+        "statusesLog": [
+            {
+                "status": 4,
+                "date": "2024-01-18T17:20:19"
+            },
+            {
+                "status": 2,
+                "date": "2024-01-18T17:20:18"
+            },
+            {
+                "status": 4,
+                "date": "2024-01-18T17:20:19"
+            },
+            {
+                "status": 2,
+                "date": "2024-01-18T17:20:18"
+            },
+            {
+                "status": 7,
+                "date": "2024-01-18T17:39:12"
+            },
+            {
+                "status": 7,
+                "date": "2024-01-18T22:39:23"
+            }
+        ],
+        "to": [
+            {
+                "email": "KNICKERBOCKER308@OUTLOOK.COM",
+                "name": null
+            }
+        ],
+        "cc": {
+            "email": "sales@dkhardware.com",
+            "name": null
+        },
+        "bcc": null,
+        "subject": "Your DK Hardware Supply  Quote request DKH-1784691",
+        "content": "<table style=\" width:100%; background-color:#ffffff; border-spacing: 0px;\"> ...",
+        "attachments": [
+            {
+                "content": "JVBERi0xLjQKJaqrrK0KMSAwIG9iago8PAovQ3JlYXRvciAoQXBhY2hlIEZPUCBWZXJzaW9uIDI ...",
+                "filename": "Invoice.0ecbc0404ab74505b7ac379ca4639c95.pdf"
+            }
+        ],
+        "templateName": "Quote Invoice"
+    }
+}
+```
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 500 | System error. |
+|  |  |
+
+Example for 500:
+```
+{
+    "status": 500,
+    "title": "System error.",
+    "traceId": "d7234748-ba00-4d87-8cf2-246423cc172c"
+}
+```
