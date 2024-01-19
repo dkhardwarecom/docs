@@ -23,13 +23,7 @@ Common [Email Message](https://github.com/dkhardwarecom/docs/blob/main/partnerAp
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | from |  | [Email Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/emails.md#email-address)  | | From address. |
-| statusesLog |  | List of [Note Email Message Status Log Entry](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/quote-email-by-note.md#Note-Email-Message-Status-Log-Entry)  | | Statuses log. |
-
-### Note Email Message Status Log Entry
-| Field | Required | Type | Restrictions | Description |
-|--|--|--|--|--|
-| status | * | string  | | Status code. |
-| date | * | date-and-time  | | Status date. |
+| delivered | * | bool  | | Email has delivered if it is 'true' and vice versa. |
 
 ## Success Response
 
@@ -43,32 +37,7 @@ Example:
             "email": "pearld@dkhardware.com",
             "name": null
         },
-        "statusesLog": [
-            {
-                "status": 4,
-                "date": "2024-01-18T17:20:19"
-            },
-            {
-                "status": 2,
-                "date": "2024-01-18T17:20:18"
-            },
-            {
-                "status": 4,
-                "date": "2024-01-18T17:20:19"
-            },
-            {
-                "status": 2,
-                "date": "2024-01-18T17:20:18"
-            },
-            {
-                "status": 7,
-                "date": "2024-01-18T17:39:12"
-            },
-            {
-                "status": 7,
-                "date": "2024-01-18T22:39:23"
-            }
-        ],
+        "delivered": true,
         "to": [
             {
                 "email": "KNICKERBOCKER308@OUTLOOK.COM",
