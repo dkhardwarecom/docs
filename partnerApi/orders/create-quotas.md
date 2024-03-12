@@ -317,6 +317,7 @@ Example for 500:
 | сomment |  | string | max 1000 | Quote operator comment. |
 | responseTime |  | [Response Time](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-quotas.md#response-time) enum | | Expected response time for quote. |
 | paymentMethodCode | * | string  | code from [Dictionary](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/dictionaries.md#payment-method) | Code of Payment method |
+| shippingMethod |  | string  | max 100 | Name of Shipping method |
 
 ## Quote Item
 | Field | Required | Type | Restrictions | Description |
