@@ -306,3 +306,10 @@ Example:
 ### Release Notes
 * Payment method code field added.
 -------------------------------
+| Date | Version |
+|--|--|
+| 2024 March 12 | 20240312.1 |
+### Release Notes
+* Add 'shippingMethod' field.
+-------------------------------
+
