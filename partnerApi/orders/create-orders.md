@@ -318,7 +318,7 @@ Example for 500:
 | paymentMethodCode | * | string  | code from [Dictionary](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/dictionaries.md#payment-method) | Code of Payment method |
 | poNumber |  | string  |  | Purchase Order Number |
 | orderDateUtc | * | datetime  | UTC | Date of order at UTC format |
-| shippingMethod | * | string  | name from [Dictionary](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/dictionaries.md#shipping-method) | Name of Shipping method |
+| shippingMethod | * | string  | max 100 | Name of Shipping method |
 
 ## Order Item
 | Field | Required | Type | Restrictions | Description |
