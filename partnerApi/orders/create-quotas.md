@@ -413,3 +413,9 @@ Example:
 ### Release Notes
 * Items is not required for create quote.
 -------------------------------
+| Date | Version |
+|--|--|
+| 2024 March 12 | 20240312.1 |
+### Release Notes
+* Add 'shippingMethod' field.
+-------------------------------
