@@ -13,7 +13,7 @@ GET
 [require request context](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/authentication.md#request-context)
 
 ## Scope
-quotas:quotas:email-by-note-id
+quotas:email-by-note-id
 
 ## Response Contracts
 Common [Email Message](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/emails.md#email-message) fields and extra fields
