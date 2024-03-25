@@ -136,7 +136,7 @@ Example:
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | customerId | * | string | max 64 | Customer identifier |
-| orderEntities | * | [Order Entities]() |  | Customer order entities relations. |
+| orderEntities | * | [Order Entities](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/customers/relations.md#order-entities) |  | Customer order entities relations. |
 
 ## Order Entities
 | Field | Required | Type | Restrictions | Description |
