@@ -15,7 +15,7 @@ orders
 |--|--|--|--|--|
 | from|  | DateTime| default(null)<br />UTC | From updated (or created) date and time filter value.<br /> Example: /v1/order?from=2022-03-11T22:15:59Z |
 | to|  | DateTime| default(null)<br />UTC | To updated (or created) date and time filter value.<br /> Example: /v1/order?to=2022-03-13T10:45:11Z |
-| newest|  | Boolean| default(true) | If true, return in descending order newest to oldest. |
+| newest|  | Boolean| default(true) | If true, return in descending order newest to oldest. Sort by update date. |
 | limit|  | integer | max 1000, default(100) | Return a number of records with the set limit value. |
 | offset |  | integer | default(0) | Return a subset of records starting with the offset value. |
 ## Success Response
