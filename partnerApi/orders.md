@@ -543,3 +543,9 @@ extra fields:
 ### Release Notes
 * 'vendorOrderIds' (for customer order) and 'customerOrderIds' (for vendor order) fields added.
 -------------------------------
+| Date | Version |
+|--|--|
+| 2024 April 22 | 20240422.1 |
+### Release Notes
+* Add order ststus filter.
+-------------------------------
