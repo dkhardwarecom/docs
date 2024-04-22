@@ -13,6 +13,7 @@ orders
 ## Query Parameters
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
+| statusId|  | string| value of otrder ststuses dictionaty | Current order status filter. <br /> Example: /v1/order?statusId=81 |
 | from|  | DateTime| default(null)<br />UTC | From updated (or created) date and time filter value.<br /> Example: /v1/order?from=2022-03-11T22:15:59Z |
 | to|  | DateTime| default(null)<br />UTC | To updated (or created) date and time filter value.<br /> Example: /v1/order?to=2022-03-13T10:45:11Z |
 | newest|  | Boolean| default(true) | If true, return in descending order newest to oldest. Sort by update date. |
