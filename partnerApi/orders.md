@@ -290,7 +290,8 @@ orders
 | currentStatus | * | [Order Status](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#order-status) |  | Order current status. |
 | customerId | * | string | max 64  | Customer's identifier |
 | customerNotes | | string | max 8000 | Customer's notes or Cutting instructions |
-| channel | | string | max 100 | Order channel name from **Dictionary**|
+| channel | | string | max 100 | Order channel name |
+| channelReferenceId | | string | max 100 | Order channel reference id |
 | shippingMethod | * | string | max 200  | Shipping method |
 | paymentMethod | | [PaymentMethod](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#payment-method) |  | Payment method |
 | shippingPrice | * | money  |  | Shipping price |
@@ -547,5 +548,10 @@ extra fields:
 |--|--|
 | 2024 April 22 | 20240422.1 |
 ### Release Notes
-* Add order ststus filter.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2024 Jun 14 | 20240614.1 |
+### Release Notes
+* Channel reference id field added.
 -------------------------------
