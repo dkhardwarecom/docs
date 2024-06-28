@@ -13,6 +13,9 @@ users
 ## Query Parameters
 | Name | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
+| limit|  | integer | max 1000, default(100) | Return a number of records with the set limit value. |
+| offset |  | integer | default(0) | Return a subset of records starting with the offset value. |
+
 
 ## Success Response
 
