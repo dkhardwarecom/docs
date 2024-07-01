@@ -281,6 +281,7 @@ orders
 |--|--|--|--|--|
 | orderId | * | string | max 64 | Order identifier |
 | shoppingCartId | * | string | max 64 | Shopping cart identifier |
+| poNumber |  | string | max 50 | A P.O. (purchase order) number |
 | createdAt | * | dateTime |  | Creation date and time in UTC format |
 | updatedAt | * | dateTime  |  | Last changes date and time in UTC format |
 | total | * | money |  | Order total |
