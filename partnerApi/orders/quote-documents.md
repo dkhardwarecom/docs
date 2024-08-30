@@ -260,7 +260,6 @@ Example for 500:
 
 | Field | Type | Description |
 |--|--|--|
-| quoteId | string | Id of quote. |
 | documentId | string | Id of document. |
 | documentName | string | Document name setted on upload. |
 | fileName | string | File name. |
