@@ -260,7 +260,6 @@ Example for 500:
 
 | Field | Type | Description |
 |--|--|--|
-| orderId | string | Id of order. |
 | documentId | string | Id of document. |
 | documentName | string | Document name setted on upload. |
 | fileName | string | File name. |
