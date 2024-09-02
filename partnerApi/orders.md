@@ -355,7 +355,7 @@ orders
 | country | * | string | max 150 | Country name |
 | state | * | string | max 50 | State or region |
 | city | * | string | max 255 | City |
-| address1 | * | string  | max 255 | Address line 1 |
+| address1 |  | string  | max 255 | Address line 1 |
 | address2 |  | string  | max 255 | Address line 2 |
 | email |  | string  | max 100|Email address|
 
