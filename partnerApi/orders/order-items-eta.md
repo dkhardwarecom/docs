@@ -1,5 +1,4 @@
-# Get Order Items Estimated Time of Arrival
-
+# Get Order ETA
 ## Path
 /v1/order/{orderId}/eta
 
