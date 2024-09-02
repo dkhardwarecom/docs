@@ -16,7 +16,7 @@ orders
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | orderEntityId | * | string | | Id of order entity. In case of customer order it is 'orderId'. |
-| itemsEta |  | Array of [Item ETA](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-items-eta.md#item-eta)  | | Estimated Time of Arrival for order items. |
+| itemsEta |  | Array of [Item ETA](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-items-eta.md#item-eta)  | | Estimated time of arrival for order items. |
 
 ### Item ETA
 | Field | Required | Type | Restrictions | Description |
