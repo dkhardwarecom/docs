@@ -38,12 +38,12 @@ Example:
             {
                 "itemId": "4128482",
                 "quantity": 38,
-                "estimatedTimeOfArrival": "2024-08-02T00:00:00"
+                "estimatedTimeOfArrival": "2024-08-02"
             },
             {
                 "itemId": "4128482",
                 "quantity": 90,
-                "estimatedTimeOfArrival": "2024-07-29T00:00:00"
+                "estimatedTimeOfArrival": "2024-07-29"
             }
         ]
     }
