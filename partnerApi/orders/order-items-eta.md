@@ -1,7 +1,7 @@
 # Get Order Items Estimated Time of Arrival
 
 ## Path
-/v1/order/{orderId}/items-eta
+/v1/order/{orderId}/eta
 
 ## Method
 
@@ -15,15 +15,15 @@ orders
 ### Payload
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| orderEntityId | * | string | | Id of order entity. In case of customer order it is 'orderId'. |
-| itemsEta |  | Array of [Item ETA](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-items-eta.md#item-eta)  | | Estimated time of arrival for order items. |
+| orderId | * | string | | Id of order. |
+| etaList |  | List of [Item ETA](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-items-eta.md#item-eta)  | | Estimated time of arrival for order items. |
 
 ### Item ETA
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | itemId | * | string | | Id of order item. |
 | quantity | * | integer  | | Product quantity in order line. |
-| estimatedTimeOfArrival | * | date  | | Estimated time (date) of arrival. |
+| eta | * | date  | | Estimated time (date) of arrival. |
 
 ## Success Response
 
@@ -33,17 +33,17 @@ Example:
 ```
 {
     "payload": {
-        "orderEntityId": "2020928",
-        "itemsEta": [
+        "orderId": "2020928",
+        "etaList": [
             {
                 "itemId": "4128482",
                 "quantity": 38,
-                "estimatedTimeOfArrival": "2024-08-02"
+                "eta": "2024-08-02"
             },
             {
                 "itemId": "4128482",
                 "quantity": 90,
-                "estimatedTimeOfArrival": "2024-07-29"
+                "eta": "2024-07-29"
             }
         ]
     }
