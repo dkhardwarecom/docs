@@ -23,7 +23,7 @@ orders
 |--|--|--|--|--|
 | itemId | * | string | | Id of order item. |
 | quantity | * | integer  | | Product quantity in order line. |
-| estimatedTimeOfArrival | * | dateTime  | | Estimated Time of Arrival. |
+| estimatedTimeOfArrival | * | dateTime  | | Estimated time of arrival. |
 
 ## Success Response
 
