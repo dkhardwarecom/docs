@@ -11,3 +11,11 @@ Endpoints for return (RMA), vendor-order, vendor-quote, vendor-return (RMA) impl
 - vendor-orders:documents
 - vendor-quotas:documents
 - vendor-returns:documents
+
+# Releases
+-------------------------------
+| Date | Version |
+|--|--|
+| 2024 October 23 | 20241023. |
+### Release Notes
+* Document endpoints added to RMA, vendor RMA, vendor order, and vendor quote entities.
