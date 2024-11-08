@@ -90,6 +90,9 @@ Example:
 | url |  | string |  | Product url for details |
 | brand |  | [Brand](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/products.md#brand) |  | Product brand |
 | manufacturer |  | [Manufacturer](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/products.md#manufacturer) |  | Product manufacturer |
+| weight |  | float |  | Product weight (LB) |
+| minOrder |  | float |  | Product minimum order quantity |
+| unitOfMeasure |  | [Unit of Measure](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/products.md#Unit-of-Measure) |  | Product unit of measure |
 | discontinued |  | Boolean |  | Product is discontinued |
 | hold |  | Boolean |  | Product has put on hold |
 | hidden |  | Boolean |  | Product is hidden on web site |
@@ -130,6 +133,13 @@ Example:
 |  discontinued | * | bool |  | Product is discontinued by the Vendor |
 |  removed | * | bool |  | Product is removed from the Vendor public information system |
 
+## Unit of Measure
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+|  Id | * | string | max 64 | identifier |
+|  name | * | string | max 100 | name |
+
+
 # Releases
 -------------------------------
 | Date | Version |
@@ -149,4 +159,10 @@ Example:
 | 2022 November 18 | 20221118.2 |
 ### Release Notes
 * Add product vendors collection to product model.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2024 November 08 | 20241108.1 |
+### Release Notes
+* Add product min order.
 -------------------------------
