@@ -307,6 +307,7 @@ orders
 | notes | | fields from [Note](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#note) |  | Notes |
 | payments | | fields from [Payment](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#payment) | Applicable for orders and RMAs only | Payments |
 | shipments | | fields from [Shipment](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#shipment) | Applicable for orders and RMAs only | Shipments |
+| filters | | fields from [Order filter](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders.md#order-filter) |  | Order filters. Like a tags for filtering. |
 
 ## Order Item
 | Field | Required | Type | Restrictions | Description |
@@ -427,6 +428,11 @@ orders
 | carrierName |  | string  | max 50 |  Name of shipping company  |
 | service |  | string  | max 250 |  Title of shipping service  |
 | shippingPrice |  | money  |  | Price of shipping |
+
+## Order Filter
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| name | * | string  | max 250 |  Name of the filter  |
 
 ## Order Status
 | Field | Required | Type | Restrictions | Description |
@@ -555,4 +561,10 @@ extra fields:
 | 2024 Jun 14 | 20240614.1 |
 ### Release Notes
 * Channel reference id field added.
+-------------------------------
+| Date | Version |
+|--|--|
+| 2024 Dec 17 | 20241217.1 |
+### Release Notes
+* Order filters added.
 -------------------------------
