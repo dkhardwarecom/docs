@@ -432,7 +432,7 @@ orders
 ## Order Filter
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
-| name | * | string  | max 250 |  Name of the filter  |
+| name | * | string  | max 100 |  Name of the filter.  |
 
 ## Order Status
 | Field | Required | Type | Restrictions | Description |
