@@ -366,6 +366,13 @@ POST
 orders:email-templated
 
 ## Body
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| sendEmailCommand | * |Complex type [Send Prepared Email Command](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#Send-Prepared-Email-Command)  |  | Prepare email command. |
+
+### Send Prepared Email Command
+
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | cc |  | [Email Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#Email-Address) |  | Carbon copy email address. |
@@ -375,7 +382,7 @@ orders:email-templated
 | EmailTemplateCode |  | string | max 200 | Code of template.  |
 | options |  |Array of [Send Prepared Email Template Option](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#Send-Prepared-Email-Template-Option)  |  One of AvailableOptions from [Template](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#email-template)  | Options Array. |
 
-## Email Address
+### Email Address
 
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
