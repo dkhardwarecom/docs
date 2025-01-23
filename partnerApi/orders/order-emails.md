@@ -352,7 +352,106 @@ Example for 500:
 }
 ```
 
+# Send Order Prepared Email by Template
 
+## Path
+/v1/order/{orderId}/email/send-prepared-by-template
+
+## Method
+
+POST
+
+## Headers
+
+[require request context](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/authentication.md#request-context)
+
+## Scope
+orders:email-templated
+
+## Body
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| cc |  | [Email Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#Email-Address) |  | Carbon copy email address. |
+| bcc |  | [Email Address](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#Email-Address) |  | Blind carbon copy email address. |
+| subject | * | string | max 500 | Message subject. |
+| content | * | string |  | Message content. For example html content. |
+| EmailTemplateCode |  | string | max 200 | Code of template.  |
+| options |  |Array of [Send Prepared Email Template Option](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#Send-Prepared-Email-Template-Option)  |  One of AvailableOptions from [Template](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#email-template)  | Options Array. |
+
+## Email Address
+
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| email | * | string | | Email address. |
+| name |  | string |  | Name. |
+
+### Send Prepared Email Template Option
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| code | * | string  | | Available option code. |
+
+## Valid Request
+```
+{
+	"sendEmailCommand"
+	{
+		 "to":[{"email":"some.address@somedomain.com", "name":"John Doe"}],
+		 "content":"<p>Hello John!</p><p><b>How are you?</b></p>",
+		 "subject":"Have a good day!",
+		 "cc":{"email":"copy.addres@otherdomain.com"},
+		 "options":[{"code":"details"}]
+	}
+}
+```
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "submissionId": "313mm825-3372-4de0-848a-accda64d4dec"
+}
+```
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 | One or more validation errors occurred. |
+| 500 | System error. |
+|  |  |
+
+Example for 400:
+```
+{
+    "status": 400,
+    "title": "One or more validation errors occurred.",
+    "traceId": "7c4d9ffe-5b78-4817-9112-8f997c62d415",
+    "errors": {
+        "sendEmailCommand.options[0]": [
+            "'code' should be one of the 'details, details_with_sugnature but not 'details1'."
+        ],
+        "sendEmailCommand.options[1]": [
+            "'code' should be one of the 'details, details_with_sugnature but not 'details2'."
+        ],
+        "sendEmailCommand.options": [
+            "The specified condition was not met for 'options'."
+        ]
+    }
+}
+```
+
+Example for 500:
+```
+{
+    "status": 500,
+    "title": "System error.",
+    "traceId": "d7234748-ba00-4d87-8cf2-246423cc172c"
+}
+```
 
 # Operation status
 
