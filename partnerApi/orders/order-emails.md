@@ -15,7 +15,6 @@ POST
 orders:email-general
 
 ## Body
-Update Customer Order Request
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | emailMessage | * |Complex type [Email Message](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/emails.md#email-message)  |  | Email Message. |
@@ -183,7 +182,6 @@ POST
 orders:email-templated
 
 ## Body
-Update Customer Order Request
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | sendEmailCommand | * |Complex type [Send Email Command](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#Send-Email-Command)  |  | Send email command. |
@@ -276,7 +274,6 @@ POST
 orders:email-templated
 
 ## Body
-Update Customer Order Request
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | prepareEmailCommand | * |Complex type [Send Email Command](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#Prepare-Email-Command)  |  | Prepare email command. |
