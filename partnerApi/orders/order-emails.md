@@ -259,6 +259,101 @@ Example for 500:
 }
 ```
 
+# Prepare Order Email by Template
+
+## Path
+/v1/order/{orderId}/email/prepare-by-template
+
+## Method
+
+POST
+
+## Headers
+
+[require request context](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/authentication.md#request-context)
+
+## Scope
+orders:email-templated
+
+## Body
+Update Customer Order Request
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| prepareEmailCommand | * |Complex type [Send Email Command](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#Prepare-Email-Command)  |  | Prepare email command. |
+
+### Prepare Email Command
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| emailTemplateCode | * | string  | Code of [Email Template](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#Email-Template) | Template code. |
+| options |  |Array of [Prepare Email Template Option](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#Prepare-Email-Template-Option)  |  One of AvailableOptions from [Template](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/order-emails.md#email-template)  | Options Array. |
+
+### Prepare Email Template Option
+| Field | Required | Type | Restrictions | Description |
+|--|--|--|--|--|
+| code | * | string  | | Available option code. |
+
+## Valid Request
+```
+{
+    "prepareEmailCommand":
+    {
+        "emailTemplateCode":"account_created",
+        "options":[{"code":"details"}]
+    }
+}
+```
+
+## Success Response
+
+HTTP Status Code: 200
+
+Example:
+```
+{
+    "submissionId": "193mm825-3372-4de0-848a-accda64d4d7c"
+}
+```
+
+## Error Response
+
+
+| HTTP status code | Message |
+|--|--|
+| 400 | One or more validation errors occurred. |
+| 500 | System error. |
+|  |  |
+
+Example for 400:
+```
+{
+    "status": 400,
+    "title": "One or more validation errors occurred.",
+    "traceId": "7c4d9ffe-5b78-4817-9112-8f997c62d415",
+    "errors": {
+        "prepareEmailCommand.options[0]": [
+            "'code' should be one of the 'details, details_with_sugnature but not 'details1'."
+        ],
+        "prepareEmailCommand.options[1]": [
+            "'code' should be one of the 'details, details_with_sugnature but not 'details2'."
+        ],
+        "prepareEmailCommand.options": [
+            "The specified condition was not met for 'options'."
+        ]
+    }
+}
+```
+
+Example for 500:
+```
+{
+    "status": 500,
+    "title": "System error.",
+    "traceId": "d7234748-ba00-4d87-8cf2-246423cc172c"
+}
+```
+
+
+
 # Operation status
 
 Status operation is the same as [Order operation status](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/create-orders.md#order-operation-status) for create order operation.
