@@ -19,6 +19,7 @@ Payment for Quote Request
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | customerQuote | * | [Quote for Request Payment](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/request-payment-for-quote.md#quote-for-request-payment) object |  | Customer quote data for request payment serialized as JSON. |
+| fraudInsuranceRequired |  | bool |  | Flag for manage fraud insurance. |
 
 ### Quote for Request Payment
 
@@ -31,7 +32,8 @@ Payment for Quote Request
 {
 	"customerQuote": {
 		"quoteId": "536784"
-	}
+	},
+	"fraudInsuranceRequired":true
 }
 ```
 
