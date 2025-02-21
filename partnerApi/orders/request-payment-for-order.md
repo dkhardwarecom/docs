@@ -19,6 +19,8 @@ Update Customer Quote Request
 | Field | Required | Type | Restrictions | Description |
 |--|--|--|--|--|
 | customerOrder | * | [Order for Request Payment](https://github.com/dkhardwarecom/docs/blob/main/partnerApi/orders/request-payment-for-order.md#order-for-request-payment) object |  | Customer order data for request payment serialized as JSON. |
+| fraudInsuranceRequired |  | bool |  | Flag for manage fraud insurance. |
+
 
 ### Order for Request Payment
 
@@ -31,7 +33,8 @@ Update Customer Quote Request
 {
 	"customerOrder": {
 		"orderId": "517231"
-	}
+	},
+	"fraudInsuranceRequired":true
 }
 ```
 
